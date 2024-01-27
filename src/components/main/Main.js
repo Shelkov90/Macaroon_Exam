@@ -11,7 +11,7 @@ class Main extends PureComponent {
 
 	render() {
 		return (
-			<div></div>
+			<div>Main</div>
 		)
 	}
 }
