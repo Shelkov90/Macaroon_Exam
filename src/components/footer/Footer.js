@@ -11,7 +11,9 @@ class Footer extends PureComponent {
 
 	render() {
 		return (
-			<div>Footer</div>
+			<footer class="bg-gray-200 p-16">
+				Footer
+			</footer>
 		)
 	}
 }

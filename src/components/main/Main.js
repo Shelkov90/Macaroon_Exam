@@ -11,7 +11,9 @@ class Main extends PureComponent {
 
 	render() {
 		return (
-			<div>Main</div>
+			<main class="w-5/6 max-w-[1400px] mx-auto basis-full">
+				Main
+			</main>
 		)
 	}
 }
