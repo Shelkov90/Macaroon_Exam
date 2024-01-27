@@ -11,7 +11,7 @@ class Header extends PureComponent {
 
 	render() {
 		return (
-			<div></div>
+			<div>Header</div>
 		)
 	}
 }
