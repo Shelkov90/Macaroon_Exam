@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { NavLink} from "react-router-dom";
 
 class Header extends PureComponent {
   constructor(props) {
@@ -37,12 +38,14 @@ class Header extends PureComponent {
 
         <div className="header__navigation bg-orange-50">
           <div className="flex justify-between text-sm max-w-\[1400px\] mx-auto py-3 px-2">
-            <div className="flex basis-3/6">
-              <div className="mr-5">Fresh guarantee</div>
-              <div className="mr-5">Delivery and payments</div>
-              <div className="mr-5">Wholesale supply</div>
-              <div className="mr-5">Contacts</div>
-            </div>
+            <nav>
+              <div className="flex basis-3/6">
+                <div className="mr-5"><NavLink to="/Guarantee">Fresh guarantee</NavLink></div>
+                <div className="mr-5"><NavLink to="/Delivery">Delivery and payments</NavLink></div>
+                <div className="mr-5"><NavLink to="/Wholesale">Wholesale supply</NavLink></div>
+                <div className="mr-5"><NavLink to="/Contacts">Contacts</NavLink></div>
+              </div>
+            </nav>
 
             <div className="flex basis-2/6">
               <div className="flex items-center mr-10">
