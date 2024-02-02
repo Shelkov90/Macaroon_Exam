@@ -15,9 +15,9 @@ class Layout extends PureComponent {
 	render() {
 		return (
 			<>
-			<Header />
-			<Main />
-			<Footer />
+				<Header />
+				<Main />
+				<Footer />
 			</>
 		)
 	}
