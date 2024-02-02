@@ -84,7 +84,7 @@ class Header extends PureComponent {
             <div><NavLink to="/Gift">gift Baskets</NavLink></div>
             <div>assemble the set</div>
             <div>
-              <img className="size-32" src="images/logo.svg" alt="logo" />
+              <NavLink to='/'><img className="size-32" src="images/logo.svg" alt="logo" /></NavLink>
             </div>
             <div>create design</div>
             <div><NavLink to="/ForCompanies">for companies</NavLink></div>

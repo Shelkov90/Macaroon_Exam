@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
 import Guarantee from './components/pages/Guarantee';
 import Delivery from './components/pages/Delivery';
 import Wholesale from './components/pages/Wholesale';
@@ -11,15 +9,20 @@ import Sweet from './components/pages/Sweet';
 import Catalogue from './components/pages/Catalogue';
 import ForCompanies from './components/pages/ForCompanies';
 import NotFound from './components/pages/NotFound';
-import Main from './components/main/Main';
+import Layout from './layout/Layout'
+import Homepage from './components/pages/homepage/Homepage'
 
-import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Header></Header>,
+    element: <Layout/>,
     children: [
+      {
+        path: '/',
+        element: <Homepage />
+      },
       {
         path: '/Guarantee',
         element: <Guarantee />
@@ -64,12 +67,7 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid bg-gray-100 flex flex-col justify-between min-h-screen">
-        <RouterProvider router={router}>
-          <Main>
-            <Outlet />
-          </Main>
-        </RouterProvider>
-        <Footer />
+            <RouterProvider router={router}/>
       </div>
     );
   }
