@@ -11,7 +11,7 @@ class Newspage extends PureComponent {
 
 	render() {
 		return (
-			<div></div>
+			<div>NewsPage</div>
 		)
 	}
 }
