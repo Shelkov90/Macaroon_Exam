@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-class Delivery extends PureComponent {
+class Sweet extends PureComponent {
 	constructor(props) {
 		super(props)
 
@@ -12,10 +12,10 @@ class Delivery extends PureComponent {
 	render() {
 		return (
 			<>
-			Delivery
+			Sweet
 			</>
 		)
 	}
 }
 
-export default Delivery
+export default Sweet

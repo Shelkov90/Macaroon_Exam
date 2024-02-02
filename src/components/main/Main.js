@@ -1,21 +1,14 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react';
+import { Outlet } from 'react-router-dom';
 
-class Main extends PureComponent {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			
-		}
-	}
-
+class Main extends Component {
 	render() {
 		return (
-			<main class="w-5/6 max-w-[1400px] mx-auto basis-full">
-				Main
+			<main className="w-5/6 max-w-[1400px] mx-auto basis-full">
+				<Outlet />
 			</main>
-		)
+		);
 	}
 }
 
-export default Main
+export default Main;

@@ -1,12 +1,15 @@
 import React, { PureComponent } from "react";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Header extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+
+    };
   }
+
 
   render() {
     return (
@@ -38,15 +41,14 @@ class Header extends PureComponent {
 
         <div className="header__navigation bg-orange-50">
           <div className="flex justify-between text-sm max-w-\[1400px\] mx-auto py-3 px-2">
-            <nav>
-              <div className="flex basis-3/6">
+            
+              <nav className="flex basis-3/6">
                 <div className="mr-5"><NavLink to="/Guarantee">Fresh guarantee</NavLink></div>
                 <div className="mr-5"><NavLink to="/Delivery">Delivery and payments</NavLink></div>
                 <div className="mr-5"><NavLink to="/Wholesale">Wholesale supply</NavLink></div>
                 <div className="mr-5"><NavLink to="/Contacts">Contacts</NavLink></div>
-              </div>
-            </nav>
-
+              </nav>
+            
             <div className="flex basis-2/6">
               <div className="flex items-center mr-10">
                 <img className="mr-2" src="images/place.svg" alt="alt" />
@@ -77,17 +79,17 @@ class Header extends PureComponent {
         </div>
 
         <div className="header__menu bg-white py-3">
-          <div className="header__menu__inner max-w-\[1400px\] mx-auto flex justify-around items-center uppercase">
-            <div>sweet days</div>
-            <div>gift Baskets</div>
+          <nav className="header__menu__inner max-w-\[1400px\] mx-auto flex justify-around items-center uppercase">
+            <div><NavLink to="/Sweet">sweet days</NavLink></div>
+            <div><NavLink to="/Gift">gift Baskets</NavLink></div>
             <div>assemble the set</div>
             <div>
               <img className="size-32" src="images/logo.svg" alt="logo" />
             </div>
             <div>create design</div>
-            <div>for companies</div>
-            <div>all catalogue</div>
-          </div>
+            <div><NavLink to="/ForCompanies">for companies</NavLink></div>
+            <div><NavLink to="/Catalogue">all catalogue</NavLink></div>
+          </nav>
         </div>
       </header>
     );

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-class Layout extends PureComponent {
+class NotFound extends PureComponent {
 	constructor(props) {
 		super(props)
 
@@ -12,9 +12,10 @@ class Layout extends PureComponent {
 	render() {
 		return (
 			<>
+			NotFound
 			</>
 		)
 	}
 }
 
-export default Layout
+export default NotFound

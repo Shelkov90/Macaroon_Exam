@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-class Layout extends PureComponent {
+class Delivery extends PureComponent {
 	constructor(props) {
 		super(props)
 
@@ -12,9 +12,10 @@ class Layout extends PureComponent {
 	render() {
 		return (
 			<>
+			<h1>Delivery</h1>
 			</>
 		)
 	}
 }
 
-export default Layout
+export default Delivery
