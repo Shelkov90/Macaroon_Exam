@@ -33,7 +33,7 @@ class Contacts extends PureComponent {
 							<p>Cafe “Meant”. Deribasovcka, 22 (from 10 to 22)</p>
 							<h5 className='text-2xl font-semibold mt-6 mb-2'>Phones :</h5>
 							<p>(063) 309-82-88 main number</p>
-							<p>(093) 841-85-25 for complaints and suggestions</p>
+							<p>(093) 841-86-29 for complaints and suggestions</p>
 						</div>
 					</div>
 				</div>
