@@ -25,13 +25,13 @@ class Contacts extends PureComponent {
 						</div>
 						<div className='contacts_info mt-10 ml-40 mb-12'>
 							<h2 className='text-4xl font-semibold mb-6'>Contacts</h2>
-							<h5 className='text-2xl font-semibold mb-2'>Production:</h5>
+							<h5 className='text-2xl font-semibold mb-2'>Production :</h5>
 							<p>Sadova, 22 </p>
 							<p>Opening hours: from 8 to 19:30.</p>
-							<h5 className='text-2xl font-semibold mt-6 mb-2'>Pickup points:</h5>
+							<h5 className='text-2xl font-semibold mt-6 mb-2'>Pickup points :</h5>
 							<p>Cafe “Morosha”. Sadova, 22 (from 8 to 19:30)</p>
 							<p>Cafe “Meant”. Deribasovcka, 22 (from 10 to 22)</p>
-							<h5 className='text-2xl font-semibold mt-6 mb-2'>Phones:</h5>
+							<h5 className='text-2xl font-semibold mt-6 mb-2'>Phones :</h5>
 							<p>(063) 309-82-88 main number</p>
 							<p>(093) 841-85-25 for complaints and suggestions</p>
 						</div>
