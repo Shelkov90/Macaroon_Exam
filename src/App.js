@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Layout from './layout/Layout'
 import Guarantee from './components/pages/Guarantee';
 import Delivery from './components/pages/Delivery';
 import Wholesale from './components/pages/Wholesale';
@@ -9,7 +10,6 @@ import Sweet from './components/pages/Sweet';
 import Catalogue from './components/pages/Catalogue';
 import ForCompanies from './components/pages/ForCompanies';
 import NotFound from './components/pages/NotFound';
-import Layout from './layout/Layout'
 import Homepage from './components/pages/homepage/Homepage'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';

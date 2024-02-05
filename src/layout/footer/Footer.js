@@ -75,9 +75,9 @@ class Footer extends PureComponent {
 						</div>
 						
 						<div className="social-links flex flex-end self-end">
-							<a className="ml-3" href="#"><img src="images/inst.svg" alt="alt"/></a>
-							<a className="ml-3" href="#"><img src="images/fb.svg" alt="alt"/></a>
-							<a className="ml-3" href="#"><img src="images/fb.svg" alt="alt"/></a>
+							<a className="ml-3" href="/"><img src="images/inst.svg" alt="alt"/></a>
+							<a className="ml-3" href="/"><img src="images/fb.svg" alt="alt"/></a>
+							<a className="ml-3" href="/"><img src="images/fb.svg" alt="alt"/></a>
 						</div>
 
 					</div>

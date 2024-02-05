@@ -10,7 +10,6 @@ class Header extends PureComponent {
     };
   }
 
-
   render() {
     return (
       <header>
