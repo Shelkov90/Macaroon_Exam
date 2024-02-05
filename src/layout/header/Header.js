@@ -15,7 +15,7 @@ class Header extends PureComponent {
       <header>
         <div className="header__banner bg-blue-100 row-auto">
           <div className="flex items-center justify-between py-2 max-w-[1400px] mx-auto">
-            <img src="/images/leftArrow.svg" alt="alt" />
+            <img src="images/leftArrow.svg" alt="alt" />
 
             <div className="header__banner__inner items-center flex">
               {/* 		
