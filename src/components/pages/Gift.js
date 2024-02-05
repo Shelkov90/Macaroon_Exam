@@ -13,7 +13,7 @@ class Gift extends PureComponent {
 				<div className="breadcrumbs__inner flex justify-center">
 					<div className="breadcrumbs__item">Homepage</div>
 
-					<p className="text-blue-400 mx-3"></p>
+					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 
 					<div className="breadcrumbs__item text-blue-400">Gift Baskets</div>
 				</div>

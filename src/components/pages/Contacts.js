@@ -14,7 +14,7 @@ class Contacts extends PureComponent {
 			<>
 				<div className="breadcrumbs__inner flex justify-center mt-10">
 					<div className="breadcrumbs__item">Homepage</div>
-					<p className="text-blue-400 mx-3"></p>
+					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 					<div className="breadcrumbs__item text-blue-400">Contacts</div>
 				</div>
 
