@@ -79,7 +79,7 @@ class Header extends PureComponent {
         </div>
 
         <div className="header__menu bg-white py-3">
-          <nav className="header__menu__inner max-w-\[1400px\] mx-auto flex justify-around items-center uppercase">
+          <nav className="header__menu__inner max-w-[1400px] mx-auto flex justify-around items-center uppercase">
             <div><NavLink to="/Sweet">sweet days</NavLink></div>
             <div><NavLink to="/Gift">gift Baskets</NavLink></div>
             <div>assemble the set</div>
