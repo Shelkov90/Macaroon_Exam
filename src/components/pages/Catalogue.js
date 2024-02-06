@@ -60,15 +60,15 @@ class Catalogue extends PureComponent {
 				<div className="main__catalogue__categories mb-16">
 					<div className="catalogue__categories__inner flex justify-between gap-x-7">
 						<div className="categories__item flex flex-col items-center justify-between basis-1/3 py-10 rounded-md bg-gradient-to-t from-orange-400 to-orange-300">
-							<img className="mt-5" src="images/catalogue3.png" alt="alt" />
+							<img className="mt-5" src="/images/catalogue3.png" alt="alt" />
 							<p className="text-white font-semibold text-2xl">Tubes with condensed milk</p>
 						</div>
 						<div className="categories__item flex flex-col items-center justify-between basis-1/3 py-10 rounded-md bg-gradient-to-t from-pink-400 to-pink-300">
-							<img src="images/catalogue2.png" alt="alt" />
+							<img src="/images/catalogue2.png" alt="alt" />
 							<p className="text-white font-semibold text-2xl">Eclairs</p>
 						</div>
 						<div className="categories__item flex flex-col items-center justify-between basis-1/3 py-10 rounded-md bg-gradient-to-t from-orange-300 to-orange-200">
-							<img src="images/catalogue1.png" alt="alt" />
+							<img src="/images/catalogue1.png" alt="alt" />
 							<p className="text-white font-semibold text-2xl">Profiteroles</p>
 						</div>
 					</div>
@@ -85,12 +85,12 @@ class Catalogue extends PureComponent {
 
 						<div className="choice__products relative">
 
-							<img className="absolute top-1/4 left-[-20px] cursor-pointer" src="images/leftArrowSlide.svg" alt="alt" />
+							<img className="absolute top-1/4 left-[-20px] cursor-pointer" src="/images/leftArrowSlide.svg" alt="alt" />
 
 							<div className="choice__products__inner flex gap-x-7">
 
 								<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
-									<img className="w-full" src="images/choice1.png" alt="alt" />
+									<img className="w-full" src="/images/choice1.png" alt="alt" />
 									<div className="popular__card__text p-5">
 										<p className="text-xl font-semibold">
 											1 macaron and 1 eclair
@@ -104,14 +104,14 @@ class Catalogue extends PureComponent {
 											<p className="text-xl text-red-500 font-semibold">$30</p>
 										</div>
 										<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-											<img className="mr-2" src="images/cart.svg" alt="alt" />
+											<img className="mr-2" src="/images/cart.svg" alt="alt" />
 											In cart
 										</div>
 									</div>
 								</div>
 
 								<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
-									<img className="w-full" src="images/choice2.png" alt="alt" />
+									<img className="w-full" src="/images/choice2.png" alt="alt" />
 									<div className="popular__card__text p-5">
 										<p className="text-xl font-semibold">
 											A bit of everything
@@ -125,14 +125,14 @@ class Catalogue extends PureComponent {
 											<p className="text-xl text-red-500 font-semibold">$80</p>
 										</div>
 										<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-											<img className="mr-2" src="images/cart.svg" alt="alt" />
+											<img className="mr-2" src="/images/cart.svg" alt="alt" />
 											In cart
 										</div>
 									</div>
 								</div>
 
 								<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
-									<img className="w-full" src="images/choice3.png" alt="alt" />
+									<img className="w-full" src="/images/choice3.png" alt="alt" />
 									<div className="popular__card__text p-5">
 										<p className="text-xl font-semibold">
 											Even more
@@ -146,14 +146,14 @@ class Catalogue extends PureComponent {
 											<p className="text-xl text-red-500 font-semibold">$130</p>
 										</div>
 										<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-											<img className="mr-2" src="images/cart.svg" alt="alt" />
+											<img className="mr-2" src="/images/cart.svg" alt="alt" />
 											In cart
 										</div>
 									</div>
 								</div>
 
 								<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
-									<img className="w-full" src="images/choice4.png" alt="alt" />
+									<img className="w-full" src="/images/choice4.png" alt="alt" />
 									<div className="popular__card__text p-5">
 										<p className="text-xl font-semibold">
 											Even more
@@ -167,7 +167,7 @@ class Catalogue extends PureComponent {
 											<p className="text-xl text-red-500 font-semibold">$130</p>
 										</div>
 										<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-											<img className="mr-2" src="images/cart.svg" alt="alt" />
+											<img className="mr-2" src="/images/cart.svg" alt="alt" />
 											In cart
 										</div>
 									</div>
@@ -175,7 +175,7 @@ class Catalogue extends PureComponent {
 
 							</div>
 
-							<img className="absolute top-1/4 right-[-20px] cursor-pointer" src="images/rightArrowSlide.svg" alt="alt" />
+							<img className="absolute top-1/4 right-[-20px] cursor-pointer" src="/images/rightArrowSlide.svg" alt="alt" />
 
 						</div>
 

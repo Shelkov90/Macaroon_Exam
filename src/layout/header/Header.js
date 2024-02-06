@@ -15,26 +15,26 @@ class Header extends PureComponent {
       <header>
         <div className="header__banner bg-blue-100 row-auto">
           <div className="flex items-center justify-between py-2 max-w-[1400px] mx-auto">
-            <img src="images/leftArrow.svg" alt="alt" />
+            <img src="/images/leftArrow.svg" alt="alt" />
 
             <div className="header__banner__inner items-center flex">
               {/* 		
-						<img className="mr-3" src="images/banner1.png" alt="alt">
+						<img className="mr-3" src="/images/banner1.png" alt="alt">
 						<p className="uppercase text-gray-600">доставка в день заказа</p> */}
 
-              <img className="mr-3" src="images/banner2.png" alt="alt" />
+              <img className="mr-3" src="/images/banner2.png" alt="alt" />
               <p className="uppercase text-gray-600">
                 оптовые поставки от производителя
               </p>
 
-              {/* <img className="mr-3" src="images/banner3.png" alt="alt">
+              {/* <img className="mr-3" src="/images/banner3.png" alt="alt">
 						<p className="uppercase text-gray-600">всегда свежее</p>
 
-						<img className="mr-3" src="images/banner4.png" alt="alt">
+						<img className="mr-3" src="/images/banner4.png" alt="alt">
 						<p className="uppercase text-gray-600">миндальная мука и натуральные ингридиенты</p> */}
             </div>
 
-            <img src="images/rightArrow.svg" alt="alt" />
+            <img src="/images/rightArrow.svg" alt="alt" />
           </div>
         </div>
 
@@ -50,28 +50,28 @@ class Header extends PureComponent {
             
             <div className="flex basis-2/6">
               <div className="flex items-center mr-10">
-                <img className="mr-2" src="images/place.svg" alt="alt" />
+                <img className="mr-2" src="/images/place.svg" alt="alt" />
                 Odesa, UKR
               </div>
               <div className="flex items-center mr-10">
-                <img className="mr-2" src="images/phone.svg" alt="alt" />
+                <img className="mr-2" src="/images/phone.svg" alt="alt" />
                 +380507375982
               </div>
               <div className="flex items-center mr-10">
-                <img className="mr-2" src="images/bag.svg" alt="alt" />
+                <img className="mr-2" src="/images/bag.svg" alt="alt" />
                 Cart
               </div>
             </div>
 
             <div className="flex items-center basis-1/6 justify-end">
               <div className="ml-4">
-                <img className="size-8" src="images/tg.svg" alt="alt" />
+                <img className="size-8" src="/images/tg.svg" alt="alt" />
               </div>
               <div className="ml-4">
-                <img className="size-6" src="images/instagram.png" alt="alt" />
+                <img className="size-6" src="/images/instagram.png" alt="alt" />
               </div>
               <div className="ml-4">
-                <img className="size-6" src="images/fb_logo.png" alt="alt" />
+                <img className="size-6" src="/images/fb_logo.png" alt="alt" />
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ class Header extends PureComponent {
             <div><NavLink to="/Gift">gift Baskets</NavLink></div>
             <div>assemble the set</div>
             <div>
-              <NavLink to='/'><img className="size-32" src="images/logo.svg" alt="logo" /></NavLink>
+              <NavLink to='/'><img className="size-32" src="/images/logo.svg" alt="logo" /></NavLink>
             </div>
             <div>create design</div>
             <div><NavLink to="/ForCompanies">for companies</NavLink></div>

@@ -14,7 +14,7 @@ class Homepage extends PureComponent {
 					<div className="main__banner__image basis-1/2 text-center">
 						<img
 							className="size-96"
-							src="images/main__banner.png"
+							src="/images/main__banner.png"
 							alt="main_banner"
 						/>
 					</div>
@@ -22,7 +22,7 @@ class Homepage extends PureComponent {
 					<div className="content basis-1/4 flex flex-col items-center">
 						<img
 							className="inline mb-4"
-							src="images/main_logo.png"
+							src="/images/main_logo.png"
 							alt="main_banner"
 						/>
 						<p className="text-4xl font-semibold">True love</p>
@@ -35,7 +35,7 @@ class Homepage extends PureComponent {
 
 				<div className="main__services grid grid-cols-2 gap-3 mb-24">
 					<div className="main__services__card bg-gradient-to-br from-orange-100 from-50% to-orange-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="images/card1.svg" alt="goods" />
+						<img className="mb-5" src="/images/card1.svg" alt="goods" />
 						<p className="flex text-xl font-semibold">
 							Ready-made sets
 							<svg
@@ -60,7 +60,7 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__services__card bg-gradient-to-bl from-pink-100 from-50% to-pink-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="images/card2.svg" alt="goods" />
+						<img className="mb-5" src="/images/card2.svg" alt="goods" />
 						<p className="flex text-xl font-semibold">
 							Build your set
 							<svg
@@ -84,7 +84,7 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__services__card bg-gradient-to-tr from-green-100 from-50% to-green-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="images/card3.svg" alt="goods" />
+						<img className="mb-5" src="/images/card3.svg" alt="goods" />
 						<p className="flex text-xl font-semibold">
 							Custom printed set
 							<svg
@@ -108,7 +108,7 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__services__card bg-gradient-to-tl from-orange-100 from-50% to-orange-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="images/card4.svg" alt="goods" />
+						<img className="mb-5" src="/images/card4.svg" alt="goods" />
 						<p className="flex text-xl font-semibold">
 							Wedding proposals
 							<svg
@@ -133,7 +133,7 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__services__card bg-gradient-to-br from-teal-100 from-50% to-teal-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="images/card5.svg" alt="goods" />
+						<img className="mb-5" src="/images/card5.svg" alt="goods" />
 						<p className="flex text-xl font-semibold">
 							Corporate gifts
 							<svg
@@ -158,7 +158,7 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__services__card bg-gradient-to-bl from-purple-100 from-50% to-purple-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="images/card6.svg" alt="goods" />
+						<img className="mb-5" src="/images/card6.svg" alt="goods" />
 						<p className="flex text-xl font-semibold">
 							Wholesale supply
 							<svg
@@ -191,7 +191,7 @@ class Homepage extends PureComponent {
 							<p className="main__promotions__card--label absolute bg-blue-300 px-2 text-white top-4">
 								FREE DELIVERY
 							</p>
-							<img src="images/promotions1.png" alt="promotions" />
+							<img src="/images/promotions1.png" alt="promotions" />
 							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-blue-300 px-1 text-white">
 								Free delivery in Odesa.
 							</p>
@@ -201,7 +201,7 @@ class Homepage extends PureComponent {
 							<p className="main__promotions__card--label absolute bg-red-500 px-2 text-white top-4">
 								NEW
 							</p>
-							<img src="images/promotions2.png" alt="promotions" />
+							<img src="/images/promotions2.png" alt="promotions" />
 							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-red-500 px-1 text-white">
 								Chocolate potato cake based on sponge cake!
 							</p>
@@ -211,7 +211,7 @@ class Homepage extends PureComponent {
 							<p className="main__promotions__card--label absolute bg-red-500 px-2 text-white top-4">
 								NEW
 							</p>
-							<img src="images/promotions3.png" alt="promotions" />
+							<img src="/images/promotions3.png" alt="promotions" />
 							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-red-500 px-1 text-white">
 								Delicious sweets based on macaroons and cream
 							</p>
@@ -221,7 +221,7 @@ class Homepage extends PureComponent {
 							<p className="main__promotions__card--label absolute bg-red-500 px-2 text-white top-4">
 								NEW
 							</p>
-							<img src="images/promotions4.png" alt="promotions" />
+							<img src="/images/promotions4.png" alt="promotions" />
 							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-red-500 px-1 text-white">
 								Caramel on a stick made from natural ingredients
 							</p>
@@ -242,37 +242,37 @@ class Homepage extends PureComponent {
 
 					<div className="main__holidays__timeline flex justify-between items-center bg-no-repeat bg-center bg-contain">
 						<div className="timeline__holiday relative">
-							<img className="size-28" src="images/holidays1.svg" alt="alt" />
+							<img className="size-28" src="/images/holidays1.svg" alt="alt" />
 							<p>Soon</p>
 							<p>Best Friend's Birthday</p>
 						</div>
 
 						<div className="timeline__holiday relative">
-							<img className="size-28" src="images/holidays3.svg" alt="alt" />
+							<img className="size-28" src="/images/holidays3.svg" alt="alt" />
 							<p>Soon</p>
 							<p>Best Friend's Birthday</p>
 						</div>
 
 						<div className="timeline__holiday relative">
-							<img className="size-28" src="images/holidays4.svg" alt="alt" />
+							<img className="size-28" src="/images/holidays4.svg" alt="alt" />
 							<p>Soon</p>
 							<p>Best Friend's Birthday</p>
 						</div>
 
 						<div className="timeline__holiday relative">
-							<img className="size-28" src="images/holidays5.svg" alt="alt" />
+							<img className="size-28" src="/images/holidays5.svg" alt="alt" />
 							<p>Soon</p>
 							<p>Best Friend's Birthday</p>
 						</div>
 
 						<div className="timeline__holiday relative">
-							<img className="size-28" src="images/holidays6.svg" alt="alt" />
+							<img className="size-28" src="/images/holidays6.svg" alt="alt" />
 							<p>Soon</p>
 							<p>Best Friend's Birthday</p>
 						</div>
 
 						<div className="timeline__holiday relative">
-							<img className="size-28" src="images/holidays7.svg" alt="alt" />
+							<img className="size-28" src="/images/holidays7.svg" alt="alt" />
 							<p>Soon</p>
 							<p>Best Friend's Birthday</p>
 						</div>
@@ -286,7 +286,7 @@ class Homepage extends PureComponent {
 						<div className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 							<img
 								className="w-full"
-								src="images/Popular1.png"
+								src="/images/Popular1.png"
 								alt="popularImage"
 							/>
 							<div className="popular__card__text p-5">
@@ -301,7 +301,7 @@ class Homepage extends PureComponent {
 									<p className="text-xl text-red-500 font-semibold">$200</p>
 								</div>
 								<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-									<img className="mr-2" src="images/cart.svg" alt="alt" />
+									<img className="mr-2" src="/images/cart.svg" alt="alt" />
 									In cart
 								</div>
 							</div>
@@ -310,7 +310,7 @@ class Homepage extends PureComponent {
 						<div className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 							<img
 								className="w-full"
-								src="images/Popular2.png"
+								src="/images/Popular2.png"
 								alt="popularImage"
 							/>
 							<div className="popular__card__text p-5">
@@ -325,7 +325,7 @@ class Homepage extends PureComponent {
 									<p className="text-xl text-red-500 font-semibold">$60</p>
 								</div>
 								<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-									<img className="mr-2" src="images/cart.svg" alt="alt" />
+									<img className="mr-2" src="/images/cart.svg" alt="alt" />
 									In cart
 								</div>
 							</div>
@@ -334,7 +334,7 @@ class Homepage extends PureComponent {
 						<div className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 							<img
 								className="w-full"
-								src="images/Popular3.png"
+								src="/images/Popular3.png"
 								alt="popularImage"
 							/>
 							<div className="popular__card__text p-5">
@@ -348,7 +348,7 @@ class Homepage extends PureComponent {
 									<p className="text-xl text-red-500 font-semibold">$240</p>
 								</div>
 								<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-									<img className="mr-2" src="images/cart.svg" alt="alt" />
+									<img className="mr-2" src="/images/cart.svg" alt="alt" />
 									In cart
 								</div>
 							</div>
@@ -357,7 +357,7 @@ class Homepage extends PureComponent {
 						<div className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 							<img
 								className="w-full"
-								src="images/Popular4.png"
+								src="/images/Popular4.png"
 								alt="popularImage"
 							/>
 							<div className="popular__card__text p-5">
@@ -372,7 +372,7 @@ class Homepage extends PureComponent {
 									<p className="text-xl text-red-500 font-semibold">$70</p>
 								</div>
 								<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-									<img className="mr-2" src="images/cart.svg" alt="alt" />
+									<img className="mr-2" src="/images/cart.svg" alt="alt" />
 									In cart
 								</div>
 							</div>
@@ -381,7 +381,7 @@ class Homepage extends PureComponent {
 						<div className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 							<img
 								className="w-full"
-								src="images/Popular5.png"
+								src="/images/Popular5.png"
 								alt="popularImage"
 							/>
 							<div className="popular__card__text p-5">
@@ -396,7 +396,7 @@ class Homepage extends PureComponent {
 									<p className="text-xl text-red-500 font-semibold">$110</p>
 								</div>
 								<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-									<img className="mr-2" src="images/cart.svg" alt="alt" />
+									<img className="mr-2" src="/images/cart.svg" alt="alt" />
 									In cart
 								</div>
 							</div>
@@ -405,7 +405,7 @@ class Homepage extends PureComponent {
 						<div className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 							<img
 								className="w-full"
-								src="images/Popular3.png"
+								src="/images/Popular3.png"
 								alt="popularImage"
 							/>
 							<div className="popular__card__text p-5">
@@ -420,7 +420,7 @@ class Homepage extends PureComponent {
 									<p className="text-xl text-red-500 font-semibold">$190</p>
 								</div>
 								<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-									<img className="mr-2" src="images/cart.svg" alt="alt" />
+									<img className="mr-2" src="/images/cart.svg" alt="alt" />
 									In cart
 								</div>
 							</div>
@@ -439,7 +439,7 @@ class Homepage extends PureComponent {
 
 					<div className="main__news__articles grid grid-cols-3 justify-items-center gap-y-5 gap-x-2 mb-8">
 						<div className="main__news__article bg-white max-w-[370px]">
-							<img src="images/News1.png" alt="newsImage" />
+							<img src="/images/News1.png" alt="newsImage" />
 							<div className="news__article__inner p-5">
 								<p className="news__article__date mb-2 text-sm text-gray-400">
 									25/02/2023
@@ -455,7 +455,7 @@ class Homepage extends PureComponent {
 						</div>
 
 						<div className="main__news__article bg-white max-w-[370px]">
-							<img src="images/News2.png" alt="newsImage" />
+							<img src="/images/News2.png" alt="newsImage" />
 							<div className="news__article__inner p-5">
 								<p className="news__article__date mb-2 text-sm text-gray-400">
 									17/02/2023
@@ -471,7 +471,7 @@ class Homepage extends PureComponent {
 						</div>
 
 						<div className="main__news__article bg-white max-w-[370px]">
-							<img src="images/News3.png" alt="newsImage" />
+							<img src="/images/News3.png" alt="newsImage" />
 							<div className="news__article__inner p-5">
 								<p className="news__article__date mb-2 text-sm text-gray-400">
 									11/02/2023
@@ -502,7 +502,7 @@ class Homepage extends PureComponent {
 
 					<div className="main__other__articles grid grid-cols-4 justify-items-center gap-y-5 gap-x-4">
 						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="images/Other1.png" alt="otherImage" />
+							<img className="mb-4" src="/images/Other1.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">The best ingredients</p>
 								<p className="text-sm text-gray-400">
@@ -511,7 +511,7 @@ class Homepage extends PureComponent {
 							</div>
 						</div>
 						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="images/Other2.png" alt="otherImage" />
+							<img className="mb-4" src="/images/Other2.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">Package</p>
 								<p className="text-sm text-gray-400">
@@ -520,7 +520,7 @@ class Homepage extends PureComponent {
 							</div>
 						</div>
 						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="images/Other3.png" alt="otherImage" />
+							<img className="mb-4" src="/images/Other3.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">
 									Receipt on the day of order
@@ -531,7 +531,7 @@ class Homepage extends PureComponent {
 							</div>
 						</div>
 						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="images/Other4.png" alt="otherImage" />
+							<img className="mb-4" src="/images/Other4.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">Anonymous delivery</p>
 								<p className="text-sm text-gray-400">

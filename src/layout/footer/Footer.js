@@ -19,17 +19,17 @@ class Footer extends PureComponent {
 						<div className="footer__about__items flex justify-end gap-6 mb-6">
 
 							<div className="footer__about__item basis-1/4">
-								<img className="size-12 mb-2 mx-auto" src="images/footer1.svg" alt="footer"/>
+								<img className="size-12 mb-2 mx-auto" src="/images/footer1.svg" alt="footer"/>
 								<p className="text-sm text-gray-600 text-balance text-center">Cooking by hand and with love</p>
 							</div>
 
 							<div className="footer__about__item basis-1/4">
-								<img className="size-12 mb-2 mx-auto" src="images/footer2.svg" alt="footer"/>
+								<img className="size-12 mb-2 mx-auto" src="/images/footer2.svg" alt="footer"/>
 								<p className="text-sm text-gray-600 text-balance text-center">We will deliver on the day of order</p>
 							</div>
 
 							<div className="footer__about__item basis-1/4">
-								<img className="size-12 mb-2 mx-auto" src="images/footer3.svg" alt="footer"/>
+								<img className="size-12 mb-2 mx-auto" src="/images/footer3.svg" alt="footer"/>
 								<p className="text-sm text-gray-600 text-balance text-center">100% almond flour and natural ingredients</p>
 							</div>
 
@@ -75,9 +75,9 @@ class Footer extends PureComponent {
 						</div>
 						
 						<div className="social-links flex flex-end self-end">
-							<a className="ml-3" href="/"><img src="images/inst.svg" alt="alt"/></a>
-							<a className="ml-3" href="/"><img src="images/fb.svg" alt="alt"/></a>
-							<a className="ml-3" href="/"><img src="images/fb.svg" alt="alt"/></a>
+							<a className="ml-3" href="/"><img src="/images/inst.svg" alt="alt"/></a>
+							<a className="ml-3" href="/"><img src="/images/fb.svg" alt="alt"/></a>
+							<a className="ml-3" href="/"><img src="/images/fb.svg" alt="alt"/></a>
 						</div>
 
 					</div>
