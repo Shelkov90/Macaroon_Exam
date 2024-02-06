@@ -12,13 +12,13 @@ class Contacts extends PureComponent {
 	render() {
 		return (
 			<>
-				<div className="breadcrumbs__inner flex justify-center mt-10">
+				<div className="breadcrumbs__inner flex justify-center mt-10 mb-12">
 					<div className="breadcrumbs__item">Homepage</div>
 					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 					<div className="breadcrumbs__item text-blue-400">Contacts</div>
 				</div>
 
-				<div className='flex justify-center mb-12 mt-10'>
+				<div className='flex justify-center mt-10 mb-12'>
 					<div className='contacts_img w-1/3 md:w-auto md:max-w-xs mt-6 '>
 						<img src="images/ContactMacaroon.png" alt="alt" />
 					</div>
@@ -35,7 +35,6 @@ class Contacts extends PureComponent {
 						<p>(093) 841-86-29 for complaints and suggestions</p>
 					</div>
 				</div>
-
 			</>
 		)
 	}
