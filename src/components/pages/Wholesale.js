@@ -122,55 +122,121 @@ class Wholesale extends PureComponent {
 					</div>
 				</div>
 
-				<div className='wholesale_recommendations'>
+				<div className='wholesale_recommendations mb-12'>
 
 					<h2 className='text-3xl text-center font-semibold mt-10 mb-12'>We are recommended</h2>
 
-					<div className='wholesale_reviews flex justify-between'>
+					<div className='wholesale_reviews flex justify-between h-auto mb-14'>
 
-						<div>
+						<div className='w-1/3'>
 
-							<div className='review bg-white p-4'>
-
-								<h4>Very good pies and straws, I recommend</h4>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<div className='review bg-white  rounded-md border border-2 '>
+								<div className='p-4'>
+									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
+									<p className='text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+								</div>
 								<hr />
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-								<img src="" alt="alt" />
-
+								<div className='p-4 text-right'>
+									<div className="flex items-center justify-end">
+										<div>
+											<p className='text-sm font-semibold'>Will Smith</p>
+											<p className='text-sm font-semibold'>WB Production</p>
+										</div>
+										<img src="images/review.png" alt="review" className="ml-4" />
+									</div>
+								</div>
 							</div>
 
-							<div className='review bg-white p-4 mt-4 mb-4'>
-
-								<h4>Very good pies and straws, I recommend</h4>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<div className='review bg-white mt-4 rounded-md border border-2'>
+								<div className='p-4'>
+									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
+									<p className='text-base'>While only part of the overall picture,the rapidly developing third world countries, regardless of their level, should be listed as key contenders.</p>
+								</div>
 								<hr />
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-								<img src="" alt="alt" />
-
+								<div className='p-4 text-right'>
+									<div className="flex items-center justify-end">
+										<div>
+											<p className='text-sm font-semibold'>J.K.Rowling</p>
+											<p className='text-sm font-semibold'>HP Production</p>
+										</div>
+										<img src="images/review.png" alt="review" className="ml-4" />
+									</div>
+								</div>
 							</div>
 
 						</div>
 
-						<div className='review bg-white p-4 ml-4 mb-4'>
-							<h4>Very good pies and straws, I recommend</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<hr />
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<img src="" alt="alt" />
+						<div className='w-1/3'>
+							<div className='review bg-white ml-4 rounded-md border border-2'>
+								<div className='p-4'>
+									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
+									<p className='text-base'>Banal but irrefutable conclusions, as well as representatives of modern social reserves, are associatively distributed across industries. The opposite point of view implies that many famous personalities may be made public.</p>
+								</div>
+								<hr />
+								<div className='p-4 text-right'>
+									<div className="flex items-center justify-end ">
+										<div>
+											<p className='text-sm font-semibold'>Homer Simpson</p>
+											<p className='text-sm font-semibold'>Spriengfield Corp.</p>
+										</div>
+										<img src="images/review.png" alt="review" className="ml-4" />
+									</div>
+								</div>
+							</div>
 						</div>
 
-						<div className='review bg-white p-4 ml-4 mb-4'>
-							<h4>Very good pies and straws, I recommend</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<hr />
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<img src="" alt="alt" />
+						<div className='w-1/3'>
+							<div className='review bg-white ml-4 rounded-md border border-2'>
+								<div className='p-4'>
+									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
+									<p className='text-base'>Key features of the project structure are ambiguous and will be cited as contenders for the role of key factors. And also clear signs of the victory of institutionalization will be blocked within their own rational limitations. Elements of the political process are functionally separated into independent elements. In our quest to improve the user experience, we miss that representatives of modern social reserves are made public.</p>
+								</div>
+								<hr />
+								<div className='p-4 text-right'>
+									<div className="flex items-center justify-end ">
+										<div>
+											<p className='text-sm font-semibold'>Bart Simpson</p>
+											<p className='text-sm font-semibold'>Spriengfield Corp.</p>
+										</div>
+										<img src="images/review.png" alt="review" className="ml-4" />
+									</div>
+								</div>
+							</div>
 						</div>
+
 					</div>
 
+					<div className='wholesale_brands flex justify-between mb-12'>
+
+						<div>
+							<img src="images/logoreview1.png" alt="" />
+						</div>
+
+						<div>
+							<img src="images/logoreview2.png" alt="" />
+						</div>
+
+						<div>
+							<img src="images/logoreview3.png" alt="" />
+						</div>
+
+						<div>
+							<img src="images/logoreview4.png" alt="" />
+						</div>
+
+						<div>
+							<img src="images/logoreview5.png" alt="" />
+						</div>
+
+						<div>
+							<img src="images/logoreview6.png" alt="" />
+						</div>
+
+					</div>
 
 				</div>
+
+
 
 			</>
 		)
