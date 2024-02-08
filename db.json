@@ -215,5 +215,67 @@
                 }
             ]
         }
+    ],
+    "banners": [
+        {
+            "image": "banner1.png",
+            "text": "same day delivery"
+        },
+        {
+            "image": "banner2.png",
+            "text": "wholesale supplies from the manufacturer"
+        },
+        {
+            "image": "banner3.png",
+            "text": "always fresh"
+        },
+        {
+            "image": "banner4.png",
+            "text": "almond flour and natural ingredients"
+        }
+    ],
+    "promotions": [
+        {
+            "image": "promotions1.png",
+            "text": "Free delivery in Odesa.",
+            "status": "free delivery"
+        },
+        {
+            "image": "promotions2.png",
+            "text": "Chocolate potato cake based on sponge cake!",
+            "status": "new"
+        },
+        {
+            "image": "promotions3.png",
+            "text": "Delicious sweets based on macaroons and cream",
+            "status": "new"
+        },
+        {
+            "image": "promotions4.png",
+            "text": "Caramel on a stick made from natural ingredients",
+            "status": "new"
+        }
+    ],
+    "otherBlockInfo": [
+        {
+            "image": "Other1.png",
+            "header": "The best ingredients",
+            "text": "Something about super quality, the best chefs, freshness, etc."
+        },
+        {
+            "image": "Other2.png",
+            "header": "Package",
+            "text": "Something about super boxes and bows and blah blah blah"
+        },
+        {
+            "image": "Other3.png",
+            "header": "Receipt on the day of order",
+            "text": "Same day of order delivery by courier or pickup"
+        },
+        {
+            "image": "Other4.png",
+            "header": "Anonymous delivery",
+            "text": "We can present your order as an anonymous gift"
+        }
     ]
 }
