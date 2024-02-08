@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
 class Homepage extends PureComponent {
 	constructor(props) {
@@ -10,58 +11,62 @@ class Homepage extends PureComponent {
 	render() {
 		return (
 			<div>
-				<div className="main__banner flex justify-center items-center">
-					<div className="main__banner__image basis-1/2 text-center">
-						<img
-							className="size-96"
-							src="/images/main__banner.png"
-							alt="main_banner"
-						/>
-					</div>
+				<div className="main__banner flex flex-col md:flex-row-reverse justify-evenly items-center">
 
-					<div className="content basis-1/4 flex flex-col items-center">
+					<div className="flex flex-col basis-full md:basis-1/4 items-center">
 						<img
-							className="inline mb-4"
+							className="inline mt-16 mb-10 md:mb-4 md:mt-0"
 							src="/images/main_logo.png"
 							alt="main_banner"
 						/>
-						<p className="text-4xl font-semibold">True love</p>
-						<p className="text-center">
-							Macarons and other desserts made <br />
+						<p className="text-2xl md:text-4xl font-semibold">True love</p>
+						<p className="text-sm md:text-xl text-center text-balance">
+							Macarons and other desserts made
 							with natural ingredients and made with love
 						</p>
 					</div>
+
+					<div className="main__banner__image my-10 md:my-0 basis-full md:basis-1/2 text-center">
+						<img
+							src="/images/MainBanner_sm.png"
+							alt="main_banner"
+						/>
+					</div>
+
 				</div>
 
-				<div className="main__services grid grid-cols-2 gap-3 mb-24">
-					<div className="main__services__card bg-gradient-to-br from-orange-100 from-50% to-orange-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="/images/card1.svg" alt="goods" />
-						<p className="flex text-xl font-semibold">
-							Ready-made sets
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={1.5}
-								stroke="currentColor"
-								className="ml-3 w-7 h-7"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-								/>
-							</svg>
-						</p>
-						<p className="text-balance text-center">
+				<div className="main__services grid md:grid-cols-2 md:gap-3 mb-24">
+
+					<div className="main__services__card flex flex-col items-stretch md:items-center border-b-2 border-gray-300 md:border-none md:bg-gradient-to-br from-orange-100 from-50% to-orange-200 to-50% py-4 md:p-9">
+						<Link to="/ReadySets">
+							<img className="hidden md:block mb-5 mx-auto" src="/images/card1.svg" alt="goods" />
+							<p className="flex justify-between text-xl font-semibold">
+								Ready-made sets
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth={1.5}
+									stroke="currentColor"
+									className="ml-3 w-7 h-7"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+									/>
+								</svg>
+							</p>
+						</Link>
+						<p className="hidden md:block text-balance text-center">
 							Ready-made sets at a discount. You can choose a set for the
 							appropriate occasion.
 						</p>
 					</div>
 
-					<div className="main__services__card bg-gradient-to-bl from-pink-100 from-50% to-pink-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="/images/card2.svg" alt="goods" />
-						<p className="flex text-xl font-semibold">
+					<div className="main__services__card flex flex-col items-stretch md:items-center border-b-2 border-gray-300 md:border-none md:bg-gradient-to-bl from-pink-100 from-50% to-pink-200 to-50% py-4 md:p-9">
+						<img className="hidden md:block mb-5 mx-auto" src="/images/card2.svg" alt="goods" />
+						<p className="flex justify-between text-xl font-semibold">
 							Build your set
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -78,14 +83,14 @@ class Homepage extends PureComponent {
 								/>
 							</svg>
 						</p>
-						<p className="text-balance text-center">
+						<p className="hidden md:block text-balance text-center">
 							Choose the quantity of macarons and choose the flavors
 						</p>
 					</div>
 
-					<div className="main__services__card bg-gradient-to-tr from-green-100 from-50% to-green-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="/images/card3.svg" alt="goods" />
-						<p className="flex text-xl font-semibold">
+					<div className="main__services__card flex flex-col items-stretch md:items-center border-b-2 border-gray-300 md:border-none md:bg-gradient-to-tr from-green-100 from-50% to-green-200 to-50% py-4 md:p-9">
+						<img className="hidden md:block mb-5 mx-auto" src="/images/card3.svg" alt="goods" />
+						<p className="flex justify-between text-xl font-semibold">
 							Custom printed set
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -102,14 +107,14 @@ class Homepage extends PureComponent {
 								/>
 							</svg>
 						</p>
-						<p className="text-balance text-center">
+						<p className="hidden md:block text-balance text-center">
 							Collect a set of macarons with a unique design.
 						</p>
 					</div>
 
-					<div className="main__services__card bg-gradient-to-tl from-orange-100 from-50% to-orange-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="/images/card4.svg" alt="goods" />
-						<p className="flex text-xl font-semibold">
+					<div className="main__services__card flex flex-col items-stretch md:items-center border-b-2 border-gray-300 md:border-none md:bg-gradient-to-tl from-orange-100 from-50% to-orange-200 to-50% py-4 md:p-9">
+						<img className="hidden md:block mb-5 mx-auto" src="/images/card4.svg" alt="goods" />
+						<p className="flex justify-between text-xl font-semibold">
 							Wedding proposals
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -126,15 +131,15 @@ class Homepage extends PureComponent {
 								/>
 							</svg>
 						</p>
-						<p className="text-balance text-center">
+						<p className="hidden md:block text-balance text-center">
 							Delicate macaroons with different flavors to decorate your wedding
 							celebration
 						</p>
 					</div>
 
-					<div className="main__services__card bg-gradient-to-br from-teal-100 from-50% to-teal-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="/images/card5.svg" alt="goods" />
-						<p className="flex text-xl font-semibold">
+					<div className="main__services__card flex flex-col items-stretch md:items-center border-b-2 border-gray-300 md:border-none md:bg-gradient-to-br from-teal-100 from-50% to-teal-200 to-50% py-4 md:p-9">
+						<img className="hidden md:block mb-5 mx-auto" src="/images/card5.svg" alt="goods" />
+						<p className="flex justify-between text-xl font-semibold">
 							Corporate gifts
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -151,15 +156,15 @@ class Homepage extends PureComponent {
 								/>
 							</svg>
 						</p>
-						<p className="text-balance text-center">
+						<p className="hidden md:block text-balance text-center">
 							From $3 per piece. With a unique design. A nice compliment for
 							colleagues and partners
 						</p>
 					</div>
 
-					<div className="main__services__card bg-gradient-to-bl from-purple-100 from-50% to-purple-200 to-50% p-9 flex flex-col items-center">
-						<img className="mb-5" src="/images/card6.svg" alt="goods" />
-						<p className="flex text-xl font-semibold">
+					<div className="main__services__card flex flex-col items-stretch md:items-center border-b-2 border-gray-300 md:border-none md:bg-gradient-to-bl from-purple-100 from-50% to-purple-200 to-50% py-4 md:p-9">
+						<img className="hidden md:block mb-5 mx-auto" src="/images/card6.svg" alt="goods" />
+						<p className="flex justify-between text-xl font-semibold">
 							Wholesale supply
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +181,7 @@ class Homepage extends PureComponent {
 								/>
 							</svg>
 						</p>
-						<p className="text-balance text-center">
+						<p className="hidden md:block text-balance text-center">
 							Offer for coffee shops, cafes, hotels, etc. Look at the terms of
 							cooperation and reviews.
 						</p>
@@ -186,7 +191,8 @@ class Homepage extends PureComponent {
 				<div className="main__promotions mb-24">
 					<p className="text-4xl font-semibold text-center mb-12">Promotions</p>
 
-					<div className="main__promotions__cards grid grid-cols-4 gap-7 justify-items-center mb-5">
+					<div className="main__promotions__cards grid grid-cols-2 md:grid-cols-4 gap-7 justify-items-center mb-5">
+						
 						<div className="main__promotions__card max-w-[270px] relative">
 							<p className="main__promotions__card--label absolute bg-blue-300 px-2 text-white top-4">
 								FREE DELIVERY
@@ -226,12 +232,13 @@ class Homepage extends PureComponent {
 								Caramel on a stick made from natural ingredients
 							</p>
 						</div>
+
 					</div>
 
 					<div className="main__promotions__cards--sliderDots flex gap-3 justify-end">
-						<div className="bg-white border border-red-500 w-3 h-3"></div>
-						<div className="bg-white border border-red-500 w-3 h-3"></div>
-						<div className="bg-white border border-red-500 w-3 h-3"></div>
+						<div className="slider__dot--active bg-red-500 border border-red-500 w-3 h-3"></div>
+						<div className="slider__dot--deactive bg-white border border-red-500 w-3 h-3"></div>
+						<div className="slider__dot--deactive bg-white border border-red-500 w-3 h-3"></div>
 					</div>
 				</div>
 
@@ -240,7 +247,10 @@ class Homepage extends PureComponent {
 						Upcoming holidays
 					</p>
 
-					<div className="main__holidays__timeline flex justify-between items-center bg-no-repeat bg-center bg-contain">
+					<div className="main__holidays__timeline flex justify-between items-center relative">
+
+						<div className="holidays__dotted__line absolute w-5/6 top-1/3 left-10 border-t-8 border-dotted border-gray-300"></div>
+
 						<div className="timeline__holiday relative">
 							<img className="size-28" src="/images/holidays1.svg" alt="alt" />
 							<p>Soon</p>
@@ -435,6 +445,7 @@ class Homepage extends PureComponent {
 				</div>
 
 				<div className="main__news mb-24">
+
 					<p className="text-4xl font-semibold text-center mb-12">News</p>
 
 					<div className="main__news__articles grid grid-cols-3 justify-items-center gap-y-5 gap-x-2 mb-8">
@@ -489,10 +500,13 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__news__more flex justify-center">
-						<div className="more__button border border-blue-400 py-3 px-8 rounded-md">
-							<p>All news</p>
-						</div>
+						<Link to="/Newspage">
+							<div className="more__button border border-blue-400 hover:bg-blue-400 hover:text-white py-3 px-8 rounded-md">
+								<p>All news</p>
+							</div>
+						</Link>
 					</div>
+					
 				</div>
 
 				<div className="main__other mb-24">
@@ -500,7 +514,8 @@ class Homepage extends PureComponent {
 						We've taken care of everything
 					</p>
 
-					<div className="main__other__articles grid grid-cols-4 justify-items-center gap-y-5 gap-x-4">
+					<div className="main__other__articles text-balance grid grid-cols-4 justify-items-center gap-y-5 gap-x-4">
+						
 						<div className="main__other__article max-w-[270px]">
 							<img className="mb-4" src="/images/Other1.png" alt="otherImage" />
 							<div className="main__other__text py-5">
@@ -510,6 +525,7 @@ class Homepage extends PureComponent {
 								</p>
 							</div>
 						</div>
+
 						<div className="main__other__article max-w-[270px]">
 							<img className="mb-4" src="/images/Other2.png" alt="otherImage" />
 							<div className="main__other__text py-5">
@@ -519,6 +535,7 @@ class Homepage extends PureComponent {
 								</p>
 							</div>
 						</div>
+
 						<div className="main__other__article max-w-[270px]">
 							<img className="mb-4" src="/images/Other3.png" alt="otherImage" />
 							<div className="main__other__text py-5">
@@ -530,6 +547,7 @@ class Homepage extends PureComponent {
 								</p>
 							</div>
 						</div>
+
 						<div className="main__other__article max-w-[270px]">
 							<img className="mb-4" src="/images/Other4.png" alt="otherImage" />
 							<div className="main__other__text py-5">
@@ -539,6 +557,7 @@ class Homepage extends PureComponent {
 								</p>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>

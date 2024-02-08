@@ -130,7 +130,7 @@ class Wholesale extends PureComponent {
 
 						<div className='w-1/3'>
 
-							<div className='review bg-white  rounded-md border border-2 '>
+							<div className='review bg-white  rounded-md border-2 '>
 								<div className='p-4'>
 									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
 									<p className='text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -147,7 +147,7 @@ class Wholesale extends PureComponent {
 								</div>
 							</div>
 
-							<div className='review bg-white mt-4 rounded-md border border-2'>
+							<div className='review bg-white mt-4 rounded-md border-2'>
 								<div className='p-4'>
 									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
 									<p className='text-base'>While only part of the overall picture,the rapidly developing third world countries, regardless of their level, should be listed as key contenders.</p>
@@ -167,7 +167,7 @@ class Wholesale extends PureComponent {
 						</div>
 
 						<div className='w-1/3'>
-							<div className='review bg-white ml-4 rounded-md border border-2'>
+							<div className='review bg-white ml-4 rounded-md border-2'>
 								<div className='p-4'>
 									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
 									<p className='text-base'>Banal but irrefutable conclusions, as well as representatives of modern social reserves, are associatively distributed across industries. The opposite point of view implies that many famous personalities may be made public.</p>
@@ -186,7 +186,7 @@ class Wholesale extends PureComponent {
 						</div>
 
 						<div className='w-1/3'>
-							<div className='review bg-white ml-4 rounded-md border border-2'>
+							<div className='review bg-white ml-4 rounded-md border-2'>
 								<div className='p-4'>
 									<h4 className='text-lg font-semibold mb-1'>Very good pies and straws, I recommend</h4>
 									<p className='text-base'>Key features of the project structure are ambiguous and will be cited as contenders for the role of key factors. And also clear signs of the victory of institutionalization will be blocked within their own rational limitations. Elements of the political process are functionally separated into independent elements. In our quest to improve the user experience, we miss that representatives of modern social reserves are made public.</p>

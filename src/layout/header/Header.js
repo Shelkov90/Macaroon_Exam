@@ -14,7 +14,7 @@ class Header extends PureComponent {
     return (
       <header>
         <div className="header__banner bg-blue-100 row-auto">
-          <div className="flex items-center justify-between py-2 max-w-[1400px] mx-auto">
+          <div className="flex items-center justify-between py-2 max-w-[1170px] mx-auto px-2">
             <img src="/images/leftArrow.svg" alt="alt" />
 
             <div className="header__banner__inner items-center flex">
@@ -39,11 +39,11 @@ class Header extends PureComponent {
         </div>
 
         <div className="header__navigation bg-orange-50">
-          <div className="flex justify-between text-sm max-w-[1400px] mx-auto py-3 px-2">
+          <div className="flex justify-between items-center text-sm max-w-[1170px] mx-auto py-3 px-2">
             
               <nav className="flex basis-3/6">
                 <div className="mr-5"><NavLink to="/Guarantee">Fresh guarantee</NavLink></div>
-                <div className="mr-5"><NavLink to="/Delivery">Delivery and payments</NavLink></div>
+                <div className="mr-5"><NavLink to="/Delivery">Delivery & payments</NavLink></div>
                 <div className="mr-5"><NavLink to="/Wholesale">Wholesale supply</NavLink></div>
                 <div className="mr-5"><NavLink to="/Contacts">Contacts</NavLink></div>
               </nav>
@@ -77,15 +77,15 @@ class Header extends PureComponent {
           </div>
         </div>
 
-        <div className="header__menu bg-white py-3">
-          <nav className="header__menu__inner max-w-[1400px] mx-auto flex justify-between items-center uppercase">
+        <div className="header__menu bg-white py-3 px-2">
+          <nav className="header__menu__inner max-w-[1170px] mx-auto flex justify-between items-center uppercase">
             <div><NavLink to="/Sweet">sweet days</NavLink></div>
             <div><NavLink to="/Gift">gift Baskets</NavLink></div>
-            <div>assemble the set</div>
+            <div><NavLink to="/">assemble the set</NavLink></div>
             <div>
               <NavLink to='/'><img className="size-32" src="/images/logo.svg" alt="logo" /></NavLink>
             </div>
-            <div>create design</div>
+            <div><NavLink to="/">create design</NavLink></div>
             <div><NavLink to="/ForCompanies">for companies</NavLink></div>
             <div><NavLink to="/Catalogue">all catalogue</NavLink></div>
           </nav>

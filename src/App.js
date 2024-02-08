@@ -10,9 +10,11 @@ import Sweet from './components/pages/Sweet';
 import Catalogue from './components/pages/Catalogue';
 import ForCompanies from './components/pages/ForCompanies';
 import NotFound from './components/pages/NotFound';
-import Homepage from './components/pages/homepage/Homepage'
-
+import Homepage from './components/pages/Homepage/Homepage';
+import Newspage from './components/pages/Newspage/Newspage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ReadySets from './components/pages/ReadySetsPage/ReadySets';
+
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
       {
         path: '/ForCompanies',
         element: <ForCompanies />
+      },
+      {
+        path: '/Newspage',
+        element: <Newspage />
+      },
+      {
+        path: '/ReadySets',
+        element: <ReadySets />
       },
       {
         path: '*', 

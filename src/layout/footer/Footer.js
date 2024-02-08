@@ -12,7 +12,7 @@ class Footer extends PureComponent {
 	render() {
 		return (
 			<footer className="bg-gray-200 p-16">
-				<div className="footer flex justify-between w-5/6 mx-auto xl:max-w-max">
+				<div className="footer flex justify-between mx-auto max-w-[1170px]">
 
 					<div className="footer__about basis-2/6">
 
