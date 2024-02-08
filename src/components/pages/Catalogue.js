@@ -32,7 +32,7 @@ class Catalogue extends PureComponent {
 
 				<div className="main__catalogue__banner">
 
-					<div className="catalogue__banner__inner flex justify-center items-center md:pl-96 sm:pl-52 mb-10 bg-no-repeat bg-center bg-contain min-h-[385px]">
+					<div className="catalogue__banner__inner flex justify-center items-center md:pl-96 sm:pl-52 mb-10 bg-no-repeat bg-center bg-contain min-h-[385px]" style={{backgroundImage: "url('../images/catalogueBG.png')"}}>
 
 						<div className="catalogue__banner__info">
 
