@@ -1,0 +1,219 @@
+{
+    "products": [
+        {
+            "sets": [
+                {
+                    "name": "Heart",
+                    "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+                    "price": 200,
+                    "discount": 0,
+                    "image": "Popular1.png",
+                    "details": [
+                        {
+                            "tastes": [
+                                {
+                                    "apple": "4 pieces",
+                                    "cherry": "10 pieces",
+                                    "coconut": "10 pieces"
+                                }
+                            ],
+                            "description": [
+                                {
+                                    "header": "Lorem ipsum",
+                                    "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+                                }
+                            ],
+                            "compound": [
+                                {
+                                    "header": "Lorem ipsum",
+                                    "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "header": "Lorem ipsum",
+                                    "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum" 
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Beauty will save the world",
+                    "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+                    "price": 60,
+                    "discount": 0,
+                    "image": "Popular2.png"
+                },
+                {
+                    "name": "Round set",
+                    "description": "40 macaroons in a round box with a personal inscription",
+                    "price": 240,
+                    "discount": 0,
+                    "image": "Popular3.png"
+                },
+                {
+                    "name": "Set for 9",
+                    "description": "Set of 9 pieces in a square box. Flavors: chocolate, pistachio, cherry",
+                    "price": 70,
+                    "discount": 0,
+                    "image": "Popular4.png"
+                },
+                {
+                    "name": "Set for 16",
+                    "description": "Set 16 pcs. Flavors: salted caramel, blue cheese, parmesan, chocolate",
+                    "price": 110,
+                    "discount": 0,
+                    "image": "Popular5.png"
+                },
+                {
+                    "name": "Heart",
+                    "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+                    "price": 200,
+                    "discount": 0,
+                    "image": "Popular3.png"
+                }
+            ],
+            "sweets": [
+                {
+                    "name": "1 macaron and 1 eclair",
+                    "description": "promo set",
+                    "price": 40,
+                    "discount": 10,
+                    "image": "choice1.png"
+                },
+                {
+                    "name": "A bit of everything",
+                    "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+                    "price": 80,
+                    "discount": 0,
+                    "image": "choice2.png"
+                },
+                {
+                    "name": "Even more",
+                    "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+                    "price": 130,
+                    "discount": 0,
+                    "image": "choice3.png"
+                },
+                {
+                    "name": "Even more",
+                    "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+                    "price": 130,
+                    "discount": 0,
+                    "image": "choice4.png"
+                }
+            ]
+        }
+    ],
+    "news": [
+        {
+            "date": "05.04.2023",
+            "image": "News4.png",
+            "header": "Easter holiday is ahead",
+            "text": "Delight your loved ones with delicious Easter pasta sets. Our new collection of gifts is already on sale.",
+            "details": [
+                {
+                    "secondHeader": "The Easter is coming soon!",
+                    "fulltext": "Your favorite spring holiday is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "30.03.2023",
+            "image": "News5.png",
+            "header": "Appetizing sets with NEW flavors",
+            "text": "We are ready to present you a collection of new mind-blowing pasta flavors",
+            "details": [
+                {
+                    "secondHeader": "The NEW flavors is coming soon!",
+                    "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "23.03.2023",
+            "image": "News6.png",
+            "header": "We bake fluffy and soft muffins",
+            "text": "Their velvety structure and impressive weight will impress absolutely anyone!",
+            "details": [
+                {
+                    "secondHeader": "The NEW flavors is coming soon!",
+                    "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "25.02.2023",
+            "image": "News7.png",
+            "header": "Is there a wedding ahead?",
+            "text": "We offer several original and simple design ideas. Guests will definitely remember",
+            "details": [
+                {
+                    "secondHeader": "The NEW flavors is coming soon!",
+                    "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "26.02.2023",
+            "image": "News8.png",
+            "header": "Gifts for women",
+            "text": "The day is just around the corner! Delight your sweet tooth with delicious sets from MacaronShop",
+            "details": [
+                {
+                    "secondHeader": "The NEW flavors is coming soon!",
+                    "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "25.02.2023",
+            "image": "News5.png",
+            "header": "The main holiday of spring is coming soon!",
+            "text": "Girls love it when it’s tasty, beautiful and natural. See more sets with handmade desserts",
+            "details": [
+                {
+                    "secondHeader": "The NEW flavors is coming soon!",
+                    "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "25.02.2023",
+            "image": "News6.png",
+            "header": "The main holiday of spring is coming soon!",
+            "text": "Girls love it when it’s tasty, beautiful and natural. See more sets with handmade desserts",
+            "details": [
+                {
+                    "secondHeader": "The NEW flavors is coming soon!",
+                    "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "05.04.2023",
+            "image": "News4.png",
+            "header": "Easter holiday is ahead",
+            "text": "Delight your loved ones with delicious Easter pasta sets. Our new collection of gifts is already on sale.",
+            "details": [
+                {
+                    "secondHeader": "The Easter is coming soon!",
+                    "fulltext": "Your favorite spring holiday is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        },
+        {
+            "date": "11.02.2023",
+            "image": "News3.png",
+            "header": "Express competition for Valentine's Day",
+            "text": "Gift in 2 days Valentine's Day is just around the corner. Tell us about your feelings with a sweet Valentine's card from MacaronShop",
+            "details": [
+                {
+                    "secondHeader": "The Easter is coming soon!",
+                    "fulltext": "Your favorite spring holiday is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
+                }
+            ]
+        }
+    ]
+}
