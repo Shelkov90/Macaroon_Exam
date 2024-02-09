@@ -10,8 +10,8 @@ import Sweet from './components/pages/Sweet';
 import Catalogue from './components/pages/Catalogue';
 import ForCompanies from './components/pages/ForCompanies';
 import NotFound from './components/pages/NotFound';
-import Homepage from './components/pages/Homepage/Homepage';
-import Newspage from './components/pages/Newspage/Newspage';
+import Homepage from './components/pages/homepage/Homepage';
+import Newspage from './components/pages/newspage/Newspage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ReadySets from './components/pages/ReadySetsPage/ReadySets';
 
