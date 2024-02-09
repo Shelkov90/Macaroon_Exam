@@ -206,30 +206,30 @@ class Wholesale extends PureComponent {
 
 					</div>
 
-					<div className='wholesale_brands flex justify-between mb-12'>
+					<div className='wholesale_brands flex justify-between items-center mb-12'>
 
 						<div>
-							<img src="images/logoreview1.png" alt="" />
+							<img src="images/reviewlogo1.png" alt="reviewlogo1" />
 						</div>
 
 						<div>
-							<img src="images/logoreview2.png" alt="" />
+							<img src="images/reviewlogo2.png" alt="reviewlogo2" />
 						</div>
 
 						<div>
-							<img src="images/logoreview3.png" alt="" />
+							<img src="images/reviewlogo4.png" alt="reviewlogo4" />
 						</div>
 
 						<div>
-							<img src="images/logoreview4.png" alt="" />
+							<img src="images/reviewlogo3.png" alt="reviewlogo3" />
 						</div>
 
 						<div>
-							<img src="images/logoreview5.png" alt="" />
+							<img src="images/reviewlogo5.png" alt="reviewlogo5" />
 						</div>
 
 						<div>
-							<img src="images/logoreview6.png" alt="" />
+							<img src="images/reviewlogo6.png" alt="reviewlogo6" />
 						</div>
 
 					</div>
