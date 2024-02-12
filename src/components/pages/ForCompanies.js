@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import NotFound from './NotFound'
 
 class ForCompanies extends PureComponent {
 	constructor(props) {
@@ -12,7 +13,7 @@ class ForCompanies extends PureComponent {
 	render() {
 		return (
 			<>
-				ForCompanies
+				<NotFound />
 			</>
 		)
 	}
