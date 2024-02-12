@@ -14,6 +14,7 @@ import Homepage from './components/pages/homepage/Homepage';
 import Newspage from './components/pages/newspage/Newspage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ReadySets from './components/pages/ReadySetsPage/ReadySets';
+import Wedding from './components/pages/Wedding';
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: '/ReadySets',
         element: <ReadySets />
+      },
+      {
+        path: '/Wedding',
+        element: <Wedding />
       },
       {
         path: '*', 

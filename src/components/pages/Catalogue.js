@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { Link } from 'react-router-dom'
 
 class Catalogue extends PureComponent {
 	constructor(props) {
@@ -32,7 +33,7 @@ class Catalogue extends PureComponent {
 
 				<div className="main__catalogue__banner">
 
-					<div className="catalogue__banner__inner flex justify-center items-center md:pl-96 sm:pl-52 mb-10 bg-no-repeat bg-center bg-contain min-h-[385px]" style={{backgroundImage: "url('../images/catalogueBG.png')"}}>
+					<div className="catalogue__banner__inner flex justify-center items-center md:pl-96 sm:pl-52 mb-10 bg-no-repeat bg-center bg-contain min-h-[385px]" style={{ backgroundImage: "url('../images/catalogueBG.png')" }}>
 
 						<div className="catalogue__banner__info">
 
@@ -43,9 +44,11 @@ class Catalogue extends PureComponent {
 								The coolest, best, fresh, airy, crispy pasta. the best we can do.
 							</div>
 							<div className="banner__buttons flex justify-between gap-x-2">
-								<div className="banner__button border border-blue-400 py-4 px-14 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
-									Ready-made sets
-								</div>
+								<Link to="/ReadySets">
+									<div className="banner__button border border-blue-400 py-4 px-14 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
+										Ready-made sets
+									</div>
+								</Link>
 								<div className="banner__button border border-blue-400 py-4 px-14 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
 									Build your set
 								</div>
