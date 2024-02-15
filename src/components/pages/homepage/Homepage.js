@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
+import News from "../../elements/News/News";
 
 class Homepage extends PureComponent {
 	constructor(props) {
@@ -478,54 +479,7 @@ class Homepage extends PureComponent {
 					<p className="text-4xl font-semibold text-center mb-12">News</p>
 
 					<div className="main__news__articles grid grid-cols-3 justify-items-center gap-y-5 gap-x-2 mb-8">
-						<div className="main__news__article bg-white max-w-[370px]">
-							<img src="/images/News1.png" alt="newsImage" />
-							<div className="news__article__inner p-5">
-								<p className="news__article__date mb-2 text-sm text-gray-400">
-									25/02/2023
-								</p>
-								<p className="news__article__header mb-2 font-semibold text-xl">
-									The main holiday of spring is coming soon!
-								</p>
-								<p className="news__article__text">
-									Girls love it when it’s tasty, beautiful and natural. See more
-									sets with handmade desserts
-								</p>
-							</div>
-						</div>
-
-						<div className="main__news__article bg-white max-w-[370px]">
-							<img src="/images/News2.png" alt="newsImage" />
-							<div className="news__article__inner p-5">
-								<p className="news__article__date mb-2 text-sm text-gray-400">
-									17/02/2023
-								</p>
-								<p className="news__article__header mb-2 font-semibold text-xl">
-									Competition for holidays!
-								</p>
-								<p className="news__article__text">
-									Defender of the Holidays is coming soon! Delight your sweet
-									tooth with delicious sets from MacaronShop
-								</p>
-							</div>
-						</div>
-
-						<div className="main__news__article bg-white max-w-[370px]">
-							<img src="/images/News3.png" alt="newsImage" />
-							<div className="news__article__inner p-5">
-								<p className="news__article__date mb-2 text-sm text-gray-400">
-									11/02/2023
-								</p>
-								<p className="news__article__header mb-2 font-semibold text-xl">
-									Express competition for Valentine's Day
-								</p>
-								<p className="news__article__text">
-									Gift in 2 days Valentine's Day is just around the corner. Tell
-									us about your feelings with a sweet Valentine's card from
-									MacaronShop
-								</p>
-							</div>
-						</div>
+						<News />
 					</div>
 
 					<div className="main__news__more flex justify-center">

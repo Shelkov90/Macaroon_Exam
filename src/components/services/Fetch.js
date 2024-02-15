@@ -1,21 +1,21 @@
-import React, { PureComponent } from 'react'
+const BASE_URL = `http://localhost:3010`;
 
-class Fetch extends PureComponent {
-    constructor(props) {
-        super(props)
+// Метод для получения массива Новостей из БД
+export const getAllNews = async () => {
+  const response = await fetch(`${BASE_URL}/news`);
+  const data = await response.json();
+  return data;
+};
 
-        this.state = {
-            
-        }
-    }
-
-    render() {
-        return (
-            <>
-                
-            </>
-        )
-    }
-}
-
-export default Fetch
+// Метод добавляет новость в БД
+export const addNewsArticle = async (article) => {
+  const response = await fetch(`${BASE_URL}/news`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(article),
+  });
+  const data = await response.json();
+  return data;
+};

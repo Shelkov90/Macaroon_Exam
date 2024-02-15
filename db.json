@@ -109,7 +109,7 @@
     "news": [
         {
             "date": "05.04.2023",
-            "image": "News4.png",
+            "image": "/images/News4.png",
             "header": "Easter holiday is ahead",
             "text": "Delight your loved ones with delicious Easter pasta sets. Our new collection of gifts is already on sale.",
             "details": [
@@ -121,7 +121,7 @@
         },
         {
             "date": "30.03.2023",
-            "image": "News5.png",
+            "image": "/images/News5.png",
             "header": "Appetizing sets with NEW flavors",
             "text": "We are ready to present you a collection of new mind-blowing pasta flavors",
             "details": [
@@ -133,7 +133,7 @@
         },
         {
             "date": "23.03.2023",
-            "image": "News6.png",
+            "image": "/images/News6.png",
             "header": "We bake fluffy and soft muffins",
             "text": "Their velvety structure and impressive weight will impress absolutely anyone!",
             "details": [
@@ -145,7 +145,7 @@
         },
         {
             "date": "25.02.2023",
-            "image": "News7.png",
+            "image": "/images/News7.png",
             "header": "Is there a wedding ahead?",
             "text": "We offer several original and simple design ideas. Guests will definitely remember",
             "details": [
@@ -157,7 +157,7 @@
         },
         {
             "date": "26.02.2023",
-            "image": "News8.png",
+            "image": "/images/News8.png",
             "header": "Gifts for women",
             "text": "The day is just around the corner! Delight your sweet tooth with delicious sets from MacaronShop",
             "details": [
@@ -169,7 +169,7 @@
         },
         {
             "date": "25.02.2023",
-            "image": "News5.png",
+            "image": "/images/News5.png",
             "header": "The main holiday of spring is coming soon!",
             "text": "Girls love it when it’s tasty, beautiful and natural. See more sets with handmade desserts",
             "details": [
@@ -181,7 +181,7 @@
         },
         {
             "date": "25.02.2023",
-            "image": "News6.png",
+            "image": "/images/News6.png",
             "header": "The main holiday of spring is coming soon!",
             "text": "Girls love it when it’s tasty, beautiful and natural. See more sets with handmade desserts",
             "details": [
@@ -193,7 +193,7 @@
         },
         {
             "date": "05.04.2023",
-            "image": "News4.png",
+            "image": "/images/News4.png",
             "header": "Easter holiday is ahead",
             "text": "Delight your loved ones with delicious Easter pasta sets. Our new collection of gifts is already on sale.",
             "details": [
@@ -205,7 +205,7 @@
         },
         {
             "date": "11.02.2023",
-            "image": "News3.png",
+            "image": "/images/News3.png",
             "header": "Express competition for Valentine's Day",
             "text": "Gift in 2 days Valentine's Day is just around the corner. Tell us about your feelings with a sweet Valentine's card from MacaronShop",
             "details": [
