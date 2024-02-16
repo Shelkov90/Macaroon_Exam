@@ -1,4 +1,33 @@
 {
+    "users": [
+        {
+            "id": "1",
+            "name": "Alex",
+            "surname": "Gray",
+            "email": "alex@gmail.com",
+            "password": "12345678",
+            "orders": [
+
+            ]
+        }
+    ],
+    "admin": [
+        {
+            "name": "Artem",
+            "surname": "Chechel",
+            "login": "admin",
+            "password": "admin"
+        }
+    ],
+    "orders": [
+        {
+            "user": "Alex",
+            "userId": "1",
+            "products": [],
+            "date": "05.04.2023",
+            "totalPrice": "120" 
+        }
+    ],
     "products": [
         {
             "sets": [
