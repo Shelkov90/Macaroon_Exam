@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
+import FormWedding from "../elements/Forms/FormWedding";
 
 class Wedding extends PureComponent {
 	constructor(props) {
@@ -12,17 +13,14 @@ class Wedding extends PureComponent {
 		return (
 			<>
 				<div className="breadcrumbs__inner flex justify-center mt-10">
-
 					<div className="breadcrumbs__item">Homepage</div>
 					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 					<div className="breadcrumbs__item text-blue-400">
 						Wedding proposals
 					</div>
-
 				</div>
 
 				<div className="wedding_general flex justify-center  mt-12 relative">
-
 					<div className="wedding_img md:w-auto md:max-w-xs relative">
 						<img
 							src="images/weddingmacaron.png"
@@ -71,7 +69,6 @@ class Wedding extends PureComponent {
 							of uselessness increases.
 						</p>
 					</div>
-
 				</div>
 
 				<div className="wedding_line">
@@ -86,7 +83,6 @@ class Wedding extends PureComponent {
 				</h2>
 
 				<div className="wedding__cards grid grid-cols-2 justify-items-stretch gap-y-5 gap-x-7 mb-8 sm:grid-cols-3 ">
-
 					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
 						<img
 							className="w-full"
@@ -231,81 +227,14 @@ class Wedding extends PureComponent {
 							</div>
 						</div>
 					</div>
-
 				</div>
 
 				<div className="wedding_propose  flex mt-40 ">
-
 					<div className="propose_img w-2/3 ">
 						<img src="images/weddingpropose.png" alt="weddingpropose" />
 					</div>
 
-					<div className="propose_info w-2/3">
-
-						<h2 className="text-3xl text-center font-semibold  mb-4">
-							We are open to new ideas
-						</h2>
-
-						<p>
-							Each event is unique and we are ready to offer individual
-							solutions for your event
-						</p>
-
-						<form class="flex flex-col justify-center mt-10">
-							<div class="form__wedding">
-								<div class="form__inputs basis-2/3 grid grid-cols-2 gap-x-7">
-									<label class="text-sm mb-2" for="name">
-										Your name*
-										<input
-											class="w-full p-2 mt-2"
-											name="name"
-											type="text"
-											placeholder="Your name"
-										/>
-									</label>
-
-									<label class="text-sm mb-2" for="phone">
-										Your phone*
-										<input
-											class="w-full p-2 mt-2"
-											name="phone"
-											type="nuber"
-											placeholder="Your phone"
-										/>
-									</label>
-
-									<div class="form__textarea">
-										<div class="text-sm mb-2">Describe your idea</div>
-										<textarea
-											className="w-full"
-											name=""
-											id=""
-											cols="40"
-											rows="2"
-										></textarea>
-
-										<button
-											class="bg-red-500 text-white py-2 px-10 mx-auto mt-10 mb-2"
-											type="button"
-										>
-											Send a request
-										</button>
-									</div>
-								</div>
-
-								<div class="form__lastText text-sm mb-12">
-									By clicking on the "Place an order" button, I accept and agree
-									to the{" "}
-									<span class="text-blue-400 underline">Offer Agreement</span>{" "}
-									and authorize the processing of my personal data in accordance
-									with the
-									<span class="text-blue-400 underline">Privacy Policy.</span>
-								</div>
-							</div>
-						</form>
-
-					</div>
-
+					<FormWedding />
 				</div>
 
 				<h2 className="text-3xl text-center font-semibold mt-20 mb-16">
@@ -313,7 +242,6 @@ class Wedding extends PureComponent {
 				</h2>
 
 				<div className="wedding_questions flex justify-between h-auto mb-20">
-
 					<div className="w-1/3">
 						<div className="question bg-white  rounded-md border-2 ">
 							<div className="p-4">
@@ -359,9 +287,7 @@ class Wedding extends PureComponent {
 							</div>
 						</div>
 					</div>
-
 				</div>
-				
 			</>
 		);
 	}

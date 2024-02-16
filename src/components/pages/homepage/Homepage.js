@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import News from "../../elements/News/News";
-import Login from "../../elements/Forms/Login";
+// import Login from "../../elements/Forms/Login";
 import Sets from "../../elements/Sets/Sets";
 
 
@@ -23,11 +23,11 @@ class Homepage extends PureComponent {
 	};
 
 	render() {
-		const { showModal } = this.state;
+		// const { showModal } = this.state;
 
 		return (
 			<div>
-				{showModal && <Login onClose={this.hideModal} />}
+				{/* {showModal && <Login onClose={this.hideModal} />} */}
 				
 				<div className="main__banner flex flex-col md:flex-row-reverse justify-evenly items-center">
 					<div className="flex flex-col basis-full md:basis-1/4 items-center">
