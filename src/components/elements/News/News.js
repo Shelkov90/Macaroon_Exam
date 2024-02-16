@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { getAllNews } from '../../services/Fetch'
+import { getDataBaseInfo } from '../../services/Fetch'
 
 
 class News extends PureComponent {
@@ -7,15 +7,16 @@ class News extends PureComponent {
         super(props)
 
         this.state = {
-            full: false,
+            full: props.count,
             items: []
         }
     }
 
-    // Получение данных из БД через обращение к методу getAllNews в компоненте fetch
+    // Получение данных из БД через обращение к методу getDataBaseInfo в компоненте fetch
     getNews = async () => {
+        const key = "news";
         try {
-            const data = await getAllNews();
+            const data = await getDataBaseInfo(key);
             if (!data) return;
             this.setState({items: data});
         } catch (error) {
@@ -29,10 +30,11 @@ class News extends PureComponent {
     }
 
     render() {
+
         let content = ``;
 
         // Если нужно выводить только три новости метод обрезает массив, если все - оставляет в состоянии полученном из БД
-        let articles = this.state.full ? this.state.items : this.state.items.slice(0, 3);
+        let articles = this.state.full === "full" ? this.state.items : this.state.items.slice(0, 3);
 
         content = articles.map((article, index) => {
             return(

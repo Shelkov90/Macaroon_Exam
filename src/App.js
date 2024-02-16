@@ -19,8 +19,6 @@ import Login from './components/elements/Forms/Login';
 import Register from './components/elements/Forms/Register';
 import FormWholeSale from './components/elements/Forms/FormWholeSale';
 
-
-
 const router = createBrowserRouter([
   {
     path: '/',
