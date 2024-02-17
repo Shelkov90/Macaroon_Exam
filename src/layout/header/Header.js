@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { NavLink } from "react-router-dom";
+import HeaderBanner from "../../components/elements/HeaderBanner/HeaderBanner";
 
 class Header extends PureComponent {
   constructor(props) {
@@ -13,30 +14,8 @@ class Header extends PureComponent {
   render() {
     return (
       <header>
-        <div className="header__banner bg-blue-100 row-auto">
-          <div className="flex items-center justify-between py-2 max-w-[1170px] mx-auto px-2">
-            <img src="/images/leftArrow.svg" alt="alt" />
 
-            <div className="header__banner__inner items-center flex">
-              		
-						<img className="mr-3" src="/images/banner1.png" alt="alt"/>
-						<p className="uppercase text-gray-600">доставка в день заказа</p>
-
-              {/* <img className="mr-3" src="/images/banner2.png" alt="alt" />
-              <p className="uppercase text-gray-600">
-                оптовые поставки от производителя
-              </p>
-
-              <img className="mr-3" src="/images/banner3.png" alt="alt"/>
-						<p className="uppercase text-gray-600">всегда свежее</p>
-
-						<img className="mr-3" src="/images/banner4.png" alt="alt"/>
-						<p className="uppercase text-gray-600">миндальная мука и натуральные ингридиенты</p> */}
-            </div>
-
-            <img src="/images/rightArrow.svg" alt="alt" />
-          </div>
-        </div>
+        <HeaderBanner />
 
         <div className="header__navigation bg-orange-50">
           <div className="flex justify-between items-center text-sm max-w-[1170px] mx-auto py-3 px-2">

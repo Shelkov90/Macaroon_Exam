@@ -247,19 +247,19 @@
     ],
     "banners": [
         {
-            "image": "banner1.png",
+            "image": "/images/banner1.png",
             "text": "same day delivery"
         },
         {
-            "image": "banner2.png",
+            "image": "/images/banner2.png",
             "text": "wholesale supplies from the manufacturer"
         },
         {
-            "image": "banner3.png",
+            "image": "/images/banner3.png",
             "text": "always fresh"
         },
         {
-            "image": "banner4.png",
+            "image": "/images/banner4.png",
             "text": "almond flour and natural ingredients"
         }
     ],
