@@ -31,8 +31,8 @@ class HeaderBanner extends PureComponent {
   handleClickNext = () => {
     this.setState({ current: this.state.current + 1 });
     
-    if(this.state.current > this.state.items.length-2) {
-        return this.setState({ current: 0 });
+    if(this.state.current > 3) {
+        this.setState({ current: 0 });
     }
   }
 
@@ -40,25 +40,23 @@ class HeaderBanner extends PureComponent {
     this.setState({ current: this.state.current - 1 });
 
     if(this.state.current < 0) {
-        return this.setState({ current: this.state.items.length-2 });
+        this.setState({ current: 3 });
     }
   }
 
   render() {
-    let content = [];
     const {current, items} = this.state;
-    content = items
 
     return (
       <>
         <div className="header__banner bg-blue-100 row-auto hidden xl:block">
           <div className="flex items-center justify-between py-2 max-w-[1170px] mx-auto px-2">
-            <img className="pointer" src="/images/leftArrow.svg" alt="alt" onClick={this.handleClickPrev} />
+            <img className="cursor-pointer" src="/images/leftArrow.svg" alt="alt" onClick={this.handleClickPrev} />
             <div className="header__banner__inner items-center flex">
-                <img className="mr-3" src={content[current]?.image} alt="alt" />
-                <p className="uppercase text-gray-600">{content[current]?.text}</p>
+                <img className="mr-3" src={items[current]?.image} alt="alt" />
+                <p className="uppercase text-gray-600">{items[current]?.text}</p>
             </div>
-            <img className="pointer" src="/images/rightArrow.svg" alt="alt" onClick={this.handleClickNext} />
+            <img className="cursor-pointer" src="/images/rightArrow.svg" alt="alt" onClick={this.handleClickNext} />
           </div>
         </div>
       </>
