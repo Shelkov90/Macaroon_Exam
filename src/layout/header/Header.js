@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { NavLink } from "react-router-dom";
-import HeaderBanner from "../../components/elements/HeaderBanner/HeaderBanner";
+import HeaderBanner from "../../components/elements/Banner/HeaderBanner";
 
 class Header extends PureComponent {
   constructor(props) {

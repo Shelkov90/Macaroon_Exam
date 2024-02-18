@@ -50,14 +50,20 @@ class HeaderBanner extends PureComponent {
     return (
       <>
         <div className="header__banner bg-blue-100 row-auto hidden xl:block">
+          
           <div className="flex items-center justify-between py-2 max-w-[1170px] mx-auto px-2">
+            
             <img className="cursor-pointer" src="/images/leftArrow.svg" alt="alt" onClick={this.handleClickPrev} />
+            
             <div className="header__banner__inner items-center flex">
                 <img className="mr-3" src={items[current]?.image} alt="alt" />
                 <p className="uppercase text-gray-600">{items[current]?.text}</p>
             </div>
+            
             <img className="cursor-pointer" src="/images/rightArrow.svg" alt="alt" onClick={this.handleClickNext} />
+          
           </div>
+        
         </div>
       </>
     );
