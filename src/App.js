@@ -96,7 +96,9 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid bg-gray-100 flex flex-col justify-between min-h-screen">
-            <RouterProvider router={router}/>
+        <RouterProvider router={router}>
+          <Layout />
+        </RouterProvider>
       </div>
     );
   }

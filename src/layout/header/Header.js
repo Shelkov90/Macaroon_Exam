@@ -1,17 +1,29 @@
 import React, { PureComponent } from "react";
 import { NavLink } from "react-router-dom";
 import HeaderBanner from "../../components/elements/Banner/HeaderBanner";
+import Login from "../../components/elements/Forms/Login";
 
 class Header extends PureComponent {
-  constructor(props) {
-    super(props);
+  state = {
+    showLoginForm: false,
+    userEmail: '' // Добавляем состояние для хранения имени пользователя
+  };
 
-    this.state = {
+  handleLoginClick = () => {
+    this.setState({ showLoginForm: true });
+  };
 
-    };
-  }
+  handleCloseLoginForm = () => {
+    this.setState({ showLoginForm: false });
+  };
+
+  setUserEmail = (email) => {
+    this.setState({ userEmail: email }); // Устанавливаем имя пользователя в состояние
+  };
 
   render() {
+    const { showLoginForm, userEmail } = this.state;
+
     return (
       <header>
 
@@ -32,10 +44,21 @@ class Header extends PureComponent {
                 <img className="mr-2" src="/images/place.svg" alt="alt" />
                 Odesa, UKR
               </div>
-              <div className="flex items-center mr-10">
-                <img className="mr-2" src="/images/phone.svg" alt="alt" />
-                +380507375982
-              </div>
+
+              {userEmail ? (
+                <div className="flex items-center mr-10">
+                  <p>Welcome, {userEmail}</p>
+                </div>
+              ) : (
+                <NavLink to={{ pathname: '/Login', state: { from: this.props.location } }} onClick={this.handleLoginClick}>
+                  <div className="flex items-center mr-10">
+                    <img className="mr-2" src="/images/login1.png" alt="alt" />
+                    <p>Login</p>
+                  </div>
+                </NavLink>
+
+              )}
+
               <div className="flex items-center mr-10">
                 <img className="mr-2" src="/images/bag.svg" alt="alt" />
                 Cart
@@ -69,6 +92,9 @@ class Header extends PureComponent {
             <div><NavLink to="/Catalogue">all catalogue</NavLink></div>
           </nav>
         </div>
+
+        {showLoginForm && <Login showLoginForm={showLoginForm} handleCloseLoginForm={this.handleCloseLoginForm} setUserEmail={this.setUserEmail} />}
+
       </header>
     );
   }

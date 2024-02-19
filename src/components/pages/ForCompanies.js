@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
-import Login from '../elements/Forms/Login'
-// import NotFound from './NotFound'
+import NotFound from './NotFound'
 
 
 
@@ -17,8 +16,7 @@ class ForCompanies extends PureComponent {
 	render() {
 		return (
 			<>
-				{/* <NotFound /> */}
-				<Login />
+				<NotFound />
 				
 			</>
 		)

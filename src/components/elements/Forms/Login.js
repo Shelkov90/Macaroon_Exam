@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { getUserByEmail } from '../../services/Fetch';
+import Register from './Register';
+import Homepage from '../../pages/homepage/Homepage';
+
+
 
 
 class Login extends Component {
@@ -10,11 +15,10 @@ class Login extends Component {
 		passwordError: '',
 		showModal: false,
 		isLoggedIn: false,
+		redirectToRegistration: false, // Новое состояние для перенаправления на страницу регистрации
+
 	};
 
-	componentDidMount() {
-		this.showModal();
-	}
 
 	showModal = () => {
 		this.setState({ showModal: true });
@@ -40,15 +44,41 @@ class Login extends Component {
 		return isValid;
 	};
 
-	handleSubmit = (e) => {
+	handleSubmit = async (e) => {
 		e.preventDefault();
 		const isValidEmail = this.validateEmail();
 		const isValidPassword = this.validatePassword();
 
 		if (isValidEmail && isValidPassword) {
-			this.setState({ isLoggedIn: true });
+			const { email, password } = this.state;
+			try {
+				const existingUserResponse = await getUserByEmail(email);
+				if (existingUserResponse && existingUserResponse.length > 0) {
+					// Пользователь существует, проверяем пароль
+					const user = existingUserResponse[0];
+					if (user.password === password) {
+						// Успешный вход
+						this.setState({ isLoggedIn: true });
+						this.props.setUserEmail(email);
+
+						// Перенаправление на предыдущую страницу, если она существует
+						const { state } = this.props.location;
+						const redirect = state && state.from && state.from.pathname ? state.from.pathname : '/';
+						this.props.history.push(redirect);
+					} else {
+						// Неправильный пароль
+						this.setState({ passwordError: 'Incorrect password' });
+					}
+				} else {
+					// Пользователь не существует
+					this.setState({ redirectToRegistration: true });
+				}
+			} catch (error) {
+				console.error('Error checking user existence:', error);
+			}
 		}
 	};
+
 
 	handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -56,17 +86,20 @@ class Login extends Component {
 	};
 
 	render() {
-		const { showModal } = this.state;
-		const { email, password, emailError, passwordError,isLoggedIn } = this.state;
+		const { email, password, emailError, passwordError, isLoggedIn, redirectToRegistration } = this.state;
+		const { showLoginForm } = this.props;
 
 		if (isLoggedIn) {
+			return <Homepage />; // Перенаправляем на главную страницу, если пользователь уже вошел в систему
+		}
 
-			return <p>You are logged in!</p>;
+		if (redirectToRegistration) {
+			return <Register />; // Перенаправляем на страницу регистрации, если пользователь не существует
 		}
 
 		return (
 			<>
-				{showModal && (
+				{showLoginForm && (
 					<div className="fixed inset-0 flex items-center justify-center z-50">
 						<div className="absolute inset-0 bg-black opacity-50"></div>
 						<div className="relative bg-white rounded-lg shadow-lg p-8">
@@ -113,14 +146,17 @@ class Login extends Component {
 												{passwordError && <p className="text-red-500 ml-20">{passwordError}</p>}
 											</div>
 										</div>
-										<button className="bg-red-500 text-white py-4 px-10 mx-auto " style={{ width: '370px' }} type="submit">Login</button>
+
+										<button className="bg-red-500 text-white py-4 px-10 mx-auto" style={{ width: '370px' }} type="submit">Login</button>
+
+
 									</form>
 									<div className="form__lastText flex justify-center text-sm mb-12">
 										<div>
 											<p>Not registered yet?</p>
-											<Link to="/Register">
+											<NavLink to="/Register">
 												<p className="text-red-400 text-center text-lg font-bold mt-2 ">Register</p>
-											</Link>
+											</NavLink>
 										</div>
 									</div>
 								</div>
@@ -129,7 +165,6 @@ class Login extends Component {
 					</div>
 				)}
 			</>
-
 		);
 	}
 }

@@ -1,26 +1,30 @@
-import React, { PureComponent } from 'react'
-import Header from './header/Header'
-import Footer from './footer/Footer'
-import Main from './main/Main'
+import React, { PureComponent } from "react";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
+import Main from "./main/Main";
+import Login from "../components/elements/Forms/Login";
 
 class Layout extends PureComponent {
-	constructor(props) {
-		super(props)
+	state = {
+		userEmail: null, // или установите начальное значение, если адрес электронной почты не определен
+	};
 
-		this.state = {
-			
-		}
-	}
+	setUserEmail = (email) => {
+		console.log("Email received:", email);
+		this.setState({ userEmail: email });
+	};
+
 
 	render() {
 		return (
 			<>
-				<Header />
+				<Header userEmail={this.state.userEmail} />
+				<Login setUserEmail={this.setUserEmail} />
 				<Main />
 				<Footer />
 			</>
-		)
+		);
 	}
 }
 
-export default Layout
+export default Layout;

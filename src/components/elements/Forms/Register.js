@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, NavLink } from 'react-router-dom';
+import { addUserToDatabase, getUserByEmail } from '../../services/Fetch';
 
 class Register extends Component {
 	state = {
@@ -17,6 +17,8 @@ class Register extends Component {
 		companyError: '',
 		passwordError: '',
 		showModal: true,
+		userAdded: false,
+		registrationSuccess: false,
 	};
 
 	validateName = () => {
@@ -67,8 +69,17 @@ class Register extends Component {
 		return isValid;
 	};
 
-	handleSubmit = (e) => {
+	handleSubmit = async (e) => {
 		e.preventDefault();
+		const {
+			name,
+			phone,
+			email,
+			city,
+			company,
+			password,
+		} = this.state;
+
 		const isValidName = this.validateName();
 		const isValidPhone = this.validatePhone();
 		const isValidEmail = this.validateEmail();
@@ -77,7 +88,30 @@ class Register extends Component {
 		const isValidPassword = this.validatePassword();
 
 		if (isValidName && isValidPhone && isValidEmail && isValidCity && isValidCompany && isValidPassword) {
-			window.location.href = '/';
+			try {
+				const existingUserResponse = await getUserByEmail(email);
+				if (existingUserResponse && existingUserResponse.length > 0) {
+					console.log('User with this email already exists:', existingUserResponse);
+					return;
+				}
+
+				const userData = {
+					name,
+					phone,
+					email,
+					city,
+					company,
+					password,
+				};
+
+				const response = await addUserToDatabase(userData);
+				console.log('User added to database:', response);
+
+				this.setState({ userAdded: true,registrationSuccess: true }); // Устанавливаем состояние userAdded в true после успешной регистрации
+
+			} catch (error) {
+				console.error('Error registering user:', error);
+			}
 		}
 	};
 
@@ -91,7 +125,8 @@ class Register extends Component {
 	};
 
 	render() {
-		const { name, phone, email, city, company, password, nameError, phoneError, emailError, cityError, companyError, passwordError, showModal } = this.state;
+		
+		const { name, phone, email, city, company, password, nameError, phoneError, emailError, cityError, companyError, passwordError, showModal, userAdded } = this.state;
 
 		return (
 			<>
@@ -106,120 +141,132 @@ class Register extends Component {
 							</button>
 							<div className="flex justify-center items-center">
 								<div className='register_form' style={{ width: '600px', backgroundColor: '#F7EBE5', padding: '24px', margin: 'auto' }}>
-									<h2 className='text-2xl text-center font-semibold mt-4 mb-2'>Get access to wholesale prices</h2>
-									<h4 className='text-xl text-center font-semibold mt-2 mb-4'>Please register</h4>
-									<form className="flex flex-col justify-center mb-4" onSubmit={this.handleSubmit}>
-										<div className="form__register flex">
-											<div className="mb-2 flex flex-col flex-1">
-												<label className="text-sm ml-12" htmlFor="name">Your Name</label>
-												<input
-													className="w-full p-2 mt-2 mb-2 mx-auto"
-													style={{ maxWidth: '180px' }}
-													name="name"
-													type="text"
-													placeholder="Your Name"
-													value={name}
-													onChange={this.handleInputChange}
-													onBlur={this.validateName}
-													pattern="[a-zA-Z\s]+"
-													required
-												/>
-												{nameError && <p className="text-red-500 ml-12">{nameError}</p>}
-											</div>
-											<div className="mb-2 flex flex-col flex-1">
-												<label className="text-sm ml-12" htmlFor="phone">Your Phone</label>
-												<input
-													className="w-full p-2 mt-2 mb-2 mx-auto"
-													style={{ maxWidth: '180px' }}
-													name="phone"
-													type="tel"
-													placeholder="Your Phone"
-													value={phone}
-													onChange={this.handleInputChange}
-													onBlur={this.validatePhone}
-													pattern="[0-9]{10}"
-													required
-												/>
-												{phoneError && <p className="text-red-500 ml-12">{phoneError}</p>}
-											</div>
-										</div>
-										<div className="form__wholesale mb-4 flex">
-											<div className="mb-2 flex flex-col flex-1">
-												<label className="text-sm ml-12" htmlFor="email">Your Email</label>
-												<input
-													className="w-full p-2 mt-2 mb-2 mx-auto"
-													style={{ maxWidth: '180px' }}
-													name="email"
-													type="email"
-													placeholder="Your Email"
-													value={email}
-													onChange={this.handleInputChange}
-													onBlur={this.validateEmail}
-													required
-												/>
-												{emailError && <p className="text-red-500 ml-12">{emailError}</p>}
-											</div>
-											<div className="mb-2 flex flex-col flex-1">
-												<label className="text-sm ml-12" htmlFor="city">Your City</label>
-												<input
-													className="w-full p-2 mt-2 mb-2 mx-auto"
-													style={{ maxWidth: '180px' }}
-													name="city"
-													type="text"
-													placeholder="Your City"
-													value={city}
-													onChange={this.handleInputChange}
-													onBlur={this.validateCity}
-													pattern="[a-zA-Z\s]+"
-													required
-												/>
-												{cityError && <p className="text-red-500 ml-12">{cityError}</p>}
-											</div>
-										</div>
-										<div className="form__wholesale mb-4 flex">
-											<div className="mb-2 flex flex-col flex-1">
-												<label className="text-sm ml-12" htmlFor="company">Your Company</label>
-												<input
-													className="w-full p-2 mt-2 mb-2 mx-auto"
-													style={{ maxWidth: '180px' }}
-													name="company"
-													type="text"
-													placeholder="Your Company"
-													value={company}
-													onChange={this.handleInputChange}
-													onBlur={this.validateCompany}
-													pattern="[a-zA-Z\s]+"
-													required
-												/>
-												{companyError && <p className="text-red-500 ml-12">{companyError}</p>}
-											</div>
-											<div className="mb-2 flex flex-col flex-1">
-												<label className="text-sm ml-12" htmlFor="password">Your Password</label>
-												<input
-													className="w-full p-2 mt-2 mb-2 mx-auto"
-													style={{ maxWidth: '180px' }}
-													name="password"
-													type="password"
-													placeholder="Your Password"
-													value={password}
-													onChange={this.handleInputChange}
-													onBlur={this.validatePassword}
-													pattern=".{6,}"
-													required
-												/>
-												{passwordError && <p className="text-red-500 ml-12">{passwordError}</p>}
-											</div>
-										</div>
-										<button className="bg-red-500 text-white py-2 px-4 mx-auto" style={{ width: '460px' }} type="submit">Send a registration request</button>
-									</form>
-									<div className="form__lastText flex justify-center text-sm mb-4">
-										<div>
-											<p>Already registered?</p>
-											<Link to="/Login">
+									{userAdded ? (
+										<div className="text-center">
+											<p className="text-green-500">Registration successful!</p>
+											<p className="text-gray-600">You can now log in using your email and password.</p>
+											<NavLink to="/Login">
 												<p className="text-red-400 text-center text-lg font-bold mt-2 ">Login</p>
-											</Link>
+											</NavLink>
 										</div>
-									</div>
+									) : (
+										<>
+											<h2 className='text-2xl text-center font-semibold mt-4 mb-2'>Get access to wholesale prices</h2>
+											<h4 className='text-xl text-center font-semibold mt-2 mb-4'>Please register</h4>
+											<form className="flex flex-col justify-center mb-4" onSubmit={this.handleSubmit}>
+												<div className="form__register flex">
+													<div className="mb-2 flex flex-col flex-1">
+														<label className="text-sm ml-12" htmlFor="name">Your Name</label>
+														<input
+															className="w-full p-2 mt-2 mb-2 mx-auto"
+															style={{ maxWidth: '180px' }}
+															name="name"
+															type="text"
+															placeholder="Your Name"
+															value={name}
+															onChange={this.handleInputChange}
+															onBlur={this.validateName}
+															pattern="[a-zA-Z\s]+"
+															required
+														/>
+														{nameError && <p className="text-red-500 ml-12">{nameError}</p>}
+													</div>
+													<div className="mb-2 flex flex-col flex-1">
+														<label className="text-sm ml-12" htmlFor="phone">Your Phone</label>
+														<input
+															className="w-full p-2 mt-2 mb-2 mx-auto"
+															style={{ maxWidth: '180px' }}
+															name="phone"
+															type="tel"
+															placeholder="Your Phone"
+															value={phone}
+															onChange={this.handleInputChange}
+															onBlur={this.validatePhone}
+															pattern="[0-9]{10}"
+															required
+														/>
+														{phoneError && <p className="text-red-500 ml-12">{phoneError}</p>}
+													</div>
+												</div>
+												<div className="form__wholesale mb-4 flex">
+													<div className="mb-2 flex flex-col flex-1">
+														<label className="text-sm ml-12" htmlFor="email">Your Email</label>
+														<input
+															className="w-full p-2 mt-2 mb-2 mx-auto"
+															style={{ maxWidth: '180px' }}
+															name="email"
+															type="email"
+															placeholder="Your Email"
+															value={email}
+															onChange={this.handleInputChange}
+															onBlur={this.validateEmail}
+															required
+														/>
+														{emailError && <p className="text-red-500 ml-12">{emailError}</p>}
+													</div>
+													<div className="mb-2 flex flex-col flex-1">
+														<label className="text-sm ml-12" htmlFor="city">Your City</label>
+														<input
+															className="w-full p-2 mt-2 mb-2 mx-auto"
+															style={{ maxWidth: '180px' }}
+															name="city"
+															type="text"
+															placeholder="Your City"
+															value={city}
+															onChange={this.handleInputChange}
+															onBlur={this.validateCity}
+															pattern="[a-zA-Z\s]+"
+															required
+														/>
+														{cityError && <p className="text-red-500 ml-12">{cityError}</p>}
+													</div>
+												</div>
+												<div className="form__wholesale mb-4 flex">
+													<div className="mb-2 flex flex-col flex-1">
+														<label className="text-sm ml-12" htmlFor="company">Your Company</label>
+														<input
+															className="w-full p-2 mt-2 mb-2 mx-auto"
+															style={{ maxWidth: '180px' }}
+															name="company"
+															type="text"
+															placeholder="Your Company"
+															value={company}
+															onChange={this.handleInputChange}
+															onBlur={this.validateCompany}
+															pattern="[a-zA-Z\s]+"
+															required
+														/>
+														{companyError && <p className="text-red-500 ml-12">{companyError}</p>}
+													</div>
+													<div className="mb-2 flex flex-col flex-1">
+														<label className="text-sm ml-12" htmlFor="password">Your Password</label>
+														<input
+															className="w-full p-2 mt-2 mb-2 mx-auto"
+															style={{ maxWidth: '180px' }}
+															name="password"
+															type="password"
+															placeholder="Your Password"
+															value={password}
+															onChange={this.handleInputChange}
+															onBlur={this.validatePassword}
+															pattern=".{6,}"
+															required
+														/>
+														{passwordError && <p className="text-red-500 ml-12">{passwordError}</p>}
+													</div>
+												</div>
+												<button className="bg-red-500 text-white py-2 px-4 mx-auto" style={{ width: '460px' }} type="submit">Send a registration request</button>
+											</form>
+											<div className="form__lastText flex justify-center text-sm mb-4">
+												<div>
+													<p>Already registered?</p>
+													<Link to="/Login">
+														<p className="text-red-400 text-center text-lg font-bold mt-2 ">Login</p>
+													</Link>
+												</div>
+											</div>
+										</>
+									)}
 								</div>
 							</div>
 						</div>
