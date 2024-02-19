@@ -73,14 +73,6 @@ const router = createBrowserRouter([
         element: <Wedding />
       },
       {
-        path: '/Login',
-        element: <Login />
-      },
-      {
-        path: '/Register',
-        element: <Register />
-      },
-      {
         path: '/FormWholeSale',
         element: <FormWholeSale />
       },

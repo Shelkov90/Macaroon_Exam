@@ -50,12 +50,12 @@ class Header extends PureComponent {
                   <p>Welcome, {userEmail}</p>
                 </div>
               ) : (
-                <NavLink to={{ pathname: '/Login', state: { from: this.props.location } }} onClick={this.handleLoginClick}>
+                <div className="cursor-pointer" onClick={this.handleLoginClick}>
                   <div className="flex items-center mr-10">
                     <img className="mr-2" src="/images/login1.png" alt="alt" />
                     <p>Login</p>
                   </div>
-                </NavLink>
+                </div>
 
               )}
 

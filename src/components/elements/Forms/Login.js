@@ -8,7 +8,11 @@ import Homepage from '../../pages/homepage/Homepage';
 
 
 class Login extends Component {
-	state = {
+	constructor(props) {
+	
+	super(props)
+	
+	this.state = {
 		email: '',
 		password: '',
 		emailError: '',
@@ -18,6 +22,7 @@ class Login extends Component {
 		redirectToRegistration: false, // Новое состояние для перенаправления на страницу регистрации
 
 	};
+}
 
 
 	showModal = () => {
@@ -103,7 +108,7 @@ class Login extends Component {
 					<div className="fixed inset-0 flex items-center justify-center z-50">
 						<div className="absolute inset-0 bg-black opacity-50"></div>
 						<div className="relative bg-white rounded-lg shadow-lg p-8">
-							<button className="absolute -top-2 -right-2 p-2" onClick={this.hideModal}>
+							<button className="absolute -top-2 -right-2 p-2" onClick={this.props.handleCloseLoginForm}>
 								<svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
 								</svg>

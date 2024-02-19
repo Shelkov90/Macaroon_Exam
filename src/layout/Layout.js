@@ -3,6 +3,7 @@ import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Main from "./main/Main";
 import Login from "../components/elements/Forms/Login";
+import Register from "../components/elements/Forms/Register";
 
 class Layout extends PureComponent {
 	state = {
@@ -20,6 +21,7 @@ class Layout extends PureComponent {
 			<>
 				<Header userEmail={this.state.userEmail} />
 				<Login setUserEmail={this.setUserEmail} />
+				<Register />
 				<Main />
 				<Footer />
 			</>
