@@ -15,8 +15,6 @@ export const getUserByEmail = async (email) => {
   }
 };
 
-
-
 // Метод для добавления нового пользователя в БД
 export const addUserToDatabase = async (userData) => {
   try {
@@ -42,15 +40,14 @@ export const addUserToDatabase = async (userData) => {
 
 
 
-
-// Метод для получения массива Новостей из БД
+// Метод для получения массива информации из БД
 export const getDataBaseInfo = async (key) => {
   const response = await fetch(`${BASE_URL}/${key}`);
   const data = await response.json();
   return data;
 };
 
-// Метод добавляет новость в БД
+// Метод добавляет информацию в БД
 export const addDataBaseItem = async (key) => {
   const response = await fetch(`${BASE_URL}/${key}`, {
     method: 'POST',

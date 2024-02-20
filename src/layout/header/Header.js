@@ -1,28 +1,18 @@
 import React, { PureComponent } from "react";
 import { NavLink } from "react-router-dom";
 import HeaderBanner from "../../components/elements/Banner/HeaderBanner";
-import Login from "../../components/elements/Forms/Login";
 
 class Header extends PureComponent {
-  state = {
-    showLoginForm: false,
-    userEmail: '' // Добавляем состояние для хранения имени пользователя
-  };
+  constructor(props) {
+		  super(props)
 
-  handleLoginClick = () => {
-    this.setState({ showLoginForm: true });
-  };
-
-  handleCloseLoginForm = () => {
-    this.setState({ showLoginForm: false });
-  };
-
-  setUserEmail = (email) => {
-    this.setState({ userEmail: email }); // Устанавливаем имя пользователя в состояние
-  };
+      this.state = {
+        
+      }
+    };
 
   render() {
-    const { showLoginForm, userEmail } = this.state;
+    const userEmail = this.props.userEmail;
 
     return (
       <header>
@@ -45,18 +35,19 @@ class Header extends PureComponent {
                 Odesa, UKR
               </div>
 
-              {userEmail ? (
+              {userEmail ? 
+              (
                 <div className="flex items-center mr-10">
-                  <p>Welcome, {userEmail}</p>
+                  <p>Welcome, <span className="underline italic text-blue-600">{userEmail}</span></p>
                 </div>
-              ) : (
-                <div className="cursor-pointer" onClick={this.handleLoginClick}>
+              ) : 
+              (
+                <div className="cursor-pointer" onClick={this.props.showLoginForm}>
                   <div className="flex items-center mr-10">
                     <img className="mr-2" src="/images/login1.png" alt="alt" />
                     <p>Login</p>
                   </div>
                 </div>
-
               )}
 
               <div className="flex items-center mr-10">
@@ -93,11 +84,10 @@ class Header extends PureComponent {
           </nav>
         </div>
 
-        {showLoginForm && <Login showLoginForm={showLoginForm} handleCloseLoginForm={this.handleCloseLoginForm} setUserEmail={this.setUserEmail} />}
-
       </header>
     );
   }
 }
+
 
 export default Header;

@@ -5,6 +5,14 @@ import Sets from "../../elements/Sets/Sets";
 
 
 class Homepage extends PureComponent {
+    
+	constructor(props) {
+        super(props)
+
+        this.state = {
+            
+        }
+    }
 
 	render() {
 

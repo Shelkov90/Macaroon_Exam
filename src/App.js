@@ -15,8 +15,6 @@ import Newspage from './components/pages/newspage/Newspage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ReadySets from './components/pages/ReadySetsPage/ReadySets';
 import Wedding from './components/pages/Wedding';
-import Login from './components/elements/Forms/Login';
-import Register from './components/elements/Forms/Register';
 import FormWholeSale from './components/elements/Forms/FormWholeSale';
 
 const router = createBrowserRouter([
