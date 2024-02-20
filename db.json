@@ -6,6 +6,7 @@
       "surname": "Gray",
       "email": "alex@gmail.com",
       "password": "12345678",
+      "isAdmin": false,
       "orders": []
     },
     {
@@ -13,18 +14,10 @@
       "name": "Artem",
       "phone": "0502661699",
       "email": "artem@gmail.com",
+      "isAdmin": true,
       "city": "Odesa",
       "company": "AnyCompany",
       "password": "12345678"
-    }
-  ],
-  "admin": [
-    {
-      "name": "Artem",
-      "surname": "Chechel",
-      "login": "admin",
-      "password": "admin",
-      "id": "0cb2"
     }
   ],
   "orders": [

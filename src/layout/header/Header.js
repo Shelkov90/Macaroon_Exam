@@ -12,7 +12,7 @@ class Header extends PureComponent {
     };
 
   render() {
-    const userEmail = this.props.userEmail;
+    const {userEmail, isAdmin} = this.props;
 
     return (
       <header>
@@ -20,16 +20,16 @@ class Header extends PureComponent {
         <HeaderBanner />
 
         <div className="header__navigation bg-orange-50">
-          <div className="flex justify-between items-center text-sm max-w-[1170px] mx-auto py-3 px-2">
+          <div className="flex justify-between items-center text-sm max-w-[1170px] mx-auto py-3">
             
-              <nav className="flex basis-3/6">
+              <nav className="flex">
                 <div className="mr-5"><NavLink to="/Guarantee">Fresh guarantee</NavLink></div>
                 <div className="mr-5"><NavLink to="/Delivery">Delivery & payments</NavLink></div>
                 <div className="mr-5"><NavLink to="/Wholesale">Wholesale supply</NavLink></div>
                 <div className="mr-5"><NavLink to="/Contacts">Contacts</NavLink></div>
               </nav>
             
-            <div className="flex basis-2/6">
+            <div className="flex justify-between basis-1/3">
               <div className="flex items-center mr-10">
                 <img className="mr-2" src="/images/place.svg" alt="alt" />
                 Odesa, UKR
@@ -37,8 +37,9 @@ class Header extends PureComponent {
 
               {userEmail ? 
               (
-                <div className="flex items-center mr-10">
+                <div className="flex items-between">
                   <p>Welcome, <span className="underline italic text-blue-600">{userEmail}</span></p>
+                  {isAdmin ? <NavLink to="/Admin" className="border rounded-xl bg-blue-400 p-2 text-white" >Admin</NavLink> : ''}
                 </div>
               ) : 
               (
@@ -50,13 +51,13 @@ class Header extends PureComponent {
                 </div>
               )}
 
-              <div className="flex items-center mr-10">
-                <img className="mr-2" src="/images/bag.svg" alt="alt" />
+              <div className="flex items-center">
+                <img className="ml-8 mr-2" src="/images/bag.svg" alt="alt" />
                 Cart
               </div>
             </div>
 
-            <div className="flex items-center basis-1/6 justify-end">
+            <div className="flex items-center justify-end">
               <div className="ml-4">
                 <img className="size-8" src="/images/tg.svg" alt="alt" />
               </div>

@@ -7,10 +7,15 @@ import Register from "../components/elements/Forms/Register";
 
 class Layout extends PureComponent {
 	state = {
+		isAdmin: false,
 		showLoginForm: false,
 		showRegisterForm: false,
 		userEmail: '', // или установите начальное значение, если адрес электронной почты не определен
 	};
+
+	setAdminStatus = () => {
+		this.setState({ isAdmin: true });
+	}
 
 	setUserEmail = (email) => {
 		console.log("Email received:", email);
@@ -50,10 +55,27 @@ class Layout extends PureComponent {
 	render() {
 		return (
 			<>
-				<Header userEmail={this.state.userEmail} showLoginForm={this.showLoginForm}/>
-				{this.state.showLoginForm ? <Login setUserEmail={this.setUserEmail} handleCloseLoginForm={this.handleCloseLoginForm} redirectToRegistrationForm={this.redirectToRegistrationForm} /> : ''}
-				{this.state.showRegisterForm ? <Register handleCloseRegisterForm={this.handleCloseRegisterForm} redirectToLoginForm={this.redirectToLoginForm} /> : ''}
+				<Header
+					isAdmin={this.state.isAdmin}
+					userEmail={this.state.userEmail} 
+					showLoginForm={this.showLoginForm} />
+				
+				{this.state.showLoginForm ? 
+				<Login
+					setAdminStatus={this.setAdminStatus}
+					setUserEmail={this.setUserEmail} 
+					handleCloseLoginForm={this.handleCloseLoginForm} 
+					redirectToRegistrationForm={this.redirectToRegistrationForm} /> : 
+				''}
+				
+				{this.state.showRegisterForm ? 
+				<Register 
+					handleCloseRegisterForm={this.handleCloseRegisterForm} 
+					redirectToLoginForm={this.redirectToLoginForm} /> : 
+				''}
+				
 				<Main />
+				
 				<Footer />
 			</>
 		);

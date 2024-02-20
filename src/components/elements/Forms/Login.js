@@ -49,6 +49,8 @@ class Login extends Component {
 					
 					if (user.password === password) {
 						
+						if(user.isAdmin) this.props.setAdminStatus();
+
 						// Успешный вход
 						this.setState({ isLoggedIn: true });
 						this.props.setUserEmail(email);
@@ -104,7 +106,6 @@ class Login extends Component {
 												value={email}
 												onChange={this.handleInputChange}
 												onBlur={this.validateEmail}
-												pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 												required
 											/>
 											{emailError && <p className="text-red-500 ml-20">{emailError}</p>}
@@ -120,7 +121,6 @@ class Login extends Component {
 												value={password}
 												onChange={this.handleInputChange}
 												onBlur={this.validatePassword}
-												pattern=".{6,}"
 												required
 											/>
 											{passwordError && <p className="text-red-500 ml-20">{passwordError}</p>}
