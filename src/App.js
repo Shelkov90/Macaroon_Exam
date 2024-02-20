@@ -16,6 +16,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ReadySets from './components/pages/ReadySetsPage/ReadySets';
 import Wedding from './components/pages/Wedding';
 import FormWholeSale from './components/elements/Forms/FormWholeSale';
+import AdminPanel from './components/pages/AdminPanel/AdminPanel';
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: '/FormWholeSale',
         element: <FormWholeSale />
+      },
+      {
+        path: '/Admin',
+        element: <AdminPanel />
       },
       {
         path: '*', 
