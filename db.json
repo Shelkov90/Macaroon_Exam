@@ -19,6 +19,15 @@
       "city": "Odesa",
       "company": "AnyCompany",
       "password": "12345678"
+    },
+    {
+      "name": "Sergey",
+      "phone": "0679465787",
+      "email": "sergey@gmail.com",
+      "city": "Kiyv",
+      "company": "KiyvBud",
+      "password": "qwerty",
+      "id": "lCkU6uh"
     }
   ],
   "orders": [

@@ -47,6 +47,7 @@ class OrdersList extends PureComponent {
 
         return (
             <>
+                <h2 className='text-2xl text-center font-semibold my-4'>Orders:</h2>
                 {content ? content : ""}
             </>
         )

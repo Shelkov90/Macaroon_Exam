@@ -31,7 +31,7 @@ class HeaderBanner extends PureComponent {
   handleClickNext = () => {
     this.setState({ current: this.state.current + 1 });
     
-    if(this.state.current > 3) {
+    if(this.state.current >= this.state.items.length-1) {
         this.setState({ current: 0 });
     }
   }
@@ -39,7 +39,7 @@ class HeaderBanner extends PureComponent {
   handleClickPrev = () => {
     this.setState({ current: this.state.current - 1 });
 
-    if(this.state.current < 0) {
+    if(this.state.current <= 0) {
         this.setState({ current: 3 });
     }
   }
@@ -56,7 +56,7 @@ class HeaderBanner extends PureComponent {
             <img className="cursor-pointer" src="/images/leftArrow.svg" alt="alt" onClick={this.handleClickPrev} />
             
             <div className="header__banner__inner items-center flex">
-                <img className="mr-3" src={items[current]?.image} alt="alt" />
+                <img className="mr-3 max-h-6" src={items[current]?.image} alt="alt" />
                 <p className="uppercase text-gray-600">{items[current]?.text}</p>
             </div>
             

@@ -48,6 +48,8 @@ class UsersList extends PureComponent {
 
         return (
             <>
+                <h2 className='text-2xl text-center font-semibold my-4'>Users:</h2>
+
                 {content ? content : ""}
             </>
         )

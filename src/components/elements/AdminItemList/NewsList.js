@@ -38,6 +38,7 @@ class NewsList extends PureComponent {
 
         return (
             <>
+                <h2 className='text-2xl text-center font-semibold my-4'>News:</h2>
                 {content}
             </>
         )

@@ -31,7 +31,7 @@ class NotFound extends PureComponent {
 					
 						<Link to="/">
 							<div className="back__button text-red-400 border border-red-400 hover:bg-red-400 hover:text-white py-3 px-28 mt-20 rounded-md">
-								<p>Back</p>
+								<p>Homepage</p>
 							</div>
 						</Link>
 					

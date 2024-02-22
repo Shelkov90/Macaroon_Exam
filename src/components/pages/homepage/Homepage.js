@@ -334,9 +334,9 @@ class Homepage extends PureComponent {
 					</div>
 
 					<div className="main__popular__more flex justify-center">
-						<div className="more__button border border-blue-400 py-3 px-8 rounded-md">
+						<Link to='/ReadySets' className="more__button border cursor-pointer border-blue-400 hover:bg-blue-400 hover:text-white py-3 px-8 rounded-md">
 							<p>All holiday sets</p>
-						</div>
+						</Link>
 					</div>
 				</div>
 
