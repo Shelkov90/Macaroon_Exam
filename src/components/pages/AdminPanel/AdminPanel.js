@@ -21,11 +21,10 @@ class AdminPanel extends PureComponent {
 
                 <div className='admin__categories flex justify-between text-blue-500 my-10'>
 
-                    <button className='border p-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="users" onClick={this.getInfo}>Users</button>
-                    <button className='border p-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="orders" onClick={this.getInfo}>Orders</button>
-                    <button className='border p-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="sets" onClick={this.getInfo}>Sets</button>
-                    <button className='border p-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="sweets" onClick={this.getInfo}>Sweets</button>
-                    <button className='border p-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="news" onClick={this.getInfo}>News</button>
+                    <button className='border px-5 py-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="users" onClick={this.getInfo}>Users</button>
+                    <button className='border px-5 py-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="orders" onClick={this.getInfo}>Orders</button>
+                    <button className='border px-5 py-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="products" onClick={this.getInfo}>Products</button>
+                    <button className='border px-5 py-2 border-blue-300 rounded-md hover:bg-blue-500 hover:text-white' data-name="news" onClick={this.getInfo}>News</button>
 
                 </div>
 

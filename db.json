@@ -12,6 +12,7 @@
     {
       "id": "5f1c",
       "name": "Artem",
+      "surname": "Chechel",
       "phone": "0502661699",
       "email": "artem@gmail.com",
       "isAdmin": true,
@@ -22,11 +23,40 @@
   ],
   "orders": [
     {
-      "user": "Alex",
       "userId": "1",
-      "products": [],
+      "products": [
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        }
+      ],
       "date": "05.04.2023",
-      "totalPrice": "120",
+      "totalPrice": "300",
+      "id": "35af"
+    },
+    {
+      "userId": "1",
+      "products": [
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        }
+      ],
+      "date": "25.04.2023",
+      "totalPrice": "60",
       "id": "35af"
     }
   ],
@@ -111,28 +141,28 @@
           "description": "promo set",
           "price": 40,
           "discount": 10,
-          "image": "choice1.png"
+          "image": "/images/choice1.png"
         },
         {
           "name": "A bit of everything",
           "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 80,
           "discount": 0,
-          "image": "choice2.png"
+          "image": "/images/choice2.png"
         },
         {
           "name": "Even more",
           "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 130,
           "discount": 0,
-          "image": "choice3.png"
+          "image": "/images/choice3.png"
         },
         {
           "name": "Even more",
           "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 130,
           "discount": 0,
-          "image": "choice4.png"
+          "image": "/images/choice4.png"
         }
       ],
       "id": "f80d"

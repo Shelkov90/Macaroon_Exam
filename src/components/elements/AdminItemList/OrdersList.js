@@ -1,42 +1,41 @@
 import React, { PureComponent } from 'react'
 
-class UsersList extends PureComponent {
+class OrdersList extends PureComponent {
     constructor(props) {
         super(props)
 
         this.state = {
-
+            
         }
     }
 
     render() {
-
         let content = '';
 
-        if (this.props.users) {
-            content = this.props.users.map((item, index) => {
+        if (this.props.orders) {
+            content = this.props.orders.map((item, index) => {
                 return (
                     <div key={index} className='news__item grid grid-cols-8 border my-2 bg-white p-4 items-center'>
                         <p>#{index + 1}</p>
                         <p>
-                            <span className='font-semibold'>ID:</span> 
+                            <span className='font-semibold'>Date:</span> 
                             <br/> 
-                            {item.id}
+                            {item.date}
                         </p>
                         <p>
-                            <span className='font-semibold'>Name:</span> 
+                            <span className='font-semibold'>User ID:</span> 
                             <br/> 
-                            {item.name}
+                            {item.userId}
                         </p>
                         <p>
-                            <span className='font-semibold'>Admin roots:</span> 
+                            <span className='font-semibold'>Total price:</span> 
                             <br/> 
-                            {item.isAdmin ? "Yes" : "No"}
+                            ${item.totalPrice}
                         </p>
                         <p className='col-span-2'>
-                            <span className='font-semibold'>Email:</span> 
+                            <span className='font-semibold'>Products:</span> 
                             <br/> 
-                            {item.email}
+                            {item.products.length}
                         </p>
 
                         <button className='bg-green-200 hover:bg-green-400 rounded-md mx-4 py-2'>EDIT</button>
@@ -54,4 +53,4 @@ class UsersList extends PureComponent {
     }
 }
 
-export default UsersList
+export default OrdersList
