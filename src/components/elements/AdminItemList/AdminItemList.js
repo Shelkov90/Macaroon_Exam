@@ -28,7 +28,6 @@ class AdminItemList extends PureComponent {
         if(this.props.type !== prevProps.type){
             this.setState({ [this.props.type]: data })
         } 
-        console.log(data);
     }
 
     render() {

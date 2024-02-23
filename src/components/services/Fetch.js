@@ -59,3 +59,16 @@ export const addDataBaseItem = async (key) => {
   const data = await response.json();
   return data;
 };
+
+// Метод редактирования єлемента в БД (кроме продуктов)
+export const editDataBaseItem = async (key, id, item) => {
+  const response = await fetch(`${BASE_URL}/${key}/${id}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(item),
+  });
+  const data = await response.json();
+  return data;
+};
