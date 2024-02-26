@@ -14,8 +14,6 @@ class ProductsList extends PureComponent {
         let sweetsContent = ``;
         const sets = this.props.products[0]?.sets;
         const sweets = this.props.products[0]?.sweets;
-        console.log(sets);
-        console.log(sweets);
 
         if (sets) {
             setsContent = sets.map((item, index) => {

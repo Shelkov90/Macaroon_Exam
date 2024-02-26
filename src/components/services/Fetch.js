@@ -72,3 +72,17 @@ export const editDataBaseItem = async (key, id, item) => {
   const data = await response.json();
   return data;
 };
+
+export const deleteDataBaseItem = async (key, id) => {
+  fetch(`${BASE_URL}/${key}/${id}`, {
+    method: 'DELETE'
+  })
+    .then(response => {
+    if (response.ok) {
+      console.log('Элемент успешно удален');
+    } else {
+      console.error('Ошибка при удалении элемента:', response.status);
+    }
+    })
+    .catch(error => console.error('Ошибка при отправке запроса:', error));
+};
