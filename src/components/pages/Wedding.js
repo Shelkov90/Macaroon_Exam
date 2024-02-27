@@ -83,7 +83,7 @@ class Wedding extends PureComponent {
 				</h2>
 
 				<div className="wedding__cards grid grid-cols-2 justify-items-stretch gap-y-5 gap-x-7 mb-8 sm:grid-cols-3 ">
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 						<img
 							className="w-full"
 							src="images/weddingset1.png"
@@ -102,14 +102,14 @@ class Wedding extends PureComponent {
 								<p className="text-xl text-red-500 font-semibold">$600</p>
 							</div>
 
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center">
+							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 								<img className="mr-2" src="images/cart.svg" alt="alt" />
 								In cart
 							</div>
 						</div>
 					</div>
 
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 						<img
 							className="w-full"
 							src="images/weddingset2.png"
@@ -126,14 +126,14 @@ class Wedding extends PureComponent {
 							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 								<p className="text-xl text-red-500 font-semibold">$200</p>
 							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center">
+							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 								<img className="mr-2" src="images/cart.svg" alt="alt" />
 								In cart
 							</div>
 						</div>
 					</div>
 
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 						<img
 							className="w-full"
 							src="images/weddingset3.png"
@@ -149,14 +149,14 @@ class Wedding extends PureComponent {
 							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 								<p className="text-xl text-red-500 font-semibold">$6600</p>
 							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center">
+							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 								<img className="mr-2" src="images/cart.svg" alt="alt" />
 								In cart
 							</div>
 						</div>
 					</div>
 
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 						<img
 							className="w-full"
 							src="images/weddingset4.png"
@@ -172,14 +172,14 @@ class Wedding extends PureComponent {
 							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 								<p className="text-xl text-red-500 font-semibold">$14400</p>
 							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center">
+							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 								<img className="mr-2" src="images/cart.svg" alt="alt" />
 								In cart
 							</div>
 						</div>
 					</div>
 
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 						<img
 							className="w-full"
 							src="images/weddingset5.png"
@@ -197,14 +197,14 @@ class Wedding extends PureComponent {
 							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 								<p className="text-xl text-red-500 font-semibold">$80</p>
 							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center">
+							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 								<img className="mr-2" src="images/cart.svg" alt="alt" />
 								In cart
 							</div>
 						</div>
 					</div>
 
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 						<img
 							className="w-full"
 							src="images/weddingset6.png"
@@ -221,7 +221,7 @@ class Wedding extends PureComponent {
 							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 								<p className="text-xl text-red-500 font-semibold">$3900</p>
 							</div>
-							<div className="pwedding__card__cart px-2 basis-2/5 flex items-center justify-center">
+							<div className="pwedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 								<img className="mr-2" src="images/cart.svg" alt="alt" />
 								In cart
 							</div>
