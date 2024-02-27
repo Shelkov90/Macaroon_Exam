@@ -1,18 +1,34 @@
 import React, { PureComponent } from "react";
 import { NavLink } from "react-router-dom";
 import HeaderBanner from "../../components/elements/Banner/HeaderBanner";
+import { getDataBaseInfo } from "../../components/services/Fetch";
+import CartIcon from "../../components/pages/Cart/CartIcon";
+
+
 
 class Header extends PureComponent {
   constructor(props) {
 		  super(props)
 
       this.state = {
-        
+        cartLength: 0,
       }
-    };
+    }
+
+    getCartItems = async () => {
+      const data = await getDataBaseInfo("cart");
+      if (!data) return;
+      this.setState({ cartLength: data.length });
+  }
+
+	componentDidMount(){
+		this.getCartItems()
+	}
 
   render() {
     const {userEmail, isAdmin} = this.props;
+    const { cartLength } = this.state;
+
 
     return (
       <header>
@@ -51,10 +67,9 @@ class Header extends PureComponent {
                 </div>
               )}
 
-              <div className="flex items-center">
-                <img className="ml-8 mr-2" src="/images/bag.svg" alt="alt" />
-                Cart
-              </div>
+<NavLink to="/Cart">
+                <CartIcon cartLength={cartLength} />
+              </NavLink>
             </div>
 
             <div className="flex items-center justify-end">

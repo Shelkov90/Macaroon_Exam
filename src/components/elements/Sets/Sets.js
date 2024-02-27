@@ -1,5 +1,8 @@
-import React, { PureComponent } from 'react'
-import { getDataBaseInfo } from '../../services/Fetch'
+import React, { PureComponent } from 'react';
+import SetItem from './SetItem';
+import { addProductToCart, getDataBaseInfo } from '../../services/Fetch';
+import Modal from '../Modal/Modal';
+
 
 
 class Sets extends PureComponent {
@@ -7,66 +10,80 @@ class Sets extends PureComponent {
         super(props)
 
         this.state = {
-            items: []
+            items: [],
+            cart: [],
+            isModalOpen: false,
         }
     }
 
-    // Получение данных из БД через обращение к методу getDataBaseInfo в компоненте fetch
     getSets = async () => {
         const key = "products";
         try {
             const data = await getDataBaseInfo(key);
             if (!data) return;
-            this.setState({items: data[0].sets});
+            this.setState({ items: data[0].sets });
         } catch (error) {
             console.error("Error fetching products:", error);
         }
     }
 
-    // Автоматический разовый вызов запроса из БД при подключении компонента
-    componentDidMount(){
+    componentDidMount() {
         this.getSets()
     }
 
+    addToCart = async (set) => {
+        try {
+            // Добавляю товар в корзину
+            await addProductToCart(set);
+            // Обновляю состояние корзины, чтобы отобразить добавленный товар
+            this.setState(prevState => ({
+                cart: [...prevState.cart, set],
+                isModalOpen: true,
+            }));
+            console.log('Item added to cart. Modal open:', this.state.isModalOpen);
+        } catch (error) {
+            console.error('Error adding product to cart:', error);
+        }
+    }
+    
+
+    handleCloseModal = () => {
+        this.setState({ isModalOpen: false }); // Закрываю модальное окно
+    }
+
+    handleContinueShopping = () => {
+        this.setState({ isModalOpen: false }); // Закрываю модальное окно
+    }
+
+    handleCheckout = () => {
+        // Переход к странице оформления покупки
+        window.location.href = "/cart";
+    }
+    
+
     render() {
+        const { items } = this.state;
 
-        let content = ``;
-
-        // В состоянии полученном из БД
-        let sets = this.state.items;
-
-        content = sets.map((set, index) => {
-            
-            return(
-						
-                <div key={index} className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
-                    <img
-                        className="w-full"
-                        src={set.image}
-                        alt="popularImage"
+        const content = items.map((set, index) => (
+            <div 
+                key={index} className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+                <SetItem
+                    key={set.id}
+                    set={set}
+                    addToCart={() => this.addToCart(set)} // передаю функцию для добавления в корзину
                     />
-                    <div className="popular__card__text p-5">
-                        <p className="text-xl font-semibold">{set.name}</p>
-                        <p className="text-gray-600">
-                            {set.description}
-                        </p>
-                    </div>
-                    <div className="popular__card__buy border-t-2 border-t-gray-300 flex">
-                        <div className="popular__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-                            <p className="text-xl text-red-500 font-semibold">${set.price}</p>
-                        </div>
-                        <div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
-                            <img className="mr-2" src="/images/cart.svg" alt="alt" />
-                            In cart
-                        </div>
-                    </div>
-                </div>
-            )
-        })
+            </div>
+        ));
 
         return (
             <>
-            {content}
+                {content}
+                <Modal 
+                    isOpen={this.state.isModalOpen} 
+                    onClose={this.handleCloseModal} 
+                    onContinueShopping={this.handleContinueShopping} 
+                    onCheckout={this.handleCheckout} 
+                />
             </>
         )
     }

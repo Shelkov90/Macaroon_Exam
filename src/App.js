@@ -6,7 +6,6 @@ import Delivery from './components/pages/Delivery';
 import Wholesale from './components/pages/Wholesale';
 import Contacts from './components/pages/Contacts';
 import Gift from './components/pages/Gift';
-import Sweet from './components/pages/Sweet';
 import Catalogue from './components/pages/Catalogue';
 import ForCompanies from './components/pages/ForCompanies';
 import NotFound from './components/pages/NotFound';
@@ -17,11 +16,17 @@ import ReadySets from './components/pages/ReadySetsPage/ReadySets';
 import Wedding from './components/pages/Wedding';
 import FormWholeSale from './components/elements/Forms/FormWholeSale';
 import AdminPanel from './components/pages/AdminPanel/AdminPanel';
+import SetProvider from './components/elements/Sets/SetContext';
+import Cart from './components/pages/Cart/Cart';
+import Sweet from './components/elements/Sweet/Sweet';
+import Set from './components/elements/Sets/Set';
+
+
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout/>,
+    element: <SetProvider><Layout/></SetProvider>,
     children: [
       {
         path: '/',
@@ -68,6 +73,10 @@ const router = createBrowserRouter([
         element: <ReadySets />
       },
       {
+        path: '/ReadySets/Sets/:id',
+        element: <Set />
+      },
+      {
         path: '/Wedding',
         element: <Wedding />
       },
@@ -78,6 +87,10 @@ const router = createBrowserRouter([
       {
         path: '/Admin',
         element: <AdminPanel />
+      },
+      {
+        path: '/Cart',
+        element: <Cart />
       },
       {
         path: '*', 

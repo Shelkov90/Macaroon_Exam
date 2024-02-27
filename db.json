@@ -73,6 +73,7 @@
     {
       "sets": [
         {
+          "id": 1,
           "name": "Heart",
           "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
           "price": 200,
@@ -82,66 +83,222 @@
             {
               "tastes": [
                 {
-                  "apple": "4 pieces",
-                  "cherry": "10 pieces",
-                  "coconut": "10 pieces"
+                  "apple": "4 pcs",
+                  "cherry": "10 pcs",
+                  "coconut": "10 pcs"
                 }
               ],
               "description": [
                 {
-                  "header": "Lorem ipsum",
-                  "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+                  "header": "Heart",
+                  "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
                 }
               ],
               "compound": [
                 {
-                  "header": "Lorem ipsum",
-                  "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+                  "header": "Calorie content",
+                  "text": "439.70 kcal (1840 kJ) (21%)"
                 }
               ],
               "conditions": [
                 {
-                  "header": "Lorem ipsum",
-                  "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
                 }
               ]
             }
           ]
         },
         {
+          "id": 2,
           "name": "Beauty will save the world",
           "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 60,
           "discount": 0,
-          "image": "/images/Popular2.png"
+          "image": "/images/Popular2.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry-basil": "4 pcs",
+                  "coconut": "4 pcs",
+                  "blue-cheese": "4 pcs",
+                  "parmezan": "4 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Set 16 pcs.",
+                  "text": "Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "439.90 kcal (1860 kJ) (22%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
+          "id": 3,
           "name": "Round set",
           "description": "40 macaroons in a round box with a personal inscription",
           "price": 240,
           "discount": 0,
-          "image": "/images/Popular3.png"
+          "image": "/images/Popular3.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry": "10 pcs",
+                  "coconut": "10 pcs",
+                  "banana": "10 pcs",
+                  "apple": "10 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Round set",
+                  "text": "40 macaroons in a round box with a personal inscription"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "429.90 kcal (1660 kJ) (18%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
-          "name": "Set for 9",
+          "id": 4,
+          "name": "Set of 9",
           "description": "Set of 9 pieces in a square box. Flavors: chocolate, pistachio, cherry",
           "price": 70,
           "discount": 0,
-          "image": "/images/Popular4.png"
+          "image": "/images/Popular4.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "chocolate": "3 pcs",
+                  "pistachio": "3 pcs",
+                  "cherry": "3 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Set for 9",
+                  "text": "Set of 9 pieces in a square box. Flavors: chocolate, pistachio, cherry"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "440.90 kcal (1960 kJ) (24%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
+          "id": 5,
           "name": "Set for 16",
           "description": "Set 16 pcs. Flavors: salted caramel, blue cheese, parmesan, chocolate",
           "price": 110,
           "discount": 0,
-          "image": "/images/Popular5.png"
+          "image": "/images/Popular5.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "salted caramel": "4 pcs",
+                  "blue cheese": "4 pcs",
+                  "parmesan": "4 pcs",
+                  "chocolate": "4 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Set for 16 ",
+                  "text": "Flavors: salted caramel, blue cheese, parmesan, chocolate"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "440.90 kcal (1960 kJ) (24%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
+          "id": 6,
           "name": "Heart",
           "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
           "price": 200,
           "discount": 0,
-          "image": "/images/Popular3.png"
+          "image": "/images/Popular3.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "peach": "4 pcs",
+                  "apple": "4 pcs",
+                  "strawberry": "4 pcs",
+                  "chocolate": "4 pcs",
+                  "banana": "4 pcs",
+                  "cherry": "4 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Heart",
+                  "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "410.90 kcal (1360 kJ) (15%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         }
       ],
       "sweets": [
@@ -150,28 +307,377 @@
           "description": "promo set",
           "price": 40,
           "discount": 10,
-          "image": "/images/choice1.png"
+          "image": "/images/choice1.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry": "1 pcs",
+                  "chocolate": "1 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Promo Set",
+                  "text": "1 macaron and 1 eclair"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "350.90 kcal (1170 kJ) (12%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "A bit of everything",
           "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 80,
           "discount": 0,
-          "image": "/images/choice2.png"
+          "image": "/images/choice2.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry - basil": "4 pcs",
+                  "coconut": "3 pcs",
+                  "blue cheese": "3 pcs",
+                  "parmesan": "3 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "A bit of everything",
+                  "text": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "470.90 kcal (1740 kJ) (17%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Even more",
           "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 130,
           "discount": 0,
-          "image": "/images/choice3.png"
+          "image": "/images/choice3.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry - basil": "4 pcs",
+                  "coconut": "3 pcs",
+                  "blue cheese": "3 pcs",
+                  "parmesan": "3 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Even more",
+                  "text": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "470.90 kcal (1740 kJ) (17%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Even more",
           "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
           "price": 130,
           "discount": 0,
-          "image": "/images/choice4.png"
+          "image": "/images/choice4.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry - basil": "4 pcs",
+                  "coconut": "3 pcs",
+                  "blue cheese": "3 pcs",
+                  "parmesan": "3 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Even more",
+                  "text": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "470.90 kcal (1740 kJ) (17%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "wedding": [
+        {
+          "id": 1,
+          "name": "Set of 9 macarons",
+          "description": "With a festive stamp and wishes for the newlyweds",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/weddingset1.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "lemon": "3 pcs",
+                  "cherry": "3 pcs",
+                  "strawberry": "3 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Set of 9 macarons",
+                  "text": "With a festive stamp and wishes for the newlyweds"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "480.90 kcal (1840 kJ) (19%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "For guests",
+          "description": "Gift set of 2 macarons with the seal of the bride and groom in transparent packaging",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/weddingset2.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "coconut": "2 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "For guests",
+                  "text": "Gift set of 2 macarons with the seal of the bride and groom in transparent packaging"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "485.90 kcal (1940 kJ) (21%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Pyramid of macarons",
+          "description": "A wonderful addition to the holiday table",
+          "price": 1200,
+          "discount": 0,
+          "image": "/images/weddingset3.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "strawberry": "10 pcs",
+                  "coconut": "10 pcs",
+                  "banana": "10 pcs",
+                  "apple": "10 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Pyramid of macarons",
+                  "text": "A wonderful addition to the holiday table"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "410.90 kcal (1040 kJ) (10%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Great Pyramid (10 floors)",
+          "description": "For a wedding or banquet, 240 macarons of your choice",
+          "price": 2400,
+          "discount": 0,
+          "image": "/images/weddingset4.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "chocolate": "24 pcs",
+                  "pistachio": "24 pcs",
+                  "strawberry": "24 pcs",
+                  "coconut": "24 pcs",
+                  "banana": "24 pcs",
+                  "apple": "24 pcs",
+                  "strawberry-basil": "24 pcs",
+                  "blue-cheese": "24 pcs",
+                  "parmezan": "24 pcs",
+                  "cherry": "24 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Great Pyramid",
+                  "text": "For a wedding or banquet, 240 macarons of your choice"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "420.90 kcal (1140 kJ) (12%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Macarons with guests' names",
+          "description": "A personalized macaron for your guests will not leave anyone indifferent!",
+          "price": 120,
+          "discount": 0,
+          "image": "/images/weddingset5.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "salted caramel": "4 pcs",
+                  "blue cheese": "4 pcs",
+                  "parmesan": "4 pcs",
+                  "chocolate": "4 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Macarons with guests' names",
+                  "text": "A personalized macaron for your guests will not leave anyone indifferent!"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "414.90 kcal (1230 kJ) (11%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Bachelorette party set",
+          "description": "A cheeky set for a bachelorette party. 30 macaroons with different flavors and funny names",
+          "price": 900,
+          "discount": 0,
+          "image": "/images/Popular3.png",
+          "details": [
+            {
+              "tastes": [
+                {
+                  "peach": "10 pcs",
+                  "strawberry": "10 pcs",
+                  "cherry": "10 pcs"
+                }
+              ],
+              "description": [
+                {
+                  "header": "Bachelorette party set",
+                  "text": "A cheeky set for a bachelorette party. 30 macaroons with different flavors and funny names"
+                }
+              ],
+              "compound": [
+                {
+                  "header": "Calorie content",
+                  "text": "435.90 kcal (1560 kJ) (11%)"
+                }
+              ],
+              "conditions": [
+                {
+                  "header": "Conditions and shelf life",
+                  "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+                }
+              ]
+            }
+          ]
         }
       ],
       "id": "f80d"
@@ -277,6 +783,571 @@
       "header": "Anonymous delivery",
       "text": "We can present your order as an anonymous gift",
       "id": "3e8f"
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "name": "Beauty will save the world",
+      "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+      "price": 60,
+      "discount": 0,
+      "image": "/images/Popular2.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry-basil": "4 pcs",
+              "coconut": "4 pcs",
+              "blue-cheese": "4 pcs",
+              "parmezan": "4 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Set 16 pcs.",
+              "text": "Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.90 kcal (1860 kJ) (22%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Round set",
+      "description": "40 macaroons in a round box with a personal inscription",
+      "price": 240,
+      "discount": 0,
+      "image": "/images/Popular3.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry": "10 pcs",
+              "coconut": "10 pcs",
+              "banana": "10 pcs",
+              "apple": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Round set",
+              "text": "40 macaroons in a round box with a personal inscription"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "429.90 kcal (1660 kJ) (18%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Round set",
+      "description": "40 macaroons in a round box with a personal inscription",
+      "price": 240,
+      "discount": 0,
+      "image": "/images/Popular3.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry": "10 pcs",
+              "coconut": "10 pcs",
+              "banana": "10 pcs",
+              "apple": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Round set",
+              "text": "40 macaroons in a round box with a personal inscription"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "429.90 kcal (1660 kJ) (18%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Round set",
+      "description": "40 macaroons in a round box with a personal inscription",
+      "price": 240,
+      "discount": 0,
+      "image": "/images/Popular3.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry": "10 pcs",
+              "coconut": "10 pcs",
+              "banana": "10 pcs",
+              "apple": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Round set",
+              "text": "40 macaroons in a round box with a personal inscription"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "429.90 kcal (1660 kJ) (18%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Round set",
+      "description": "40 macaroons in a round box with a personal inscription",
+      "price": 240,
+      "discount": 0,
+      "image": "/images/Popular3.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry": "10 pcs",
+              "coconut": "10 pcs",
+              "banana": "10 pcs",
+              "apple": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Round set",
+              "text": "40 macaroons in a round box with a personal inscription"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "429.90 kcal (1660 kJ) (18%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Set for 16",
+      "description": "Set 16 pcs. Flavors: salted caramel, blue cheese, parmesan, chocolate",
+      "price": 110,
+      "discount": 0,
+      "image": "/images/Popular5.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "salted caramel": "4 pcs",
+              "blue cheese": "4 pcs",
+              "parmesan": "4 pcs",
+              "chocolate": "4 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Set for 16 ",
+              "text": "Flavors: salted caramel, blue cheese, parmesan, chocolate"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "440.90 kcal (1960 kJ) (24%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Set for 16",
+      "description": "Set 16 pcs. Flavors: salted caramel, blue cheese, parmesan, chocolate",
+      "price": 110,
+      "discount": 0,
+      "image": "/images/Popular5.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "salted caramel": "4 pcs",
+              "blue cheese": "4 pcs",
+              "parmesan": "4 pcs",
+              "chocolate": "4 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Set for 16 ",
+              "text": "Flavors: salted caramel, blue cheese, parmesan, chocolate"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "440.90 kcal (1960 kJ) (24%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Beauty will save the world",
+      "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+      "price": 60,
+      "discount": 0,
+      "image": "/images/Popular2.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry-basil": "4 pcs",
+              "coconut": "4 pcs",
+              "blue-cheese": "4 pcs",
+              "parmezan": "4 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Set 16 pcs.",
+              "text": "Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.90 kcal (1860 kJ) (22%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "apple": "4 pcs",
+              "cherry": "10 pcs",
+              "coconut": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

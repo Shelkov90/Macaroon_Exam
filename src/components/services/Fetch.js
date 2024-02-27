@@ -1,5 +1,70 @@
 const BASE_URL = `http://localhost:3010`;
 
+export const getAllProducts = async () => {
+  const response = await fetch(`${BASE_URL}/products`);
+  const data = await response.json();
+  return data;
+};
+
+export const addProduct = async (product) => {
+  const response = await fetch(`${BASE_URL}/products`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(product),
+  });
+  const data = await response.json();
+  return data;
+};
+
+
+// Метод для добавления продукта в корзину
+
+export const addProductToCart = async (product) => {
+  const response = await fetch(`${BASE_URL}/cart`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(product),
+  });
+  const data = await response.json();
+  return data;
+};
+
+// Метод для удаления продукта из корзины
+
+export const removeProductFromCart = async (productId) => {
+  try {
+    const response = await fetch(`${BASE_URL}/cart/${productId}`, {
+      method: 'DELETE',
+    });
+    if (!response.ok) {
+      throw new Error('Не удалось удалить товар из корзины');
+    }
+    return true; // Возвращаю true после успешного удаления
+  } catch (error) {
+    console.error('Ошибка при удалении товара из корзины:', error);
+    throw error;
+  }
+};
+
+// Метод для полной очситки корзины
+
+export const clearCart = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/cart`, {
+      method: 'DELETE',
+    });
+    return response.status; // Возвращаю только статус ответа
+  } catch (error) {
+    console.error('Error clearing cart:', error);
+    throw error;
+  }
+};
+
+// Метод для получения юзера по имейлу
 
 export const getUserByEmail = async (email) => {
   try {
