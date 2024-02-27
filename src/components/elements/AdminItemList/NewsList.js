@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import NewsArticle from './NewsArticle'
-import { getDataBaseInfo } from '../../services/Fetch'
+import CreateNewsArticle from './CreateNewsArticle'
 
 class NewsList extends PureComponent {
     constructor(props) {
@@ -21,9 +21,12 @@ class NewsList extends PureComponent {
         } 
     }
 
-    requestForNews = async () => {
-        const data = await getDataBaseInfo("news");
-        this.setState({ newsList: data })
+    createNewItem = () => {
+
+    }
+
+    addNewItem = () => {
+
     }
 
     render() {
@@ -35,14 +38,18 @@ class NewsList extends PureComponent {
         if (newsList) {
             content = newsList.map((item, index) => {
                 return (
-                    <NewsArticle key={`news${index}`} item={item} index={index} requestForNews={this.requestForNews} />
+                    <NewsArticle key={`news${index}`} item={item} index={index} />
                 )
             })
         };
 
         return (
             <>
-                <h2 key={"news__header"} className='text-2xl text-center font-semibold my-4'>News:</h2>
+                <div className='flex justify-between items-center'>
+                    <h2 key={"news__header"} className='text-2xl text-center font-semibold my-4'>News - {newsList.length} items:</h2>
+                    <button className=' bg-green-200 text-blue-500 font-semibold rounded-md my-5 px-4 py-2 cursor-pointer hover:bg-green-400'>ADD NEW</button>
+                </div>
+                <CreateNewsArticle />
                 {content}
             </>
         )

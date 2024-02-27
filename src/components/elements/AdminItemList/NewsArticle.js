@@ -8,7 +8,8 @@ class NewsArticle extends PureComponent {
         this.state = {
             item: this.props.item,
             editable: false,
-            details: false
+            details: false,
+            isDelete: false
         }
     }
 
@@ -36,11 +37,13 @@ class NewsArticle extends PureComponent {
 
     deleteArticle = async (key, id) => {
         deleteDataBaseItem(key,id)
-        this.props.requestForNews();
+        this.setState({ isDelete: true })
     }
 
     render() {
-        const {item, editable, details} = this.state;
+        const {item, editable, details, isDelete} = this.state;
+        
+        if(isDelete) return null
         
         let article = {
             id: item.id,

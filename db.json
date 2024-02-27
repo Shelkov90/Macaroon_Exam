@@ -179,19 +179,6 @@
   ],
   "news": [
     {
-      "date": "21.04.2023",
-      "image": "/images/News4.png",
-      "header": "Easter holiday is ahead",
-      "text": "Delight your loved ones with delicious Easter pasta sets. Our new collection of gifts is already on sale.",
-      "details": [
-        {
-          "secondHeader": "The Easter is coming soon!",
-          "fulltext": "Your favorite spring holiday is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
-        }
-      ],
-      "id": "7d8a"
-    },
-    {
       "date": "30.03.2023",
       "image": "/images/News5.png",
       "header": "Appetizing sets with NEW flavors",
@@ -216,32 +203,6 @@
         }
       ],
       "id": "7755"
-    },
-    {
-      "date": "25.02.2023",
-      "image": "/images/News7.png",
-      "header": "Is there a wedding ahead?",
-      "text": "We offer several original and simple design ideas. Guests will definitely remember",
-      "details": [
-        {
-          "secondHeader": "The NEW flavors is coming soon!",
-          "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
-        }
-      ],
-      "id": "f825"
-    },
-    {
-      "date": "26.02.2023",
-      "image": "/images/News8.png",
-      "header": "Gifts for women",
-      "text": "The day is just around the corner! Delight your sweet tooth with delicious sets from MacaronShop",
-      "details": [
-        {
-          "secondHeader": "The NEW flavors is coming soon!",
-          "fulltext": "Your NEW flavors is coming very soon. And we have already prepared a collection of macaroons with a signature design💖 The pies delight everyone, because they are not only beautiful, but also delicious! We cook with love using only natural ingredients!"
-        }
-      ],
-      "id": "7c7b"
     }
   ],
   "banners": [
