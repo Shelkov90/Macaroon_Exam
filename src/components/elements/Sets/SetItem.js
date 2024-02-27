@@ -15,7 +15,6 @@ class SetItem extends Component {
 			<>
 				<Link
 					to={`/ReadySets/Sets/${id}`}
-					className="block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl"
 				>
 					<img className="w-full rounded-t-lg transition duration-300 ease-in-out transform " src={image} alt="popularImage" />
 					<div className="popular__card__text p-5 bg-white rounded-b-lg">

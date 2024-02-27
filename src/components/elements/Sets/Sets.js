@@ -66,7 +66,7 @@ class Sets extends PureComponent {
 
         const content = items.map((set, index) => (
             <div 
-                key={index} className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+                key={index} className="main__popular__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl">
                 <SetItem
                     key={set.id}
                     set={set}
