@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { addDataBaseItem } from '../../services/Fetch'
 
 class CreateNewsArticle extends PureComponent {
     constructor(props) {
@@ -10,14 +11,33 @@ class CreateNewsArticle extends PureComponent {
             header: 'Header text',
             text: 'Article text',
             secondHeader: 'Second header',
-            fulltext: 'Full text',
-            isCanceled: false
+            fulltext: 'Full text'
         }
     }
 
-    handleSubmit = (e) => {
+    closeForm = () => {
+        this.props.closeNewItemForm()
+    }
+
+    handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(e);
+
+        let article = {
+            date: e.target[0].value,
+            image: e.target[5].value,
+            header: e.target[1].value,
+            text: e.target[2].value,
+            details: [
+                {
+                    secondHeader: e.target[3].value,
+                    fulltext: e.target[4].value
+                }
+            ]
+        }
+
+        let newArticle = await addDataBaseItem("news", article)
+
+        this.props.addNewItem(newArticle)
     }
 
     render() {
@@ -101,7 +121,7 @@ class CreateNewsArticle extends PureComponent {
 
                     <button type="submit" className='bg-green-200 hover:bg-green-400 rounded-md mx-4 py-2'>SAVE</button>
 
-                    <button onClick={() => this.setState({ isCanceled: true })} className='bg-red-200 hover:bg-red-400 rounded-md mx-4 py-2'>CANCEL</button>
+                    <button onClick={this.closeForm} type='button' className='bg-red-200 hover:bg-red-400 rounded-md mx-4 py-2'>CANCEL</button>
 
                 </div>
             </form>

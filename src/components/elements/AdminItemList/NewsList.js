@@ -7,7 +7,8 @@ class NewsList extends PureComponent {
         super(props)
 
         this.state = {
-            newsList: []
+            newsList: [],
+            showNewArticleForm: false
         }
     }
 
@@ -22,16 +23,28 @@ class NewsList extends PureComponent {
     }
 
     createNewItem = () => {
-
+        this.setState({ 
+            showNewArticleForm: true
+         })
     }
 
-    addNewItem = () => {
+    closeNewItemForm = () => {
+        this.setState({ 
+            showNewArticleForm: false
+         })
+    }
+
+    addNewItem = (article) => {
+        this.setState({ 
+            newsList: [...this.state.newsList, article],
+            showNewArticleForm: false
+         })
 
     }
 
     render() {
 
-        const { newsList } = this.state;
+        const { newsList, showNewArticleForm } = this.state;
         
         let content = '';
 
@@ -47,9 +60,9 @@ class NewsList extends PureComponent {
             <>
                 <div className='flex justify-between items-center'>
                     <h2 key={"news__header"} className='text-2xl text-center font-semibold my-4'>News - {newsList.length} items:</h2>
-                    <button className=' bg-green-200 text-blue-500 font-semibold rounded-md my-5 px-4 py-2 cursor-pointer hover:bg-green-400'>ADD NEW</button>
+                    <button onClick={this.createNewItem} className=' bg-green-200 text-blue-500 font-semibold rounded-md my-5 px-4 py-2 cursor-pointer hover:bg-green-400'>ADD NEW</button>
                 </div>
-                <CreateNewsArticle />
+                {showNewArticleForm ? <CreateNewsArticle addNewItem={this.addNewItem} closeNewItemForm={this.closeNewItemForm} /> : ''}
                 {content}
             </>
         )

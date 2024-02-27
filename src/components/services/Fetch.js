@@ -113,13 +113,13 @@ export const getDataBaseInfo = async (key) => {
 };
 
 // Метод добавляет информацию в БД
-export const addDataBaseItem = async (key) => {
+export const addDataBaseItem = async (key, item) => {
   const response = await fetch(`${BASE_URL}/${key}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(),
+    body: JSON.stringify(item),
   });
   const data = await response.json();
   return data;
