@@ -251,7 +251,7 @@ class Register extends Component {
 													{passwordError && <p className="text-red-500 ml-12">{passwordError}</p>}
 												</div>
 											</div>
-											<button className="bg-red-500 text-white py-2 px-4 mx-auto" style={{ width: '460px' }} type="submit">Send a registration request</button>
+											<button className="bg-red-500 text-white py-2 px-4 mx-auto hover:bg-red-600" style={{ width: '460px' }} type="submit">Send a registration request</button>
 										</form>
 										<div className="form__lastText flex justify-center text-sm mb-4">
 											<div>

@@ -127,7 +127,7 @@ class Login extends Component {
 										</div>
 									</div>
 
-									<button className="bg-red-500 text-white py-4 px-10 mx-auto" style={{ width: '370px' }} type="submit">Login</button>
+									<button className="bg-red-500 text-white py-4 px-10 mx-auto hover:bg-red-600" style={{ width: '370px' }} type="submit">Login</button>
 
 								</form>
 

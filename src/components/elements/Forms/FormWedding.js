@@ -20,31 +20,31 @@ class FormWedding extends PureComponent {
 						for your event
 					</p>
 
-					<form class="flex flex-col justify-center mt-10">
-						<div class="form__wedding">
-							<div class="form__inputs basis-2/3 grid grid-cols-2 gap-x-7">
-								<label class="text-sm mb-2" for="name">
+					<form className="flex flex-col justify-center mt-10">
+						<div className="form__wedding">
+							<div className="form__inputs basis-2/3 grid grid-cols-2 gap-x-7">
+								<label className="text-sm mb-2" for="name">
 									Your name*
 									<input
-										class="w-full p-2 mt-2"
+										className="w-full p-2 mt-2"
 										name="name"
 										type="text"
 										placeholder="Your name"
 									/>
 								</label>
 
-								<label class="text-sm mb-2" for="phone">
+								<label className="text-sm mb-2" for="phone">
 									Your phone*
 									<input
-										class="w-full p-2 mt-2"
+										className="w-full p-2 mt-2"
 										name="phone"
 										type="nuber"
 										placeholder="Your phone"
 									/>
 								</label>
 
-								<div class="form__textarea">
-									<div class="text-sm mb-2">Describe your idea</div>
+								<div className="form__textarea">
+									<div className="text-sm mb-2">Describe your idea</div>
 									<textarea
 										className="w-full"
 										name=""
@@ -54,7 +54,7 @@ class FormWedding extends PureComponent {
 									></textarea>
 
 									<button
-										class="bg-red-500 text-white py-2 px-10 mx-auto mt-10 mb-2"
+										className="bg-red-500 text-white py-2 px-10 mx-auto mt-10 mb-2 hover:bg-red-600"
 										type="button"
 									>
 										Send a request
@@ -62,13 +62,13 @@ class FormWedding extends PureComponent {
 								</div>
 							</div>
 
-							<div class="form__lastText text-sm mb-12">
+							<div className="form__lastText text-sm mb-12">
 								By clicking on the "Place an order" button, I accept and agree
 								to the{" "}
-								<span class="text-blue-400 underline">Offer Agreement</span> and
+								<span className="text-blue-400 underline">Offer Agreement</span> and
 								authorize the processing of my personal data in accordance with
 								the
-								<span class="text-blue-400 underline">Privacy Policy.</span>
+								<span className="text-blue-400 underline">Privacy Policy.</span>
 							</div>
 						</div>
 					</form>

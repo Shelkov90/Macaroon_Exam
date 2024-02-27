@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Link } from "react-router-dom";
 
 class Sweet extends PureComponent {
 	constructor(props) {
@@ -36,7 +37,7 @@ class Sweet extends PureComponent {
 						</div>
 
 						<div className="choice__products__inner flex gap-x-7">
-							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 								<img className="w-full" src="/images/choice1.png" alt="alt" />
 								<div className="popular__card__text p-5">
 									<p className="text-xl font-semibold">
@@ -48,15 +49,14 @@ class Sweet extends PureComponent {
 									<div className="popular__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 										<p className="text-xl text-red-500 font-semibold">$30</p>
 									</div>
-									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center"
-											>
+									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 										<img className="mr-2" src="/images/cart.svg" alt="alt" />
 										In cart
 									</div>
 								</div>
 							</div>
 
-							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 								<img className="w-full" src="/images/choice2.png" alt="alt" />
 								<div className="popular__card__text p-5">
 									<p className="text-xl font-semibold">A bit of everything</p>
@@ -69,14 +69,14 @@ class Sweet extends PureComponent {
 									<div className="popular__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 										<p className="text-xl text-red-500 font-semibold">$80</p>
 									</div>
-									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
+									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 										<img className="mr-2" src="/images/cart.svg" alt="alt" />
 										In cart
 									</div>
 								</div>
 							</div>
 
-							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 								<img className="w-full" src="/images/choice3.png" alt="alt" />
 								<div className="popular__card__text p-5">
 									<p className="text-xl font-semibold">Even more</p>
@@ -89,14 +89,14 @@ class Sweet extends PureComponent {
 									<div className="popular__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 										<p className="text-xl text-red-500 font-semibold">$130</p>
 									</div>
-									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
+									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 										<img className="mr-2" src="/images/cart.svg" alt="alt" />
 										In cart
 									</div>
 								</div>
 							</div>
 
-							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md">
+							<div className="choice__product__card basis-1/4 flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
 								<img className="w-full" src="/images/choice4.png" alt="alt" />
 								<div className="popular__card__text p-5">
 									<p className="text-xl font-semibold">Even more</p>
@@ -109,7 +109,7 @@ class Sweet extends PureComponent {
 									<div className="popular__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
 										<p className="text-xl text-red-500 font-semibold">$130</p>
 									</div>
-									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center">
+									<div className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
 										<img className="mr-2" src="/images/cart.svg" alt="alt" />
 										In cart
 									</div>
@@ -118,11 +118,13 @@ class Sweet extends PureComponent {
 						</div>
 					</div>
 
-					<div className="choice__more flex justify-center mb-20 mt-10">
-						<div className="choice__more__button border border-blue-400 px-10 py-4 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
-							All ready-made sets
+					<Link to="/ReadySets">
+						<div className="choice__more flex justify-center mb-20 mt-10">
+							<div className="choice__more__button border border-blue-400 px-10 py-4 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
+								All ready-made sets
+							</div>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</>
 		);

@@ -122,7 +122,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 								</p>
 
 								<div
-									className="price__toCart flex py-4 px-10 rounded-md bg-pink-600 text-white cursor-pointer hover:bg-pink-700 hover:text-gray-100 transition duration-300 ease-in-out"
+									className="price__toCart flex py-4 px-10 rounded-md bg-pink-600 text-white cursor-pointer hover:bg-pink-700 hover:text-white transition duration-300 ease-in-out"
 									onClick={() => {
 										addToCart(set); // вызываю функцию addToCart
 										handleOpenModal();
