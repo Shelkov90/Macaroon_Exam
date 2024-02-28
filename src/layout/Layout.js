@@ -73,8 +73,8 @@ class Layout extends PureComponent {
 					handleCloseRegisterForm={this.handleCloseRegisterForm} 
 					redirectToLoginForm={this.redirectToLoginForm} /> : 
 				''}
-				
-				<Main />
+
+					<Main />
 				
 				<Footer />
 			</>

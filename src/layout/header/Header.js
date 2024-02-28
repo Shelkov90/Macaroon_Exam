@@ -67,9 +67,7 @@ class Header extends PureComponent {
                 </div>
               )}
 
-<NavLink to="/Cart">
                 <CartIcon cartLength={cartLength} />
-              </NavLink>
             </div>
 
             <div className="flex items-center justify-end">

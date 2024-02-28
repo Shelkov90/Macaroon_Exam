@@ -13,7 +13,9 @@ class Main extends Component {
 	render() {
 		return (
 			<main className="w-5/6 max-w-[1170px] mx-auto grow">
-				<Outlet />
+				
+					<Outlet />
+				
 			</main>
 		);
 	}

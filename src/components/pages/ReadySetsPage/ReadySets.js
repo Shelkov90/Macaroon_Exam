@@ -13,23 +13,23 @@ class ReadySets extends PureComponent {
     render() {
         return (
             <>
-                <div class="main__breadcrumbs mt-10 mb-12">
+                <div className="main__breadcrumbs mt-10 mb-12">
 
-                    <div class="breadcrumbs__inner flex justify-center">
+                    <div className="breadcrumbs__inner flex justify-center">
 
-                        <div class="breadcrumbs__item">
+                        <div className="breadcrumbs__item">
                             Homepage
                         </div>
 
-                        <p class="text-blue-400 mx-3">&gt;&gt;</p>
+                        <p className="text-blue-400 mx-3">&gt;&gt;</p>
 
-                        <div class="breadcrumbs__item">
+                        <div className="breadcrumbs__item">
                             Catalogue
                         </div>
 
-                        <p class="text-blue-400 mx-3">&gt;&gt;</p>
+                        <p className="text-blue-400 mx-3">&gt;&gt;</p>
 
-                        <div class="breadcrumbs__item text-blue-400">
+                        <div className="breadcrumbs__item text-blue-400">
                             Ready-made sets
                         </div>
 
@@ -37,37 +37,37 @@ class ReadySets extends PureComponent {
 
                 </div>
 
-                <div class="main__readySets">
+                <div className="main__readySets">
 
-                <div class="readySets__inner mb-20">
+                <div className="readySets__inner mb-20">
 
-                    <div class="article__header text-4xl text-center font-semibold mb-10">
+                    <div className="article__header text-4xl text-center font-semibold mb-10">
                         Ready-made sets
                     </div>
 
-                    <div class="article__tags mb-10">
+                    <div className="article__tags mb-10">
 
-                        <div class="tags__inner flex flex-wrap gap-y-2">
+                        <div className="tags__inner flex flex-wrap gap-y-2">
 
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 14 February
                             </div>
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 Spring
                             </div>
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 Presents for 14-th February
                             </div>
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 Wedding
                             </div>
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 New Year
                             </div>
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 Birthday
                             </div>
-                            <div class="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
+                            <div className="tags__item bg-orange-100 rounded-2xl py-1 px-3 mx-1 text-sm text-gray-600">
                                 1-st September
                             </div>
 
@@ -75,14 +75,14 @@ class ReadySets extends PureComponent {
 
                     </div>
 
-                    <div class="main__readySets__cards grid grid-cols-2 justify-items-stretch gap-y-5 gap-x-7 mb-8 sm:grid-cols-3">
+                    <div className="main__readySets__cards grid grid-cols-2 justify-items-stretch gap-y-5 gap-x-7 mb-8 sm:grid-cols-3">
 
                         <Sets />
 
                     </div>
 
-                    <div class="main__readySets__more flex justify-center">
-                        <div class="more__button border border-blue-400 py-3 px-8 rounded-md hover:bg-blue-400 hover:text-white hover:cursor-pointer">
+                    <div className="main__readySets__more flex justify-center">
+                        <div className="more__button border border-blue-400 py-3 px-8 rounded-md hover:bg-blue-400 hover:text-white hover:cursor-pointer">
                             <p>See all</p>
                         </div>
                     </div>
