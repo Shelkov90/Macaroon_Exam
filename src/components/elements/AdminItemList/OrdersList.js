@@ -12,6 +12,8 @@ class OrdersList extends PureComponent {
     render() {
         let content = '';
 
+        if(!this.props.orders) return null;
+
         if (this.props.orders) {
             content = this.props.orders.map((item, index) => {
                 return (
@@ -35,7 +37,7 @@ class OrdersList extends PureComponent {
                         <p className='col-span-2'>
                             <span className='font-semibold'>Products:</span> 
                             <br/> 
-                            {item.products.length}
+                            {item?.products?.length}
                         </p>
 
                         <button className='bg-green-200 hover:bg-green-400 rounded-md mx-4 py-2'>EDIT</button>

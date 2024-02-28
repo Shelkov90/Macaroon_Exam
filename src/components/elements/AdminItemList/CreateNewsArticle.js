@@ -41,9 +41,7 @@ class CreateNewsArticle extends PureComponent {
     }
 
     render() {
-        const { date, image, header, text, secondHeader, fulltext, isCanceled } = this.state;
-
-        if (isCanceled) return null;
+        const { date, image, header, text, secondHeader, fulltext } = this.state;
 
         return (
             <form onSubmit={this.handleSubmit}>

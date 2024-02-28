@@ -190,7 +190,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 							</div>
 						</div>
 
-						<div className="description__text">
+						<div className="description__text min-h-40">
 							{tabContent?.map((item, index) => (
 								<div key={index}>
 									<p className="font-semibold">{item.header}</p>

@@ -7,40 +7,68 @@ import ProductsList from './ProductsList';
 
 class AdminItemList extends PureComponent {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-            users: [],
-            orders: [],
-            products: [],
-            news: [],
+            data: [],
+            loading: false,
+            error: null
+        };
+    }
+
+    fetchData = async () => {
+        this.setState({ loading: true });
+        try {
+            const data = await getDataBaseInfo(this.props.type);
+            this.setState({ data, loading: false, error: null });
+        } catch (error) {
+            this.setState({ error: error.message, loading: false });
         }
-    }
+    };
 
-    componentDidMount = async() => {
-        const data = await getDataBaseInfo(this.props.type);
-        this.setState({ [this.props.type]: data })
-    }
+    componentDidMount = () => {
+        this.fetchData();
+    };
 
-    componentDidUpdate = async(prevProps) => {
-        const data = await getDataBaseInfo(this.props.type);
-        
-        if(this.props.type !== prevProps.type){
-            this.setState({ [this.props.type]: data })
-        } 
-    }
+    componentDidUpdate = (prevProps) => {
+        if (this.props.type !== prevProps.type) {
+            this.fetchData();
+        }
+    };
 
     render() {
+        const { data, loading, error } = this.state;
+        let componentToRender;
+
+        switch (this.props.type) {
+            case 'users':
+                componentToRender = <UsersList users={data} />;
+                break;
+            case 'orders':
+                componentToRender = <OrdersList orders={data} />;
+                break;
+            case 'products':
+                componentToRender = <ProductsList products={data} />;
+                break;
+            case 'news':
+                componentToRender = <NewsList news={data} />;
+                break;
+            default:
+                componentToRender = null;
+        }
 
         return (
             <>
-              {this.props.type === "users" ? <UsersList users={this.state[this.props.type]} /> : ""}
-              {this.props.type === "orders" ? <OrdersList orders={this.state[this.props.type]} /> : ""}
-              {this.props.type === "products" ? <ProductsList products={this.state[this.props.type]} /> : ""}
-              {this.props.type === "news" ? <NewsList news={this.state[this.props.type]} /> : ""}
+                {loading ? (
+                    <p>Loading...</p>
+                ) : error ? (
+                    <p>Error: {error}</p>
+                ) : (
+                    componentToRender
+                )}
             </>
-        )
+        );
     }
 }
 
-export default AdminItemList
+export default AdminItemList;

@@ -7,7 +7,9 @@
       "email": "alex@gmail.com",
       "password": "12345678",
       "isAdmin": false,
-      "orders": []
+      "phone": "0442654378",
+      "city": "Somewhere",
+      "company": "Unknown"
     },
     {
       "id": "5f1c",
@@ -27,7 +29,19 @@
       "city": "Kiyv",
       "company": "KiyvBud",
       "password": "qwerty",
-      "id": "lCkU6uh"
+      "id": "lCkU6uh",
+      "surname": "Panamar"
+    },
+    {
+      "id": "23",
+      "name": "Igor",
+      "surname": "Grib",
+      "email": "igor@gmail.com",
+      "phone": "0678765432",
+      "password": "qwertyuiop",
+      "isAdmin": false,
+      "company": "Comppany",
+      "city": "Lviv"
     }
   ],
   "orders": [
