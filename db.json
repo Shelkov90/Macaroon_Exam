@@ -81,6 +81,678 @@
       "date": "25.04.2023",
       "totalPrice": "60",
       "id": "35af"
+    },
+    {
+      "id": "pw4nf3",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 0
+    },
+    {
+      "id": "human4",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "f5t6gu",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "w5rnmi",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 600
+    },
+    {
+      "id": "61yvy",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 420
+    },
+    {
+      "id": "yc7xna",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 1020
+    },
+    {
+      "id": "9pdsk",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 20
+    },
+    {
+      "id": "4dasz",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 1020
+    },
+    {
+      "id": "fclacl",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 820
+    },
+    {
+      "id": "wc3jwg",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 220
+    },
+    {
+      "id": "lu2rtnq",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 220
+    },
+    {
+      "id": "uvihu",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 220
+    },
+    {
+      "id": "srapn",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 420
+    },
+    {
+      "id": "otpc1",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 620
+    },
+    {
+      "id": "6ubwpe",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 420
+    },
+    {
+      "id": "6hprh",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 220
+    },
+    {
+      "id": "wi50h",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 600
+    },
+    {
+      "id": "ho0p3",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 800
+    },
+    {
+      "id": "6fr5pt",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 600
+    },
+    {
+      "id": "6hi3ca",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 600
+    },
+    {
+      "id": "lvkwr",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 800
+    },
+    {
+      "id": "np6ucs",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 1220
+    },
+    {
+      "id": "qxq8kq",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 1220
+    },
+    {
+      "id": "l3zghruh",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 800
+    },
+    {
+      "id": "75jdwg",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 420
+    },
+    {
+      "id": "50lq6y",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "9onoq2",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 220
+    },
+    {
+      "id": "ur7u9s",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 620
+    },
+    {
+      "id": "8cdp1b",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 400
+    },
+    {
+      "id": "wx8d7b",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 420
+    },
+    {
+      "id": "19tjkj",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 0
+    },
+    {
+      "id": "8qw1g",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "29.02.2024",
+      "totalPrice": 0
+    },
+    {
+      "userId": "1",
+      "products": [
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        }
+      ],
+      "date": "05.04.2023",
+      "totalPrice": "300",
+      "id": "35af"
+    },
+    {
+      "userId": "1",
+      "products": [
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        }
+      ],
+      "date": "25.04.2023",
+      "totalPrice": "60",
+      "id": "35af"
+    },
+    {
+      "id": "ycx9al",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        },
+        {
+          "name": "Set for 16",
+          "description": "Set 16 pcs. Flavors: salted caramel, blue cheese, parmesan, chocolate",
+          "price": 110,
+          "discount": 0,
+          "image": "/images/Popular5.png"
+        },
+        {
+          "name": "Set for 16",
+          "description": "Set 16 pcs. Flavors: salted caramel, blue cheese, parmesan, chocolate",
+          "price": 110,
+          "discount": 0,
+          "image": "/images/Popular5.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        },
+        {
+          "name": "Round set",
+          "description": "40 macaroons in a round box with a personal inscription",
+          "price": 240,
+          "discount": 0,
+          "image": "/images/Popular3.png"
+        },
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        },
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        },
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        },
+        {
+          "name": "Beauty will save the world",
+          "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 60,
+          "discount": 0,
+          "image": "/images/Popular2.png"
+        }
+      ],
+      "date": "01.03.2024",
+      "totalPrice": 1080
     }
   ],
   "products": [
@@ -1288,7 +1960,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Beauty will save the world",
       "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
       "price": 60,
@@ -1326,7 +1998,7 @@
       ]
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Heart",
       "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
       "price": 200,
@@ -1363,7 +2035,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Round set",
       "description": "40 macaroons in a round box with a personal inscription",
       "price": 240,
@@ -1401,7 +2073,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Round set",
       "description": "40 macaroons in a round box with a personal inscription",
       "price": 240,
@@ -1439,7 +2111,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Beauty will save the world",
       "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
       "price": 60,
@@ -1477,7 +2149,7 @@
       ]
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Heart",
       "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
       "price": 200,
@@ -1502,6 +2174,44 @@
             {
               "header": "Calorie content",
               "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Beauty will save the world",
+      "description": "Set 16 pcs. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+      "price": 60,
+      "discount": 0,
+      "image": "/images/Popular2.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry-basil": "4 pcs",
+              "coconut": "4 pcs",
+              "blue-cheese": "4 pcs",
+              "parmezan": "4 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Set 16 pcs.",
+              "text": "Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.90 kcal (1860 kJ) (22%)"
             }
           ],
           "conditions": [

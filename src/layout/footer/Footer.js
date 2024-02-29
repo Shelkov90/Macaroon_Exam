@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { Link } from 'react-router-dom'
 
 class Footer extends PureComponent {
 	constructor(props) {
@@ -44,16 +45,16 @@ class Footer extends PureComponent {
 						
 						<div className="footer__links__column basis-1/4">
 							<p className="uppercase font-semibold mb-4">information</p>
-							<p className="text-sm text-gray-600 mb-2">About company</p>
-							<p className="text-sm text-gray-600 mb-2">Guarantees of taste and freshness</p>
-							<p className="text-sm text-gray-600 mb-2">Shipping and payment</p>
-							<p className="text-sm text-gray-600 mb-2">Contacts</p>
+<Link to="/Contacts">							<p className="text-sm text-gray-600 mb-2">About company</p></Link>
+<Link to="/Guarantee">							<p className="text-sm text-gray-600 mb-2">Guarantees of taste and freshness</p></Link>
+<Link to="Delivery">							<p className="text-sm text-gray-600 mb-2">Shipping and payment</p></Link>
+<Link to="/Contacts">							<p className="text-sm text-gray-600 mb-2">Contacts</p></Link>
 						</div>
 
 						<div className="footer__links__column basis-1/4">
 							<p className="uppercase font-semibold mb-4">catalogue</p>
 							<p className="text-sm text-gray-600 mb-2">Dessert catalog</p>
-							<p className="text-sm text-gray-600 mb-2">Ready-made sets</p>
+<Link to="/ReadySets">							<p className="text-sm text-gray-600 mb-2">Ready-made sets</p></Link>
 							<p className="text-sm text-gray-600 mb-2">Build your set</p>
 							<p className="text-sm text-gray-600 mb-2">Stock</p>
 						</div>

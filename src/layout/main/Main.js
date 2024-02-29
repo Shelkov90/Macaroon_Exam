@@ -6,16 +6,14 @@ class Main extends Component {
 	super(props)
 
 	this.state = {
-	  
+	
 	}
-  };
+};
 
 	render() {
 		return (
 			<main className="w-5/6 max-w-[1170px] mx-auto grow">
-				
 					<Outlet />
-				
 			</main>
 		);
 	}

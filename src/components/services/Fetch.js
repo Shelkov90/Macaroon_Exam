@@ -114,16 +114,27 @@ export const getDataBaseInfo = async (key) => {
 
 // Метод добавляет информацию в БД
 export const addDataBaseItem = async (key, item) => {
-  const response = await fetch(`${BASE_URL}/${key}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(item),
-  });
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(`${BASE_URL}/${key}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(item),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to add item to database');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error adding item to database:', error);
+    throw error; // Перехватываем ошибку и передаем ее обратно
+  }
 };
+
 
 // Метод редактирования єлемента в БД (кроме продуктов)
 export const editDataBaseItem = async (key, id, item) => {
