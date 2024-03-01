@@ -8,12 +8,17 @@ class UsersItem extends PureComponent {
         this.state = {
             item: this.props.item,
             editable: false,
-            isDelete: false
+            isDelete: false,
+            isAdmin: this.props.item.isAdmin
         }
     }
 
     setEditStatus = () => {
         this.setState({ editable: true })
+    }
+
+    changeAdminStatus = () => {
+        this.setState({ isAdmin: !this.state.isAdmin })
     }
 
     removeEditStatus = () => {
@@ -33,7 +38,7 @@ class UsersItem extends PureComponent {
 
     render() {
 
-        const {item, editable, isDelete} = this.state;
+        const {item, editable, isDelete, isAdmin} = this.state;
         
         if(isDelete) return null
 
@@ -44,7 +49,7 @@ class UsersItem extends PureComponent {
             email: item.email,
             phone: item.phone,
             password: item.password,
-            isAdmin: item.isAdmin,
+            isAdmin: isAdmin,
             city: item.city,
             company: item.company
         }
@@ -126,7 +131,10 @@ class UsersItem extends PureComponent {
                 <div className='flex flex-col justify-between basis-1/6'>   
                     <p className='flex justify-between'>
                         <span className='font-semibold'>Admin roots: </span>
-                        {item.isAdmin ? 'Yes' : 'No'}
+                        {editable ? 
+                        <button onClick={this.changeAdminStatus} className='bg-blue-100 px-1 rounded-md text-blue-500 hover:bg-blue-200' type='button'>{isAdmin ? 'Yes' : 'No'}</button>: 
+                        user.isAdmin ? 'Yes' : 'No'}
+                       
                     </p>
                     <p className='flex justify-between'>
                         <span className='font-semibold'>Company: </span>

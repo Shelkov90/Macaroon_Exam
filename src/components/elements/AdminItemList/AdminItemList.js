@@ -26,18 +26,24 @@ class AdminItemList extends PureComponent {
         }
     };
 
-    componentDidMount = () => {
+    componentDidMount() {
         this.fetchData();
     };
 
-    componentDidUpdate = (prevProps) => {
+    componentDidUpdate(prevProps) {
         if (this.props.type !== prevProps.type) {
             this.fetchData();
         }
     };
 
+    updateData = (data) => {
+        this.setState({data: [...data]});
+    }
+
     render() {
+
         const { data, loading, error } = this.state;
+
         let componentToRender;
 
         switch (this.props.type) {
@@ -45,7 +51,7 @@ class AdminItemList extends PureComponent {
                 componentToRender = <UsersList users={data} />;
                 break;
             case 'orders':
-                componentToRender = <OrdersList orders={data} />;
+                componentToRender = <OrdersList orders={data} updateData={this.updateData} />;
                 break;
             case 'products':
                 componentToRender = <ProductsList products={data} />;

@@ -13,17 +13,17 @@ class CartIcon extends Component {
 		const { cartLength } = this.props;
 
 		return (
-			<NavLink to="/Cart">
-				<div className="relative flex items-center">
-					{cartLength ? (
-						<div className="absolute bottom-2 left-5 bg-red-400 rounded-full p-1 text-xs text-white font-semibold">
-							{cartLength}
-						</div>
-					) : null}
-					<img className="ml-8 mr-2" src="/images/bag.svg" alt="Cart" />
-					Cart
-				</div>
-			</NavLink>
+			<div className="relative flex items-center">
+				{cartLength ? (
+					<div className="absolute bottom-2 left-5 bg-red-400 rounded-full p-1 text-xs text-white font-semibold">
+						{cartLength}
+					</div>
+				) : null}
+				<NavLink className="flex" to="/Cart">
+				<img className="mr-2" src="/images/bag.svg" alt="Cart" />
+				Cart
+				</NavLink>
+			</div>
 		);
 	}
 }
