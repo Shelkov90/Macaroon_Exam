@@ -48,7 +48,6 @@ class HeaderBanner extends PureComponent {
     const {current, items} = this.state;
 
     return (
-      <>
         <div className="header__banner bg-blue-100 row-auto hidden xl:block">
           
           <div className="flex items-center justify-between py-2 max-w-[1170px] mx-auto px-2">
@@ -65,7 +64,6 @@ class HeaderBanner extends PureComponent {
           </div>
         
         </div>
-      </>
     );
   }
 }

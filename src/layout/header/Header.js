@@ -15,10 +15,10 @@ class Header extends PureComponent {
       }
     }
 
-    getCartItems = async () => {
-      const data = await getDataBaseInfo("cart");
-      if (!data) return;
-      this.setState({ cartLength: data.length });
+  getCartItems = async () => {
+    const data = await getDataBaseInfo("cart");
+    if (!data) return;
+    this.setState({ cartLength: data.length });
   }
 
 	componentDidMount(){
@@ -45,29 +45,29 @@ class Header extends PureComponent {
                 <div className="mr-5"><NavLink to="/Contacts">Contacts</NavLink></div>
               </nav>
             
-            <div className="flex justify-between basis-1/3">
-              <div className="flex items-center mr-10">
+            <div className="flex justify-between basis-1/3 mr-4">
+              <div className="flex items-center">
                 <img className="mr-2" src="/images/place.svg" alt="alt" />
                 Odesa, UKR
               </div>
 
               {userEmail ? 
               (
-                <div className="flex items-between">
-                  <p>Welcome, <span className="underline italic text-blue-600">{userEmail}</span></p>
-                  {isAdmin ? <NavLink to="/Admin" className="border rounded-xl bg-blue-400 p-2 text-white" >Admin</NavLink> : ''}
+                <div className="flex justify-evenly items-center mr-4">
+                  <p className="text-balance">Welcome, <span className="underline italic text-blue-600">{userEmail}</span></p>
+                  {isAdmin ? <NavLink to="/Admin" className="border rounded-xl bg-blue-400 hover:bg-blue-500 p-2 text-white" >Admin</NavLink> : ''}
                 </div>
               ) : 
               (
                 <div className="cursor-pointer" onClick={this.props.showLoginForm}>
-                  <div className="flex items-center mr-10">
+                  <div className="flex items-center">
                     <img className="mr-2" src="/images/login1.png" alt="alt" />
                     <p>Login</p>
                   </div>
                 </div>
               )}
 
-                <CartIcon cartLength={cartLength} />
+              <CartIcon cartLength={cartLength} />
             </div>
 
             <div className="flex items-center justify-end">
