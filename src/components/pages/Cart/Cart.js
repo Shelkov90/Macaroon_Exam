@@ -2,12 +2,10 @@ import React, { PureComponent } from "react";
 import {
 	removeProductFromCart,
 	getDataBaseInfo,
-	addDataBaseItem
+	addDataBaseItem,
 } from "../../services/Fetch";
 import Sweet from "../../elements/Sweet/Sweet";
 import CheckoutModal from "../../elements/Modal/CheckoutModal";
-
-
 
 class Cart extends PureComponent {
 	constructor(props) {
@@ -20,6 +18,17 @@ class Cart extends PureComponent {
 			isOpenCheckoutModal: false,
 			selectedDeliveryMethod: null,
 		};
+	}
+
+	componentDidMount() {
+		this.getCartItems();
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+		const { cartItems } = this.state;
+		if (prevState.cartItems !== cartItems) {
+			this.calculateTotalPrice();
+		}
 	}
 
 	getCartItems = async () => {
@@ -40,7 +49,6 @@ class Cart extends PureComponent {
 		);
 
 		if (existingItemIndex !== -1) {
-			// Если товар уже есть в корзине, увеличиваем его количество
 			const updatedCartItems = cartItems.map((item, index) => {
 				if (index === existingItemIndex) {
 					const updatedQuantity = (item.quantity || 0) + 1;
@@ -54,14 +62,13 @@ class Cart extends PureComponent {
 				return item;
 			});
 			this.setState({ cartItems: updatedCartItems }, () => {
-				this.calculateTotalPrice(); // Пересчитываем общую стоимость после обновления cartItems
+				this.calculateTotalPrice();
 			});
 		} else {
-			// Если товара еще нет в корзине, добавляем его с начальным количеством 1 и ценой за единицу товара
-			const newItem = { id: productId, quantity: 1, price: 0 }; // Начальная цена установлена в 0
+			const newItem = { id: productId, quantity: 1, price: 0 };
 			const updatedCartItems = [...cartItems, newItem];
 			this.setState({ cartItems: updatedCartItems }, () => {
-				this.calculateTotalPrice(); // Пересчитываем общую стоимость после добавления нового товара
+				this.calculateTotalPrice();
 			});
 		}
 	};
@@ -81,7 +88,7 @@ class Cart extends PureComponent {
 			return item;
 		});
 		this.setState({ cartItems: updatedCartItems }, () => {
-			this.calculateTotalPrice(); // Пересчитываю общую стоимость после обновления cartItems
+			this.calculateTotalPrice();
 		});
 	};
 
@@ -115,58 +122,35 @@ class Cart extends PureComponent {
 		this.setState({ cartItems: updatedCartItems });
 	};
 
-	componentDidMount() {
-		this.getCartItems();
-	}
-
 	handleRemoveFromCart = async (productId) => {
 		try {
-			console.log("Пытаюсь удалить продукт из корзины...");
+			console.log("Removing product from cart...");
 			await removeProductFromCart(productId);
-			console.log("Продукт успешно удален из корзины.");
-			console.log("Ждем обновления базы данных...");
-			// Добавляю небольшую задержку в 500 мс перед обновлением списка товаров
+			console.log("Product successfully removed from cart.");
+			console.log("Waiting for database update...");
 			await new Promise((resolve) => setTimeout(resolve, 500));
-			console.log("Обновляем список товаров после удаления...");
+			console.log("Updating cart items after removal...");
 			await this.getCartItems();
-			console.log("Список товаров успешно обновлен.");
+			console.log("Cart items successfully updated.");
 		} catch (error) {
-			console.error("Ошибка при удалении товара из корзины:", error);
+			console.error("Error removing product from cart:", error);
 		}
 	};
 
 	handleSelectDeliveryMethod = (method, cost) => {
-		let deliveryCost = 0;
-		if (method === 'Delivery') {
-			deliveryCost = 20;
-		} else {
-			deliveryCost = 0; // Если выбран самовывоз, стоимость доставки равна 0
-		}
+		const deliveryCost = method === "Delivery" ? 20 : 0;
 		this.setState({ selectedDeliveryMethod: method, deliveryCost });
 	};
 
-
-
 	handleOpenCheckoutModal = (event) => {
-		event.preventDefault(); // Предотвращаем стандартное действие кнопки по умолчанию
+		event.preventDefault();
 		const { selectedDeliveryMethod, totalPrice, deliveryCost } = this.state;
-
-		// Создаем новую переменную для обновленной общей стоимости заказа
 		let newTotalPrice = totalPrice;
-
-		// Проверяем, выбран ли метод доставки "Delivery"
-		if (selectedDeliveryMethod === 'Delivery') {
-			// Добавляем стоимость доставки к общей сумме заказа
+		if (selectedDeliveryMethod === "Delivery") {
 			newTotalPrice += deliveryCost;
 		}
-
-		// Открываем модальное окно и передаем обновленную общую стоимость заказа
 		this.setState({ isOpenCheckoutModal: true, totalPrice: newTotalPrice });
 	};
-
-
-
-
 
 	handleCloseCheckoutModal = () => {
 		this.setState({ isOpenCheckoutModal: false });
@@ -175,43 +159,32 @@ class Cart extends PureComponent {
 	handleConfirmOrder = async () => {
 		const { cartItems } = this.state;
 		try {
-			// Создаем объект заказа
 			const order = {
-				userId: "1", // Ваш идентификатор пользователя
-				products: cartItems.map(item => ({
+				userId: "1",
+				products: cartItems.map((item) => ({
 					name: item.name,
 					description: item.description,
 					price: item.price,
 					discount: item.discount,
-					image: item.image
+					image: item.image,
 				})),
-				date: new Date().toLocaleDateString(), // Дата заказа
-				totalPrice: this.state.totalPrice, // Общая стоимость заказа
-				id: Math.random().toString(36).substring(7), // Уникальный идентификатор заказа
+				date: new Date().toLocaleDateString(),
+				totalPrice: this.state.totalPrice,
+				id: Math.random().toString(36).substring(7),
 			};
-
-			// Добавляем заказ в базу данных
 			const response = await addDataBaseItem("orders", order);
-
-			// Проверяем успешность добавления заказа в базу данных
 			if (response) {
-				console.log('Order added to database:', order);
-				// Закрываем модальное окно
+				console.log("Order added to database:", order);
 				this.handleCloseCheckoutModal();
 			} else {
-				console.error('Error adding order to database:', response.statusText);
-				// Обработка ошибки, например, показ сообщения об ошибке пользователю
+				console.error("Error adding order to database:", response.statusText);
 			}
 		} catch (error) {
-			console.error('Error adding order to database:', error);
-			// Обработка ошибки, например, показ сообщения об ошибке пользователю
+			console.error("Error adding order to database:", error);
 		}
 	};
 
-
-
 	render() {
-		console.log("isOpenCheckoutModal:", this.state.isOpenCheckoutModal);
 		const { cartItems, totalPrice } = this.state;
 		const totalItems = cartItems.reduce(
 			(total, item) => total + (item.quantity || 0),
@@ -305,12 +278,19 @@ class Cart extends PureComponent {
 									<hr />
 									<div className="flex justify-between items-center mt-2 mb-2">
 										<p>To pay:</p>
-										<p className="ml-auto">{this.state.selectedDeliveryMethod === 'Delivery' ? totalPrice + 20 : totalPrice}$</p>
+										<p className="ml-auto">
+											{this.state.selectedDeliveryMethod === "Delivery"
+												? totalPrice + 20
+												: totalPrice}
+											$
+										</p>
 									</div>
 									<hr />
 								</div>
-								<button className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500"
-									onClick={this.handleOpenCheckoutModal}>
+								<button
+									className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500"
+									onClick={this.handleOpenCheckoutModal}
+								>
 									Checkout
 								</button>
 							</div>
@@ -358,9 +338,13 @@ class Cart extends PureComponent {
 							</label>
 							<div className="mt-1 flex justify-around w-full">
 								<div
-									className={`flex items-center cursor-pointer group border ${this.state.selectedDeliveryMethod === 'Delivery' ? 'border-red-500' : 'border-transparent'} w-1/2 bg-white p-4`}
-
-									onClick={() => this.handleSelectDeliveryMethod('Delivery', 20)}
+									className={`flex items-center cursor-pointer group border ${this.state.selectedDeliveryMethod === "Delivery"
+											? "border-red-500"
+											: "border-transparent"
+										} w-1/2 bg-white p-4`}
+									onClick={() =>
+										this.handleSelectDeliveryMethod("Delivery", 20)
+									}
 								>
 									<img
 										src="/images/delivery1.svg"
@@ -373,8 +357,11 @@ class Cart extends PureComponent {
 									</div>
 								</div>
 								<div
-									className={`flex items-center cursor-pointer group border ${this.state.selectedDeliveryMethod === 'Pickup' ? 'border-green-500' : 'border-transparent'} w-1/2 bg-white p-4 ml-2`}
-									onClick={() => this.handleSelectDeliveryMethod('Pickup', 0)}
+									className={`flex items-center cursor-pointer group border ${this.state.selectedDeliveryMethod === "Pickup"
+											? "border-green-500"
+											: "border-transparent"
+										} w-1/2 bg-white p-4 ml-2`}
+									onClick={() => this.handleSelectDeliveryMethod("Pickup", 0)}
 								>
 									<img
 										src="/images/delivery2.svg"
@@ -387,7 +374,6 @@ class Cart extends PureComponent {
 									</div>
 								</div>
 							</div>
-
 						</div>
 
 						<div className="delivery_adress mb-4 mt-10">
@@ -510,13 +496,20 @@ class Cart extends PureComponent {
 							<p className="text-sm font-medium text-gray-700 mb-4">
 								Total order amount including delivery:
 							</p>
-							<p className="ml-auto text-red-400">{this.state.selectedDeliveryMethod === 'Delivery' ? totalPrice + 20 : totalPrice}$</p>
+							<p className="ml-auto text-red-400">
+								{this.state.selectedDeliveryMethod === "Delivery"
+									? totalPrice + 20
+									: totalPrice}
+								$
+							</p>
 						</div>
 
 						<hr />
 						<div className="text-center mt-4 mb-10">
-							<button className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500 w-1/2"
-								onClick={this.handleOpenCheckoutModal}>
+							<button
+								className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500 w-1/2"
+								onClick={this.handleOpenCheckoutModal}
+							>
 								Checkout
 							</button>
 						</div>
@@ -534,9 +527,11 @@ class Cart extends PureComponent {
 				<h2 className="text-4xl font-semibold text-center -mb-12">
 					Add to order
 				</h2>
+
 				<div>
 					<Sweet />
 				</div>
+
 				{this.state.isOpenCheckoutModal && (
 					<CheckoutModal
 						isOpenCheckoutModal={this.state.isOpenCheckoutModal}
@@ -544,8 +539,6 @@ class Cart extends PureComponent {
 						handleConfirmOrder={this.handleConfirmOrder}
 					/>
 				)}
-
-
 			</>
 		);
 	}
