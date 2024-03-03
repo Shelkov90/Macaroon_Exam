@@ -70,7 +70,7 @@ class Sets extends PureComponent {
                 <SetItem
                     key={set.id}
                     set={set}
-                    addToCart={() => this.addToCart(set)} // передаю функцию для добавления в корзину
+                    addToCart={this.addToCart} // передаю функцию для добавления в корзину
                     />
             </div>
         ));

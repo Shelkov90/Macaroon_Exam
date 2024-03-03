@@ -124,18 +124,26 @@ class Cart extends PureComponent {
 
 	handleRemoveFromCart = async (productId) => {
 		try {
-			console.log("Removing product from cart...");
+
 			await removeProductFromCart(productId);
+			this.getCartItems();
+			
 			console.log("Product successfully removed from cart.");
 			console.log("Waiting for database update...");
 			await new Promise((resolve) => setTimeout(resolve, 500));
 			console.log("Updating cart items after removal...");
-			await this.getCartItems();
+			// Удаляем товар из состояния корзины
+			const updatedCartItems = this.state.cartItems.filter(item => item.id !== productId);
+			this.setState({ cartItems: updatedCartItems }, () => {
+				// После обновления состояния, пересчитываем общую цену
+				this.calculateTotalPrice();
+			});
 			console.log("Cart items successfully updated.");
 		} catch (error) {
 			console.error("Error removing product from cart:", error);
 		}
 	};
+	
 
 	handleSelectDeliveryMethod = (method, cost) => {
 		const deliveryCost = method === "Delivery" ? 20 : 0;
@@ -209,94 +217,96 @@ class Cart extends PureComponent {
 				</div>
 
 				{cartItems.length > 0 && (
-					<div className="cart_info flex justify-between">
-						<div className="product_info w-2/3 border p-4 bg-white">
-							{cartItems.map((item, index) => (
-								<div
-									key={index}
-									className="w-full border-b-2 p-4 bg-white flex items-center justify-between"
-								>
-									<div className="flex items-center space-x-4 w-3/5">
-										<img src={item.image} alt="" className="w-20 h-20" />
-										<div className="w-52 truncate">
-											<p className="font-bold">{item.name}</p>
-										</div>
-									</div>
-									<div className="flex items-center space-x-4 w-1/5">
-										<button
-											onClick={() => this.handleDecrement(item.id)}
-											className="text-sm font-bold"
-										>
-											-
-										</button>
-										<span>
-											{item.quantity !== undefined &&
-												typeof item.quantity === "number"
-												? item.quantity
-												: 0}
-										</span>
-										<button
-											onClick={() => this.handleIncrement(item.id)}
-											className="text-sm font-bold"
-										>
-											+
-										</button>
-									</div>
-									<div className="flex items-center space-x-4 w-1/5">
-										<p>Price:</p>
-										<p className="text-red-400">${item.totalPrice}</p>
-										<div
-											className="cursor-pointer"
-											onClick={() => this.handleRemoveFromCart(item.id)}
-										>
-											✖️
-										</div>
-									</div>
-								</div>
-							))}
-						</div>
+    <div className="cart_info flex justify-between items-start">
+        
+        <div className="product_info w-2/3 border p-4 bg-white">
+            {cartItems.map((item, index) => (
+                <div
+                    key={index}
+                    className="w-full border-b-2 p-4 bg-white flex items-center justify-between"
+                >
+                    <div className="flex items-center space-x-4 w-3/5">
+                        <img src={item.image} alt="" className="w-20 h-20" />
+                        <div className="w-52 truncate">
+                            <p className="font-bold">{item.name}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center space-x-4 w-1/5">
+                        <button
+                            onClick={() => this.handleDecrement(item.id)}
+                            className="text-sm font-bold"
+                        >
+                            -
+                        </button>
+                        <span>
+                            {item.quantity !== undefined &&
+                                typeof item.quantity === "number"
+                                ? item.quantity
+                                : 0}
+                        </span>
+                        <button
+                            onClick={() => this.handleIncrement(item.id)}
+                            className="text-sm font-bold"
+                        >
+                            +
+                        </button>
+                    </div>
+                    <div className="flex items-center space-x-4 w-1/5">
+                        <p>Price:</p>
+                        <p className="text-red-400">${item.totalPrice}</p>
+                        <div
+                            className="cursor-pointer"
+                            onClick={() => this.handleRemoveFromCart(item.id)}
+                        >
+                            ✖️
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
 
-						<div className="whole_cart_info w-72 border p-4 bg-white relative h-96">
-							<div className="flex flex-col justify-between h-full">
-								<div>
-									<p className="font-bold text-lg mb-4">Total</p>
-									<div className="flex justify-between items-center">
-										<p>Total price:</p>
-										<p className="ml-auto">{totalPrice}</p>
-									</div>
-									<div className="border-dotted border-t border-gray-300 mb-2"></div>
-									<div className="flex justify-between items-center">
-										<p>Total quantity:</p>
-										<p className="ml-auto">{totalItems}</p>
-									</div>
-									<div className="border-dotted border-t border-gray-300 mb-2"></div>
-									<div className="flex justify-between items-center">
-										<p>Delivery:</p>
-										<p className="ml-auto">20$</p>
-									</div>
-									<div className="border-dotted border-t border-gray-300 mb-10"></div>
-									<hr />
-									<div className="flex justify-between items-center mt-2 mb-2">
-										<p>To pay:</p>
-										<p className="ml-auto">
-											{this.state.selectedDeliveryMethod === "Delivery"
-												? totalPrice + 20
-												: totalPrice}
-											$
-										</p>
-									</div>
-									<hr />
-								</div>
-								<button
-									className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500"
-									onClick={this.handleOpenCheckoutModal}
-								>
-									Checkout
-								</button>
-							</div>
-						</div>
-					</div>
-				)}
+        <div className="whole_cart_info w-72 border p-4 bg-white relative">
+            <div className="flex flex-col justify-between h-full">
+                <div>
+                    <p className="font-bold text-lg mb-4">Total</p>
+                    <div className="flex justify-between items-center">
+                        <p>Total price:</p>
+                        <p className="ml-auto">{totalPrice}</p>
+                    </div>
+                    <div className="border-dotted border-t border-gray-300 mb-2"></div>
+                    <div className="flex justify-between items-center">
+                        <p>Total quantity:</p>
+                        <p className="ml-auto">{totalItems}</p>
+                    </div>
+                    <div className="border-dotted border-t border-gray-300 mb-2"></div>
+                    <div className="flex justify-between items-center">
+                        <p>Delivery:</p>
+                        <p className="ml-auto">20$</p>
+                    </div>
+                    <div className="border-dotted border-t border-gray-300 mb-10"></div>
+                    <hr />
+                    <div className="flex justify-between items-center mt-2 mb-2">
+                        <p>To pay:</p>
+                        <p className="ml-auto">
+                            {this.state.selectedDeliveryMethod === "Delivery"
+                                ? totalPrice + 20
+                                : totalPrice}
+                            $
+                        </p>
+                    </div>
+                    <hr />
+                </div>
+                <button
+                    className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500"
+                    onClick={this.handleOpenCheckoutModal}
+                >
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+)}
+
 
 				<div className="delivery_info mt-10 w-2/3">
 					<h2 className="text-2xl font-semibold mb-4 text-center">Delivery</h2>
