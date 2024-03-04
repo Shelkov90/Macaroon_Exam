@@ -10,7 +10,10 @@ class AdminItemList extends PureComponent {
         super(props);
 
         this.state = {
-            data: [],
+            users: [],
+            orders: [],
+            products: [],
+            news: [],
             loading: false,
             error: null
         };
@@ -20,7 +23,7 @@ class AdminItemList extends PureComponent {
         this.setState({ loading: true });
         try {
             const data = await getDataBaseInfo(this.props.type);
-            this.setState({ data, loading: false, error: null });
+            this.setState({ [this.props.type]: data, loading: false, error: null })
         } catch (error) {
             this.setState({ error: error.message, loading: false });
         }
@@ -36,28 +39,28 @@ class AdminItemList extends PureComponent {
         }
     };
 
-    updateData = (data) => {
-        this.setState({data: [...data]});
+    updateData = (typeData, data) => {
+        this.setState({[typeData]: data});
     }
 
     render() {
 
-        const { data, loading, error } = this.state;
+        const { users, orders, products, news, loading, error } = this.state;
 
         let componentToRender;
 
         switch (this.props.type) {
             case 'users':
-                componentToRender = <UsersList users={data} />;
+                componentToRender = <UsersList users={users} updateData={this.updateData} />;
                 break;
             case 'orders':
-                componentToRender = <OrdersList orders={data} updateData={this.updateData} />;
+                componentToRender = <OrdersList orders={orders} updateData={this.updateData} />;
                 break;
             case 'products':
-                componentToRender = <ProductsList products={data} />;
+                componentToRender = <ProductsList products={products[0]} updateData={this.updateData} />;
                 break;
             case 'news':
-                componentToRender = <NewsList news={data} />;
+                componentToRender = <NewsList news={news} updateData={this.updateData} />;
                 break;
             default:
                 componentToRender = null;

@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
-import { deleteDataBaseItem, editDataBaseProductItem } from '../../services/Fetch'
+import { deleteDataBaseItem } from '../../services/Fetch'
 
 class SetsItem extends PureComponent {
     constructor(props) {
         super(props)
 
         this.state = {
-            item: this.props.set,
             details: false,
             editable: false,
             isDelete: false
@@ -30,8 +29,7 @@ class SetsItem extends PureComponent {
     }
 
     saveEditableSet = async (key, id, set) => { 
-        editDataBaseProductItem(key, id, set)
-        this.setState({ item: set })
+        this.props.updateProductData(key, id, set)
         this.removeEditStatus();
     }
 
@@ -42,13 +40,13 @@ class SetsItem extends PureComponent {
 
     render() {
 
-        const { item, editable, details, isDelete } = this.state;
+        const {item} = this.props
+
+        const {editable, details, isDelete } = this.state;
 
         if(isDelete) return null;
 
-        let setTastes = {
-
-        }
+        let setTastes = item.details[0].tastes;
 
         let set = {
             id: item.id,
@@ -80,7 +78,7 @@ class SetsItem extends PureComponent {
                     ]
                 }
             ]
-        }
+        };
 
         return (
             <div className='news__item grid grid-cols-8 gap-x-2 rounded-xl shadow-md my-2 bg-white p-4'>
@@ -231,7 +229,7 @@ class SetsItem extends PureComponent {
                 </p>
 
                 {editable ? 
-                <button onClick={() => this.saveEditableSet("products/0/sets/id=", item.id, set)} className='bg-green-200 hover:bg-green-400 rounded-md mx-2 max-h-56'>SAVE</button> : 
+                <button onClick={() => this.saveEditableSet("sets", item.id, set)} className='bg-green-200 hover:bg-green-400 rounded-md mx-2 max-h-56'>SAVE</button> : 
                 <button onClick={() => this.setEditStatus()} className='bg-green-200 hover:bg-green-400 rounded-md mx-2 max-h-56'>EDIT</button>
                 }
                 <button onClick={() => this.deleteSet("products", item.id)} className='bg-red-200 hover:bg-red-400 rounded-md mx-2 max-h-56'>DELETE</button>

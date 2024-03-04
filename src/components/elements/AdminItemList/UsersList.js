@@ -19,11 +19,7 @@ class UsersList extends PureComponent {
         }
     }
 
-    // componentDidUpdate = () => {
-    //     if(this.props.users !== this.state.usersList){
-    //         this.setState({ usersList: this.props.users })
-    //     }
-    // }
+    
 
     createNewItem = () => {
         this.setState({ 

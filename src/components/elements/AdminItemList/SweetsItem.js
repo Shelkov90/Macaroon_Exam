@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
-import { deleteDataBaseItem, editDataBaseItem } from '../../services/Fetch'
+import { deleteDataBaseItem } from '../../services/Fetch'
 
 class SweetsItem extends PureComponent {
     constructor(props) {
         super(props)
 
         this.state = {
-            item: this.props.sweet,
             details: false,
             editable: false,
             isDelete: false
@@ -30,8 +29,7 @@ class SweetsItem extends PureComponent {
     }
 
     saveEditableSweet = async (key, id, sweet) => { 
-        editDataBaseItem(key, id, sweet)
-        this.setState({ item: sweet })
+        this.props.updateProductData(key, id, sweet)
         this.removeEditStatus();
     }
 
@@ -42,13 +40,13 @@ class SweetsItem extends PureComponent {
 
     render() {
 
-        const { item, editable, details, isDelete } = this.state;
+        const { item } = this.props;
+
+        const { editable, details, isDelete } = this.state;
 
         if(isDelete) return null;
         
-        let sweetTastes = {
-            
-        }
+        let sweetTastes = item.details[0].tastes;
 
         let sweet = {
             id: item.id,
@@ -80,7 +78,7 @@ class SweetsItem extends PureComponent {
                     ]
                 }
             ]
-        }
+        };
 
         return (
             <div className='news__item grid grid-cols-8 gap-x-2 rounded-xl shadow-md my-2 bg-white p-4'>
@@ -231,7 +229,7 @@ class SweetsItem extends PureComponent {
                 </p>
 
                 {editable ? 
-                <button onClick={() => this.saveEditableSweet("products", item.id, sweet)} className='bg-green-200 hover:bg-green-400 rounded-md mx-2 max-h-56'>SAVE</button> : 
+                <button onClick={() => this.saveEditableSweet("sweets", item.id, sweet)} className='bg-green-200 hover:bg-green-400 rounded-md mx-2 max-h-56'>SAVE</button> : 
                 <button onClick={() => this.sweetEditStatus()} className='bg-green-200 hover:bg-green-400 rounded-md mx-2 max-h-56'>EDIT</button>
                 }
                 <button onClick={() => this.deleteSweet("products", item.id)} className='bg-red-200 hover:bg-red-400 rounded-md mx-2 max-h-56'>DELETE</button>

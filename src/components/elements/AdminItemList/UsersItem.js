@@ -13,6 +13,12 @@ class UsersItem extends PureComponent {
         }
     }
 
+    componentDidUpdate() {
+        if(this.props.item !== this.state.item) {
+            this.setState({ item: this.props.item})
+        }
+    }
+
     setEditStatus = () => {
         this.setState({ editable: true })
     }

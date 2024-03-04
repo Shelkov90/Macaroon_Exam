@@ -6,7 +6,6 @@ class OrdersItem extends PureComponent {
         super(props)
 
         this.state = {
-            item: this.props.item,
             isDelete: false
         }
     }
@@ -18,9 +17,9 @@ class OrdersItem extends PureComponent {
 
     render() {
 
-        const {item, isDelete} = this.state;
+        const {item} = this.props;
         
-        if(isDelete) return null;
+        if(this.state.isDelete) return null;
 
         return (
             <div className='news__item flex justify-between border my-2 bg-white p-4 items-center'>

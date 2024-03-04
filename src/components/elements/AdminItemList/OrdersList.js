@@ -19,7 +19,7 @@ class OrdersList extends PureComponent {
 
         if(prevState.sortType !== this.state.sortType){
             let sortedOrders = this.sorted(this.state.ordersList)
-            this.props.updateData(sortedOrders)
+            this.props.updateData("orders", sortedOrders)
         }
 
     }
@@ -30,7 +30,7 @@ class OrdersList extends PureComponent {
         
         switch(sortType) {
             case "date":
-                return arr.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+                return arr.slice().sort((a, b) =>  new Date(parseInt(a.date)) - new Date(parseInt(b.date)));
             case "user":
                 return arr.slice().sort((a, b) => a.userId.localeCompare(b.userId));
             case "price":
@@ -41,7 +41,6 @@ class OrdersList extends PureComponent {
     };
 
     render() {
-        console.log("render");
         let { ordersList } = this.state;
 
         let content = '';

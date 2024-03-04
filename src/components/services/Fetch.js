@@ -151,7 +151,7 @@ export const editDataBaseItem = async (key, id, item) => {
 
 // Метод редактирования єлемента в БД (кроме продуктов)
 export const editDataBaseProductItem = async (key, id, item) => {
-  const response = await fetch(`${BASE_URL}/${key}${id}`, {
+  const response = await fetch(`${BASE_URL}/${key}/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
