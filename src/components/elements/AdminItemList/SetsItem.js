@@ -38,6 +38,15 @@ class SetsItem extends PureComponent {
         this.setState({ isDelete: true })
     }
 
+    getTastes = (tastes) => {
+        let content = ``;
+        for (const [key, value] of Object.entries(tastes[0])) {
+            content += `${key} - ${value},`;
+        }
+
+        return content;
+    }
+
     render() {
 
         const {item} = this.props
@@ -57,7 +66,7 @@ class SetsItem extends PureComponent {
             image: item.image,
             details: [
                 {
-                    tastes: [setTastes],
+                    tastes: setTastes,
                     description: [
                         {
                             header: item.details[0].description[0].header,
@@ -79,7 +88,8 @@ class SetsItem extends PureComponent {
                 }
             ]
         };
-
+        let tastesContent = this.getTastes(setTastes);
+        console.log(this.getTastes(setTastes));
         return (
             <div className='news__item grid grid-cols-8 gap-x-2 rounded-xl shadow-md my-2 bg-white p-4'>
                 
@@ -135,6 +145,11 @@ class SetsItem extends PureComponent {
 
                     {details ?
                     <div>
+                        <div className='bg-gray-100 rounded-md my-2 p-4'>
+                            <h2 className='text-lg font-semibold'>Tastes:</h2>
+                            {tastesContent}
+                        </div>
+
                         <div className='bg-gray-100 rounded-md my-2 p-4'>
                             <h2 className='text-lg font-semibold'>Description:</h2>
                             <p className='my-1'>

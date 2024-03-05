@@ -23,17 +23,17 @@ class ProductsList extends PureComponent {
             case "sets":
                 index = sets.findIndex((element) => parseInt(element.id) === parseInt(id));
                 sets.splice(index, 1, item);
-                newProductsList = [{sets, sweets, wedding}];
+                newProductsList = {sets, sweets, wedding};
                 break;
             case "sweets":
                 index = sweets.findIndex((element) => parseInt(element.id) === parseInt(id));
                 sweets.splice(index, 1, item);
-                newProductsList = [{sets, sweets, wedding}];
+                newProductsList = {sets, sweets, wedding};
                 break;
             case "wedding":
                 index = wedding.findIndex((element) => parseInt(element.id) === parseInt(id));
                 wedding.splice(index, 1, item);
-                newProductsList = [{sets, sweets, wedding}];
+                newProductsList = {sets, sweets, wedding};
                 break;
             default:
                 return alert("error get new products List")

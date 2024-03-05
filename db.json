@@ -789,7 +789,7 @@
       "sets": [
         {
           "id": 1,
-          "name": "HeartStone",
+          "name": "Heart",
           "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
           "price": 200,
           "discount": 0,
@@ -797,21 +797,11 @@
           "details": [
             {
               "tastes": [
-                [
-                  [
-                    [
-                      [
-                        [
-                          [
-                            [
-                              {}
-                            ]
-                          ]
-                        ]
-                      ]
-                    ]
-                  ]
-                ]
+                {
+                  "strawberry": "10 pcs",
+                  "coconut": "10 pcs",
+                  "banana": "10 pcs"
+                }
               ],
               "description": [
                 {

@@ -57,7 +57,7 @@ class AdminItemList extends PureComponent {
                 componentToRender = <OrdersList orders={orders} updateData={this.updateData} />;
                 break;
             case 'products':
-                componentToRender = <ProductsList products={products[0]} updateData={this.updateData} />;
+                componentToRender = <ProductsList products={Array.isArray(products) ? products[0] : products} updateData={this.updateData} />;
                 break;
             case 'news':
                 componentToRender = <NewsList news={news} updateData={this.updateData} />;
