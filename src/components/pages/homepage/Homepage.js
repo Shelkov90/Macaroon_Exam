@@ -19,7 +19,7 @@ class Homepage extends PureComponent {
 		return (
 			<div>
 				
-				<div className="main__banner flex flex-col md:flex-row-reverse justify-evenly items-center">
+				<div className="main__banner flex flex-col sm:flex-row-reverse justify-evenly items-center">
 					<div className="flex flex-col basis-full md:basis-1/4 items-center">
 						<img
 							className="inline mt-16 mb-10 md:mb-4 md:mt-0"
@@ -135,7 +135,7 @@ class Homepage extends PureComponent {
 								src="/images/card4.svg"
 								alt="goods"
 							/>
-							<p className="flex justify-center text-xl font-semibold">
+							<p className="flex justify-between text-xl font-semibold">
 								Wedding proposal
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ class Homepage extends PureComponent {
 								src="/images/card6.svg"
 								alt="goods"
 							/>
-							<p className="flex justify-center text-xl font-semibold">
+							<p className="flex justify-between text-xl font-semibold">
 								Wholesale supply
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -214,20 +214,23 @@ class Homepage extends PureComponent {
 									/>
 								</svg>
 							</p>
-							<p className="hidden md:block text-balance text-center">
+						</Link>
+
+						<p className="hidden md:block text-balance text-center">
 								Offer for coffee shops, cafes, hotels, etc. Look at the terms of
 								cooperation and reviews.
-							</p>
-						</Link>
+						</p>
 
 					</div>
 
 				</div>
 
 				<div className="main__promotions mb-24">
+
 					<p className="text-4xl font-semibold text-center mb-12">Promotions</p>
 
-					<div className="main__promotions__cards grid grid-cols-2 md:grid-cols-4 gap-7 justify-items-center mb-5">
+					<div className="main__promotions__cards hidden sm:grid grid-cols-2 md:grid-cols-4 gap-7 justify-items-center mb-5">
+						
 						<div className="main__promotions__card max-w-[270px] relative">
 							<p className="main__promotions__card--label absolute bg-blue-300 px-2 text-white top-4">
 								FREE DELIVERY
@@ -269,11 +272,56 @@ class Homepage extends PureComponent {
 						</div>
 					</div>
 
-					<div className="main__promotions__cards--sliderDots flex gap-3 justify-end">
+					<div className="main__promotions__cards flex sm:hidden mb-5">
+						
+						<div className="main__promotions__card w-full relative">
+							<p className="main__promotions__card--label hidden sm:block absolute bg-blue-300 px-2 text-white top-4">
+								FREE DELIVERY
+							</p>
+							<img className="w-full" src="/images/promotions5.png" alt="promotions" />
+							<p className="main__promotions__card--description absolute flex flex-col justify-center w-full h-40 bottom-0 text-center rounded-lg bg-gradient-to-t from-green-600 from-70%">
+								<span className="block sm:hidden text-white text-xl align-middle">FREE DELIVERY</span>
+								<span className="text-white text-xl align-middle">Free delivery in Odesa.</span>
+							</p>
+						</div>
+
+						<div className="main__promotions__card hidden relative">
+							<p className="main__promotions__card--label absolute bg-red-500 px-2 text-white top-4">
+								NEW
+							</p>
+							<img src="/images/promotions2.png" alt="promotions" />
+							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-red-500 px-1 text-white">
+								Chocolate potato cake based on sponge cake!
+							</p>
+						</div>
+
+						<div className="main__promotions__card hidden relative">
+							<p className="main__promotions__card--label absolute bg-red-500 px-2 text-white top-4">
+								NEW
+							</p>
+							<img src="/images/promotions3.png" alt="promotions" />
+							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-red-500 px-1 text-white">
+								Delicious sweets based on macaroons and cream
+							</p>
+						</div>
+
+						<div className="main__promotions__card hidden relative">
+							<p className="main__promotions__card--label absolute bg-red-500 px-2 text-white top-4">
+								NEW
+							</p>
+							<img src="/images/promotions4.png" alt="promotions" />
+							<p className="main__promotions__card--description absolute w-full h-12 bottom-0 bg-red-500 px-1 text-white">
+								Caramel on a stick made from natural ingredients
+							</p>
+						</div>
+					</div>
+
+					<div className="main__promotions__cards--sliderDots flex gap-3 justify-center sm:justify-end">
 						<div className="slider__dot--active bg-red-500 border border-red-500 w-3 h-3"></div>
 						<div className="slider__dot--deactive bg-white border border-red-500 w-3 h-3"></div>
 						<div className="slider__dot--deactive bg-white border border-red-500 w-3 h-3"></div>
 					</div>
+
 				</div>
 
 				<div className="main__holidays mb-24">
@@ -281,43 +329,55 @@ class Homepage extends PureComponent {
 						Upcoming holidays
 					</p>
 
-					<div className="main__holidays__timeline flex justify-between items-center relative">
-						<div className="holidays__dotted__line absolute w-5/6 top-1/3 left-10 border-t-8 border-dotted border-gray-300"></div>
+					<div className="main__holidays__timeline flex flex-col sm:flex-row justify-between sm:items-center relative">
+						<div className="holidays__dotted__line absolute h-5/6 sm:h-auto w-5/6 top-20 sm:top-1/3 left-16 sm:left-10 border-l-8 sm:border-t-8 border-dotted border-gray-300"></div>
 
-						<div className="timeline__holiday relative">
-							<img className="size-28" src="/images/holidays1.svg" alt="alt" />
-							<p>Soon</p>
-							<p>Best Friend's Birthday</p>
+						<div className="timeline__holiday flex sm:block items-center justify-between relative">
+							<img className="basis-1/3 size-40 sm:size-28" src="/images/holidays1.svg" alt="alt" />
+							<div className="text-center sm:text-left font-semibold sm:font-normal text-xl sm:text-md">
+								<p>Soon</p>
+								<p>Best Friend's Birthday</p>
+							</div>
 						</div>
 
-						<div className="timeline__holiday relative">
-							<img className="size-28" src="/images/holidays3.svg" alt="alt" />
-							<p>Soon</p>
-							<p>Best Friend's Birthday</p>
+						<div className="timeline__holiday flex sm:block items-center justify-between relative">
+							<img className="basis-1/3 size-40 sm:size-28" src="/images/holidays3.svg" alt="alt" />
+							<div className="text-center sm:text-left font-semibold sm:font-normal text-xl sm:text-md">
+								<p>Soon</p>
+								<p>Best Friend's Birthday</p>
+							</div>
 						</div>
 
-						<div className="timeline__holiday relative">
-							<img className="size-28" src="/images/holidays4.svg" alt="alt" />
-							<p>Soon</p>
-							<p>Best Friend's Birthday</p>
+						<div className="timeline__holiday flex sm:block items-center justify-between relative">
+							<img className="basis-1/3 size-40 sm:size-28" src="/images/holidays4.svg" alt="alt" />
+							<div className="text-center sm:text-left font-semibold sm:font-normal text-xl sm:text-md">
+								<p>Soon</p>
+								<p>Best Friend's Birthday</p>
+							</div>
 						</div>
 
-						<div className="timeline__holiday relative">
-							<img className="size-28" src="/images/holidays5.svg" alt="alt" />
-							<p>Soon</p>
-							<p>Best Friend's Birthday</p>
+						<div className="timeline__holiday flex sm:block items-center justify-between relative">
+							<img className="basis-1/3 size-40 sm:size-28" src="/images/holidays5.svg" alt="alt" />
+							<div className="text-center sm:text-left font-semibold sm:font-normal text-xl sm:text-md">
+								<p>Soon</p>
+								<p>Best Friend's Birthday</p>
+							</div>
 						</div>
 
-						<div className="timeline__holiday relative">
-							<img className="size-28" src="/images/holidays6.svg" alt="alt" />
-							<p>Soon</p>
-							<p>Best Friend's Birthday</p>
+						<div className="timeline__holiday flex sm:block items-center justify-between relative">
+							<img className="basis-1/3 size-40 sm:size-28" src="/images/holidays6.svg" alt="alt" />
+							<div className="text-center sm:text-left font-semibold sm:font-normal text-xl sm:text-md">
+								<p>Soon</p>
+								<p>Best Friend's Birthday</p>
+							</div>
 						</div>
 
-						<div className="timeline__holiday relative">
-							<img className="size-28" src="/images/holidays7.svg" alt="alt" />
-							<p>Soon</p>
-							<p>Best Friend's Birthday</p>
+						<div className="timeline__holiday flex sm:block items-center justify-between relative">
+							<img className="basis-1/3 size-40 sm:size-28" src="/images/holidays7.svg" alt="alt" />
+							<div className="text-center sm:text-left font-semibold sm:font-normal text-xl sm:text-md">
+								<p>Soon</p>
+								<p>Best Friend's Birthday</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -343,7 +403,7 @@ class Homepage extends PureComponent {
 				<div className="main__news mb-24">
 					<p className="text-4xl font-semibold text-center mb-12">News</p>
 
-					<div className="main__news__articles grid grid-cols-3 justify-items-center gap-y-5 gap-x-2 mb-8">
+					<div className="main__news__articles grid grid-cols-2 sm:grid-cols-3 justify-items-center gap-y-5 gap-x-2 mb-8">
 						<News count="three"/>
 					</div>
 
@@ -361,9 +421,10 @@ class Homepage extends PureComponent {
 						We've taken care of everything
 					</p>
 
-					<div className="main__other__articles text-balance grid grid-cols-4 justify-items-center gap-y-5 gap-x-4">
-						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="/images/Other1.png" alt="otherImage" />
+					<div className="main__other__articles text-balance grid grid-cols-2 sm:grid-cols-4 justify-items-center gap-y-5 gap-x-4">
+						
+						<div className="main__other__article flex flex-col justify-between max-w-[270px]">
+							<img className="sm:mb-4" src="/images/Other1.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">
 									The best ingredients
@@ -374,8 +435,8 @@ class Homepage extends PureComponent {
 							</div>
 						</div>
 
-						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="/images/Other2.png" alt="otherImage" />
+						<div className="main__other__article flex flex-col justify-between max-w-[270px]">
+							<img className="sm:mb-4" src="/images/Other2.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">Package</p>
 								<p className="text-sm text-gray-400">
@@ -384,8 +445,8 @@ class Homepage extends PureComponent {
 							</div>
 						</div>
 
-						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="/images/Other3.png" alt="otherImage" />
+						<div className="main__other__article flex flex-col justify-between max-w-[270px]">
+							<img className="sm:mb-4" src="/images/Other3.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">
 									Receipt on the day of order
@@ -396,8 +457,8 @@ class Homepage extends PureComponent {
 							</div>
 						</div>
 
-						<div className="main__other__article max-w-[270px]">
-							<img className="mb-4" src="/images/Other4.png" alt="otherImage" />
+						<div className="main__other__article flex flex-col justify-between max-w-[270px]">
+							<img className="sm:mb-4" src="/images/Other4.png" alt="otherImage" />
 							<div className="main__other__text py-5">
 								<p className="font-semibold text-xl mb-3">Anonymous delivery</p>
 								<p className="text-sm text-gray-400">
@@ -405,6 +466,7 @@ class Homepage extends PureComponent {
 								</p>
 							</div>
 						</div>
+
 					</div>
 				</div>
 

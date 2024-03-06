@@ -21,7 +21,7 @@ class CartIcon extends Component {
 				) : null}
 				<NavLink className="flex" to="/Cart">
 				<img className="mr-2" src="/images/bag.svg" alt="Cart" />
-				Cart
+				<span className="hidden sm:block">Cart</span> 
 				</NavLink>
 			</div>
 		);

@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import HeaderBanner from "../../components/elements/Banner/HeaderBanner";
 import { getDataBaseInfo } from "../../components/services/Fetch";
 import CartIcon from "../../components/pages/Cart/CartIcon";
@@ -31,7 +31,9 @@ class Header extends PureComponent {
 
 
     return (
-      <header>
+      <>
+
+      <header className="big__header hidden sm:block">
 
         <HeaderBanner />
 
@@ -99,6 +101,28 @@ class Header extends PureComponent {
         </div>
 
       </header>
+
+      <header className="small__header block sm:hidden min-w-[320px]">
+
+        <div className="small__header__navigation bg-orange-50">
+
+                <div className="flex items-center justify-between p-4">
+                    
+                    <div>
+                      <img src="/images/hidden_menu_button.svg" alt="hidden_menu"/>
+                    </div>
+
+                    <div>
+                      <Link to='/'><img src="/images/mini_logo.svg" alt="small_logo"/></Link>
+                    </div>
+                    
+                    <CartIcon cartLength={cartLength} />
+                </div>
+
+        </div>
+
+      </header>
+      </>
     );
   }
 }
