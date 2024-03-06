@@ -28,12 +28,15 @@ class SetItem extends Component {
 						<p className="text-xl text-red-500 font-semibold">${price}</p>
 					</div>
 					<div
-						className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white"
+						className="popular__card__cart group px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white"
 						onClick={() => {
 							this.props.addToCart(this.props.set); // вызываю функцию addToCart
 						}}
 					>
-						<img className="mr-2" src="/images/cart.svg" alt="alt" />
+						<svg className="mr-2" width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path className="group-hover:stroke-white" d="M14.2911 5.37085H1V20H14.2911V5.37085Z" stroke="black" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+							<path className="group-hover:stroke-white" d="M4.12207 7.15493V3.40845C4.12207 2.07042 5.10329 1 6.26292 1H9.02818C10.1878 1 11.169 2.07042 11.169 3.40845V7.15493" stroke="black" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+						</svg>
 						In cart
 					</div>
 				</div>

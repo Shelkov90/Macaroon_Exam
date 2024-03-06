@@ -103,7 +103,7 @@ const router = createBrowserRouter([
 class App extends Component {
   render() {
     return (
-      <div className="container sm:container-fluid min-w-[320px] bg-gray-100 flex flex-col justify-between min-h-screen">
+      <div className="w-full min-w-[320px] bg-gray-100 flex flex-col justify-between min-h-screen">
         <RouterProvider router={router}>
           <Layout />
         </RouterProvider>
