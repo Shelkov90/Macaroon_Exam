@@ -68,7 +68,7 @@ class Footer extends PureComponent {
 
 					</div>
 
-					<div className="footer__contacts sm:basis-1/6 flex flex-row-reverse sm:flex-col justify-between mb-4 sm:mb-0">
+					<div className="footer__contacts sm:basis-1/6 flex flex-row-reverse sm:flex-col justify-between mb-4 sm:mb-0 pt-2 sm:pt-0">
 
 						<div className="phone text-right">
 							<p className="text-xl font-semibold">+380507375982</p>

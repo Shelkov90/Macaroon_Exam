@@ -1,5 +1,5 @@
 import React, { PureComponent, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SweetProvider, { useSets } from "./SweetContext";
 import { addProductToCart } from "../../services/Fetch";
 import Modal from "../Modal/Modal";

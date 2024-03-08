@@ -36,7 +36,7 @@ class Header extends PureComponent {
         <HeaderBanner />
 
         <div className="header__navigation bg-orange-50">
-          <div className="flex justify-between items-center text-sm max-w-[1170px] mx-auto py-3">
+          <div className="flex justify-between items-center text-sm max-w-[1170px] mx-auto p-3">
             
               <nav className="flex">
                 <div className="mr-5"><NavLink to="/Guarantee">Fresh guarantee</NavLink></div>

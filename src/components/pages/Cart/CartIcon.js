@@ -14,14 +14,14 @@ class CartIcon extends Component {
 
 		return (
 			<div className="relative flex items-center">
-				{cartLength ? (
-					<div className="absolute bottom-2 left-5 bg-red-400 rounded-full p-1 text-xs text-white font-semibold">
-						{cartLength}
-					</div>
-				) : null}
 				<NavLink className="flex" to="/Cart">
-				<img className="mr-2" src="/images/bag.svg" alt="Cart" />
-				Cart
+					{cartLength ? (
+						<div className="absolute bottom-1 left-3 bg-red-400 rounded-full px-1 text-xs text-white font-semibold">
+							{cartLength}
+						</div>
+					) : null}
+					<img className="mr-2" src="/images/bag.svg" alt="Cart" />
+					<span className='hidden sm:block'>Cart</span> 
 				</NavLink>
 			</div>
 		);
