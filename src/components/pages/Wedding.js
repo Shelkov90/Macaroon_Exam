@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import FormWedding from "../elements/Forms/FormWedding";
+import WeddingSets from "../elements/Wedding/WeddingSets";
 
 class Wedding extends PureComponent {
 	constructor(props) {
@@ -82,152 +83,7 @@ class Wedding extends PureComponent {
 					Sets for weddings
 				</h2>
 
-				<div className="wedding__cards grid grid-cols-2 justify-items-stretch gap-y-5 gap-x-7 mb-8 sm:grid-cols-3 ">
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
-						<img
-							className="w-full"
-							src="images/weddingset1.png"
-							alt="weddingset"
-						/>
-
-						<div className="wedding__card__text p-5">
-							<p className="text-xl font-semibold">Set of 9 macarons</p>
-							<p className="text-gray-600">
-								With a festive stamp and wishes for the newlyweds
-							</p>
-						</div>
-
-						<div className="wedding__card__buy border-t-2 border-t-gray-300 flex">
-							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-								<p className="text-xl text-red-500 font-semibold">$600</p>
-							</div>
-
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
-								<img className="mr-2" src="images/cart.svg" alt="alt" />
-								In cart
-							</div>
-						</div>
-					</div>
-
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
-						<img
-							className="w-full"
-							src="images/weddingset2.png"
-							alt="weddingset"
-						/>
-						<div className="wedding__card__text p-5">
-							<p className="text-xl font-semibold">For guests</p>
-							<p className="text-gray-600">
-								Gift set of 2 macarons with the seal of the bride and groom in
-								transparent packaging
-							</p>
-						</div>
-						<div className="wedding__card__buy border-t-2 border-t-gray-300 flex">
-							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-								<p className="text-xl text-red-500 font-semibold">$200</p>
-							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
-								<img className="mr-2" src="images/cart.svg" alt="alt" />
-								In cart
-							</div>
-						</div>
-					</div>
-
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
-						<img
-							className="w-full"
-							src="images/weddingset3.png"
-							alt="weddingset"
-						/>
-						<div className="wedding__card__text p-5">
-							<p className="text-xl font-semibold">Pyramid of macarons</p>
-							<p className="text-gray-600">
-								A wonderful addition to the holiday table
-							</p>
-						</div>
-						<div className="wedding__card__buy border-t-2 border-t-gray-300 flex">
-							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-								<p className="text-xl text-red-500 font-semibold">$6600</p>
-							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
-								<img className="mr-2" src="images/cart.svg" alt="alt" />
-								In cart
-							</div>
-						</div>
-					</div>
-
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
-						<img
-							className="w-full"
-							src="images/weddingset4.png"
-							alt="weddingset"
-						/>
-						<div className="wedding__card__text p-5">
-							<p className="text-xl font-semibold">Great Pyramid (10 floors)</p>
-							<p className="text-gray-600">
-								For a wedding or banquet, 240 macarons of your choice
-							</p>
-						</div>
-						<div className="wedding__card__buy border-t-2 border-t-gray-300 flex">
-							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-								<p className="text-xl text-red-500 font-semibold">$14400</p>
-							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
-								<img className="mr-2" src="images/cart.svg" alt="alt" />
-								In cart
-							</div>
-						</div>
-					</div>
-
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
-						<img
-							className="w-full"
-							src="images/weddingset5.png"
-							alt="weddingset"
-						/>
-						<div className="wedding__card__text p-5">
-							<p className="text-xl font-semibold">
-								Macarons with guests' names
-							</p>
-							<p className="text-gray-600">
-								Description of the sentence for a couple of lines or more
-							</p>
-						</div>
-						<div className="wedding__card__buy border-t-2 border-t-gray-300 flex">
-							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-								<p className="text-xl text-red-500 font-semibold">$80</p>
-							</div>
-							<div className="wedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
-								<img className="mr-2" src="images/cart.svg" alt="alt" />
-								In cart
-							</div>
-						</div>
-					</div>
-
-					<div className="wedding__card flex flex-col justify-between bg-white max-w-[435px] rounded-md block overflow-hidden transform transition duration-300 ease-in-out hover:shadow-xl cursor-pointer">
-						<img
-							className="w-full"
-							src="images/weddingset6.png"
-							alt="pweddingset"
-						/>
-						<div className="wedding__card__text p-5">
-							<p className="text-xl font-semibold">Bachelorette party set</p>
-							<p className="text-gray-600">
-								A cheeky set for a bachelorette party. 30 macaroons with
-								different flavors and funny names
-							</p>
-						</div>
-						<div className="wedding__card__buy border-t-2 border-t-gray-300 flex">
-							<div className="wedding__card__price p-3  basis-3/5 flex items-center border-r-2 border-r-gray-300">
-								<p className="text-xl text-red-500 font-semibold">$3900</p>
-							</div>
-							<div className="pwedding__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white">
-								<img className="mr-2" src="images/cart.svg" alt="alt" />
-								In cart
-							</div>
-						</div>
-					</div>
-				</div>
+				<WeddingSets />
 
 				<div className="wedding_propose  flex mt-40 ">
 					<div className="propose_img w-2/3 ">
@@ -294,3 +150,4 @@ class Wedding extends PureComponent {
 }
 
 export default Wedding;
+

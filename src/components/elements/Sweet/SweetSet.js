@@ -1,9 +1,9 @@
-import React, { Component, useState } from "react";
+import React, { PureComponent, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import SetProvider, { useSets } from "./SetContext";
+import SweetProvider, { useSets } from "./SweetContext";
 import { addProductToCart } from "../../services/Fetch";
 import Modal from "../Modal/Modal";
-import SweetSets from "../Sweet/SweetSets";
+import WeddingSets from "../Wedding/WeddingSet";
 
 export const SetWrapper = ({ addToCart, openModal }) => {
 	const { id } = useParams();
@@ -22,11 +22,11 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 
 	const handleContinueShopping = () => {
 		setShowModal(false);
-	}
+	};
 
 	const handleCheckout = () => {
 		window.location.href = "/cart";
-	}
+	};
 
 	// Состояние для отслеживания текущей выбранной вкладки
 	const [selectedTab, setSelectedTab] = useState("description");
@@ -52,9 +52,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 			tabContent = set?.details[0]?.description;
 	}
 
-
 	if (!set || !sets) return <div> No sets </div>;
-
 
 	return (
 		<>
@@ -64,7 +62,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 
 					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 
-					<div className="breadcrumbs__item">Ready-made sets</div>
+					<div className="breadcrumbs__item">Sweet sets</div>
 
 					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 
@@ -165,7 +163,9 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 					<div className="set__description bg-white rounded-md px-6 pb-16">
 						<div className="description__categories flex border-b-2 mb-10">
 							<div
-								className={`description__category px-4 py-5 font-semibold ${selectedTab === "description" ? "border-b-4 border-pink-600" : ""
+								className={`description__category px-4 py-5 font-semibold ${selectedTab === "description"
+										? "border-b-4 border-pink-600"
+										: ""
 									}`}
 								onClick={() => selectTab("description")}
 								style={{ cursor: "pointer" }}
@@ -181,7 +181,9 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 								Composition and nutritional value
 							</div>
 							<div
-								className={`description__category px-4 py-5 font-semibold ${selectedTab === "conditions" ? "border-b-4 border-pink-600" : ""
+								className={`description__category px-4 py-5 font-semibold ${selectedTab === "conditions"
+										? "border-b-4 border-pink-600"
+										: ""
 									}`}
 								onClick={() => selectTab("conditions")}
 								style={{ cursor: "pointer" }}
@@ -198,7 +200,6 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 								</div>
 							))}
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -216,7 +217,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 	);
 };
 
-class Set extends Component {
+class SweetSet extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -240,26 +241,17 @@ class Set extends Component {
 	render() {
 		return (
 			<div>
-				<SetProvider>
-					<SetWrapper addToCart={this.addToCart} openModal={this.props.openModal} />
-				</SetProvider>
+				<SweetProvider>
+					<SetWrapper
+						addToCart={this.addToCart}
+						openModal={this.props.openModal}
+					/>
+				</SweetProvider>
 
-				<h2 className="text-4xl font-semibold mb-20 text-center">We also recommend</h2>
-				
-				<SweetSets/>
-
-				<Link to="/ReadySets">
-						<div className="choice__more flex justify-center mb-20 mt-10">
-							<div className="choice__more__button border border-blue-400 px-10 py-4 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
-								All ready-made sets
-							</div>
-						</div>
-					</Link>
+				<WeddingSets />
 			</div>
-
 		);
 	}
 }
 
-export default Set;
-
+export default SweetSet;

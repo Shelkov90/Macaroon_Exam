@@ -2,9 +2,6 @@ import React, { PureComponent } from 'react';
 import SetItem from './SetItem';
 import { addProductToCart, getDataBaseInfo } from '../../services/Fetch';
 import Modal from '../Modal/Modal';
-
-
-
 class Sets extends PureComponent {
     constructor(props) {
         super(props)
@@ -46,7 +43,6 @@ class Sets extends PureComponent {
         }
     }
     
-
     handleCloseModal = () => {
         this.setState({ isModalOpen: false }); // Закрываю модальное окно
     }
@@ -60,7 +56,6 @@ class Sets extends PureComponent {
         window.location.href = "/cart";
     }
     
-
     render() {
         const { items } = this.state;
 

@@ -135,8 +135,10 @@ class Homepage extends PureComponent {
 								src="/images/card4.svg"
 								alt="goods"
 							/>
+
 							<p className="flex justify-between text-xl font-semibold">
 								Wedding proposal
+								
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
@@ -152,11 +154,12 @@ class Homepage extends PureComponent {
 									/>
 								</svg>
 							</p>
+						</Link>
+
 							<p className="hidden sm:block text-balance text-center">
 								Delicate macaroons with different flavors to decorate your
 								wedding celebration
 							</p>
-						</Link>
 
 					</div>
 

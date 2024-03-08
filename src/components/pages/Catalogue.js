@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
-import Sweet from '../elements/Sweet/Sweet'
+import SweetSets from '../elements/Sweet/SweetSets'
 
 
 class Catalogue extends PureComponent {
@@ -83,7 +83,15 @@ class Catalogue extends PureComponent {
 
 					<div className="choice__inner">
 
-						<Sweet />
+						<SweetSets />
+
+						<Link to="/ReadySets">
+						<div className="choice__more flex justify-center mb-20 mt-10">
+							<div className="choice__more__button border border-blue-400 px-10 py-4 rounded-md font-semibold cursor-pointer hover:bg-blue-400 hover:text-white">
+								All ready-made sets
+							</div>
+						</div>
+					</Link>
 
 					</div>
 

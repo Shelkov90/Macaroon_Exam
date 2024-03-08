@@ -20,6 +20,8 @@ import SetProvider from './components/elements/Sets/SetContext';
 import Cart from './components/pages/Cart/Cart';
 import Sweet from './components/elements/Sweet/Sweet';
 import Set from './components/elements/Sets/Set';
+import SweetSet from './components/elements/Sweet/SweetSet';
+import WeddingSet from './components/elements/Wedding/WeddingSet';
 
 
 
@@ -57,6 +59,10 @@ const router = createBrowserRouter([
         element: <Sweet />
       },
       {
+        path: '/Sweet/SweetSets/:id',
+        element: <SweetSet />
+      },
+      {
         path: '/Catalogue',
         element: <Catalogue />
       },
@@ -79,6 +85,10 @@ const router = createBrowserRouter([
       {
         path: '/Wedding',
         element: <Wedding />
+      },
+      {
+        path: '/Wedding/WeddingSets/:id',
+        element: <WeddingSet />
       },
       {
         path: '/FormWholeSale',

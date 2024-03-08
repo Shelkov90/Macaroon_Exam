@@ -4,8 +4,8 @@ import {
 	getDataBaseInfo,
 	addDataBaseItem,
 } from "../../services/Fetch";
-import Sweet from "../../elements/Sweet/Sweet";
 import CheckoutModal from "../../elements/Modal/CheckoutModal";
+import SweetSets from "../../elements/Sweet/SweetSets";
 
 class Cart extends PureComponent {
 	constructor(props) {
@@ -44,13 +44,12 @@ class Cart extends PureComponent {
 
 	handleIncrement = async (productId) => {
 		const { cartItems } = this.state;
-		const existingItemIndex = cartItems.findIndex(
-			(item) => item.id === productId
-		);
+		const existingItem = cartItems.find((item) => item.id === productId);
 
-		if (existingItemIndex !== -1) {
-			const updatedCartItems = cartItems.map((item, index) => {
-				if (index === existingItemIndex) {
+		if (existingItem) {
+			// Если товар уже есть в корзине, увеличиваем его количество на 1
+			const updatedCartItems = cartItems.map((item) => {
+				if (item.id === productId) {
 					const updatedQuantity = (item.quantity || 0) + 1;
 					const updatedTotalPrice = item.price * updatedQuantity;
 					return {
@@ -65,11 +64,23 @@ class Cart extends PureComponent {
 				this.calculateTotalPrice();
 			});
 		} else {
-			const newItem = { id: productId, quantity: 1, price: 0 };
-			const updatedCartItems = [...cartItems, newItem];
-			this.setState({ cartItems: updatedCartItems }, () => {
-				this.calculateTotalPrice();
-			});
+			try {
+				// Получаем информацию о товаре из базы данных
+				const productToAdd = await getDataBaseInfo("products", productId);
+				if (!productToAdd) {
+					console.error("Product not found in database.");
+					return;
+				}
+				// Устанавливаем начальное количество товара в корзине равным 1
+				productToAdd.quantity = 1;
+				productToAdd.pricePerUnit = productToAdd.price;
+				const updatedCartItems = [...cartItems, productToAdd];
+				this.setState({ cartItems: updatedCartItems }, () => {
+					this.calculateTotalPrice();
+				});
+			} catch (error) {
+				console.error("Error fetching product information:", error);
+			}
 		}
 	};
 
@@ -124,26 +135,22 @@ class Cart extends PureComponent {
 
 	handleRemoveFromCart = async (productId) => {
 		try {
-
 			await removeProductFromCart(productId);
-			this.getCartItems();
-			
 			console.log("Product successfully removed from cart.");
-			console.log("Waiting for database update...");
-			await new Promise((resolve) => setTimeout(resolve, 500));
-			console.log("Updating cart items after removal...");
+
 			// Удаляем товар из состояния корзины
-			const updatedCartItems = this.state.cartItems.filter(item => item.id !== productId);
-			this.setState({ cartItems: updatedCartItems }, () => {
-				// После обновления состояния, пересчитываем общую цену
-				this.calculateTotalPrice();
-			});
+			const updatedCartItems = this.state.cartItems.filter(
+				(item) => item.id !== productId
+			);
+			const totalPrice = this.calculateTotalPrice(updatedCartItems);
+
+			this.setState({ cartItems: updatedCartItems, totalPrice });
+
 			console.log("Cart items successfully updated.");
 		} catch (error) {
 			console.error("Error removing product from cart:", error);
 		}
 	};
-	
 
 	handleSelectDeliveryMethod = (method, cost) => {
 		const deliveryCost = method === "Delivery" ? 20 : 0;
@@ -217,96 +224,94 @@ class Cart extends PureComponent {
 				</div>
 
 				{cartItems.length > 0 && (
-    <div className="cart_info flex justify-between items-start">
-        
-        <div className="product_info w-2/3 border p-4 bg-white">
-            {cartItems.map((item, index) => (
-                <div
-                    key={index}
-                    className="w-full border-b-2 p-4 bg-white flex items-center justify-between"
-                >
-                    <div className="flex items-center space-x-4 w-3/5">
-                        <img src={item.image} alt="" className="w-20 h-20" />
-                        <div className="w-52 truncate">
-                            <p className="font-bold">{item.name}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center space-x-4 w-1/5">
-                        <button
-                            onClick={() => this.handleDecrement(item.id)}
-                            className="text-sm font-bold"
-                        >
-                            -
-                        </button>
-                        <span>
-                            {item.quantity !== undefined &&
-                                typeof item.quantity === "number"
-                                ? item.quantity
-                                : 0}
-                        </span>
-                        <button
-                            onClick={() => this.handleIncrement(item.id)}
-                            className="text-sm font-bold"
-                        >
-                            +
-                        </button>
-                    </div>
-                    <div className="flex items-center space-x-4 w-1/5">
-                        <p>Price:</p>
-                        <p className="text-red-400">${item.totalPrice}</p>
-                        <div
-                            className="cursor-pointer"
-                            onClick={() => this.handleRemoveFromCart(item.id)}
-                        >
-                            ✖️
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </div>
+					<div className="cart_info flex justify-between items-start">
+						<div className="product_info w-2/3 border p-4 bg-white">
+							{cartItems.map((item, index) => (
+								<div
+									key={index}
+									className="w-full border-b-2 p-4 bg-white flex items-center justify-between"
+								>
+									<div className="flex items-center space-x-4 w-3/5">
+										<img src={item.image} alt="" className="w-20 h-20" />
+										<div className="w-52 truncate">
+											<p className="font-bold">{item.name}</p>
+										</div>
+									</div>
+									<div className="flex items-center space-x-4 w-1/5">
+										<button
+											onClick={() => this.handleDecrement(item.id)}
+											className="text-sm font-bold"
+										>
+											-
+										</button>
+										<span>
+											{item.quantity !== undefined &&
+												typeof item.quantity === "number"
+												? item.quantity
+												: 0}
+										</span>
+										<button
+											onClick={() => this.handleIncrement(item.id)}
+											className="text-sm font-bold"
+										>
+											+
+										</button>
+									</div>
+									<div className="flex items-center space-x-4 w-1/5">
+										<p>Price:</p>
+										<p className="text-red-400">${item.totalPrice}</p>
+										<div
+											className="cursor-pointer"
+											onClick={() => this.handleRemoveFromCart(item.id)}
+										>
+											✖️
+										</div>
+									</div>
+								</div>
+							))}
+						</div>
 
-        <div className="whole_cart_info w-72 border p-4 bg-white relative">
-            <div className="flex flex-col justify-between h-full">
-                <div>
-                    <p className="font-bold text-lg mb-4">Total</p>
-                    <div className="flex justify-between items-center">
-                        <p>Total price:</p>
-                        <p className="ml-auto">{totalPrice}</p>
-                    </div>
-                    <div className="border-dotted border-t border-gray-300 mb-2"></div>
-                    <div className="flex justify-between items-center">
-                        <p>Total quantity:</p>
-                        <p className="ml-auto">{totalItems}</p>
-                    </div>
-                    <div className="border-dotted border-t border-gray-300 mb-2"></div>
-                    <div className="flex justify-between items-center">
-                        <p>Delivery:</p>
-                        <p className="ml-auto">20$</p>
-                    </div>
-                    <div className="border-dotted border-t border-gray-300 mb-10"></div>
-                    <hr />
-                    <div className="flex justify-between items-center mt-2 mb-2">
-                        <p>To pay:</p>
-                        <p className="ml-auto">
-                            {this.state.selectedDeliveryMethod === "Delivery"
-                                ? totalPrice + 20
-                                : totalPrice}
-                            $
-                        </p>
-                    </div>
-                    <hr />
-                </div>
-                <button
-                    className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500"
-                    onClick={this.handleOpenCheckoutModal}
-                >
-                    Checkout
-                </button>
-            </div>
-        </div>
-    </div>
-)}
-
+						<div className="whole_cart_info w-72 border p-4 bg-white relative">
+							<div className="flex flex-col justify-between h-full">
+								<div>
+									<p className="font-bold text-lg mb-4">Total</p>
+									<div className="flex justify-between items-center">
+										<p>Total price:</p>
+										<p className="ml-auto">{totalPrice}</p>
+									</div>
+									<div className="border-dotted border-t border-gray-300 mb-2"></div>
+									<div className="flex justify-between items-center">
+										<p>Total quantity:</p>
+										<p className="ml-auto">{totalItems}</p>
+									</div>
+									<div className="border-dotted border-t border-gray-300 mb-2"></div>
+									<div className="flex justify-between items-center">
+										<p>Delivery:</p>
+										<p className="ml-auto">20$</p>
+									</div>
+									<div className="border-dotted border-t border-gray-300 mb-10"></div>
+									<hr />
+									<div className="flex justify-between items-center mt-2 mb-2">
+										<p>To pay:</p>
+										<p className="ml-auto">
+											{this.state.selectedDeliveryMethod === "Delivery"
+												? totalPrice + 20
+												: totalPrice}
+											$
+										</p>
+									</div>
+									<hr />
+								</div>
+								<button
+									className="bg-red-500 text-white px-4 py-2 mt-4 hover:bg-blue-500"
+									onClick={this.handleOpenCheckoutModal}
+								>
+									Checkout
+								</button>
+							</div>
+						</div>
+					</div>
+				)}
 
 				<div className="delivery_info mt-10 w-2/3">
 					<h2 className="text-2xl font-semibold mb-4 text-center">Delivery</h2>
@@ -349,8 +354,8 @@ class Cart extends PureComponent {
 							<div className="mt-1 flex justify-around w-full">
 								<div
 									className={`flex items-center cursor-pointer group border ${this.state.selectedDeliveryMethod === "Delivery"
-											? "border-red-500"
-											: "border-transparent"
+										? "border-red-500"
+										: "border-transparent"
 										} w-1/2 bg-white p-4`}
 									onClick={() =>
 										this.handleSelectDeliveryMethod("Delivery", 20)
@@ -368,8 +373,8 @@ class Cart extends PureComponent {
 								</div>
 								<div
 									className={`flex items-center cursor-pointer group border ${this.state.selectedDeliveryMethod === "Pickup"
-											? "border-green-500"
-											: "border-transparent"
+										? "border-green-500"
+										: "border-transparent"
 										} w-1/2 bg-white p-4 ml-2`}
 									onClick={() => this.handleSelectDeliveryMethod("Pickup", 0)}
 								>
@@ -524,7 +529,7 @@ class Cart extends PureComponent {
 							</button>
 						</div>
 
-						<div class="form__lastText text-sm mb-12">
+						<div class="form__lastText text-sm mb-20">
 							By clicking on the "Place an order" button, I accept and agree to
 							the <span class="text-blue-400 underline">Offer Agreement</span>{" "}
 							and authorize the processing of my personal data in accordance
@@ -534,14 +539,8 @@ class Cart extends PureComponent {
 					</form>
 				</div>
 
-				<h2 className="text-4xl font-semibold text-center -mb-12">
-					Add to order
-				</h2>
-
-				<div>
-					<Sweet />
-				</div>
-
+				<SweetSets />
+				
 				{this.state.isOpenCheckoutModal && (
 					<CheckoutModal
 						isOpenCheckoutModal={this.state.isOpenCheckoutModal}

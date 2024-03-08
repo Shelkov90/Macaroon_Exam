@@ -18,23 +18,52 @@ export const addProduct = async (product) => {
   return data;
 };
 
-
 // Метод для добавления продукта в корзину
-
 export const addProductToCart = async (product) => {
-  const response = await fetch(`${BASE_URL}/cart`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(product),
-  });
-  const data = await response.json();
-  return data;
+  try {
+    const existingProductResponse = await fetch(`${BASE_URL}/cart/${product.id}`);
+    if (existingProductResponse.status === 404) {
+      // Товара с указанным ID еще нет в корзине, добавляем его
+      const response = await fetch(`${BASE_URL}/cart`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(product),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to add product to cart');
+      }
+
+      return await response.json();
+    } else {
+      // Если товар уже есть в корзине, обновляем его количество
+      const existingProductData = await existingProductResponse.json();
+      const updatedQuantity = existingProductData.quantity + 1;
+      const updatedProduct = { ...existingProductData, quantity: updatedQuantity };
+
+      const updateResponse = await fetch(`${BASE_URL}/cart/${product.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedProduct),
+      });
+
+      if (!updateResponse.ok) {
+        throw new Error('Failed to update product in cart');
+      }
+
+      return await updateResponse.json();
+    }
+  } catch (error) {
+    console.error('Error adding product to cart:', error);
+    throw error;
+  }
 };
 
 // Метод для удаления продукта из корзины
-
 export const removeProductFromCart = async (productId) => {
   try {
     const response = await fetch(`${BASE_URL}/cart/${productId}`, {
@@ -51,7 +80,6 @@ export const removeProductFromCart = async (productId) => {
 };
 
 // Метод для полной очситки корзины
-
 export const clearCart = async () => {
   try {
     const response = await fetch(`${BASE_URL}/cart`, {
@@ -65,7 +93,6 @@ export const clearCart = async () => {
 };
 
 // Метод для получения юзера по имейлу
-
 export const getUserByEmail = async (email) => {
   try {
     const response = await fetch(`${BASE_URL}/users?email=${email}`);
@@ -103,8 +130,6 @@ export const addUserToDatabase = async (userData) => {
   }
 };
 
-
-
 // Метод для получения массива информации из БД
 export const getDataBaseInfo = async (key) => {
   const response = await fetch(`${BASE_URL}/${key}`);
@@ -134,7 +159,6 @@ export const addDataBaseItem = async (key, item) => {
     throw error; // Перехватываем ошибку и передаем ее обратно
   }
 };
-
 
 // Метод редактирования єлемента в БД (кроме продуктов)
 export const editDataBaseItem = async (key, id, item) => {

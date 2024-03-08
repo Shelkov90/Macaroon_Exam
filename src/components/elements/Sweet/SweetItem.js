@@ -1,22 +1,13 @@
-import React, { Component } from "react";
+import React from 'react';
 import { Link } from "react-router-dom";
 
-class SetItem extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {};
-	}
-
-	render() {
-		const { id, name, description, price, image } = this.props.set;
+const SweetItem = ({ set, addToCart }) => {
+	const { id, name, description, price, image } = set;
 
 		return (
 			<>
-				<Link
-					to={`/ReadySets/Sets/${id}`}
-				>
-					<img className="w-full rounded-t-lg transition duration-300 ease-in-out transform " src={image} alt="popularImage" />
+				<Link to={`/Sweet/SweetSets/${id}`}>
+					<img className="w-full rounded-t-lg transition duration-300 ease-in-out transform" src={image} alt="popularImage" />
 					<div className="popular__card__text p-5 bg-white rounded-b-lg">
 						<p className="text-xl font-semibold">{name}</p>
 						<p className="text-gray-600">{description}</p>
@@ -30,7 +21,7 @@ class SetItem extends Component {
 					<div
 						className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white"
 						onClick={() => {
-							this.props.addToCart(this.props.set); // вызываю функцию addToCart
+							addToCart(set); // вызываю функцию addToCart
 						}}
 					>
 						<img className="mr-2" src="/images/cart.svg" alt="alt" />
@@ -38,9 +29,8 @@ class SetItem extends Component {
 					</div>
 				</div>
 			</>
-
 		);
 	}
-}
 
-export default SetItem;
+
+export default SweetItem;

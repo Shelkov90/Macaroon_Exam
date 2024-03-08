@@ -1,9 +1,10 @@
-import React, { Component, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import SetProvider, { useSets } from "./SetContext";
+import React, { PureComponent, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import WeddingProvider, {useSets} from './WeddingContext';
 import { addProductToCart } from "../../services/Fetch";
 import Modal from "../Modal/Modal";
-import SweetSets from "../Sweet/SweetSets";
+import SweetSets from '../Sweet/SweetSets';
+
 
 export const SetWrapper = ({ addToCart, openModal }) => {
 	const { id } = useParams();
@@ -64,7 +65,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 
 					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 
-					<div className="breadcrumbs__item">Ready-made sets</div>
+					<div className="breadcrumbs__item">Wedding sets</div>
 
 					<p className="text-blue-400 mx-3">&gt;&gt;</p>
 
@@ -216,7 +217,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 	);
 };
 
-class Set extends Component {
+class WeddingSet extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -240,13 +241,11 @@ class Set extends Component {
 	render() {
 		return (
 			<div>
-				<SetProvider>
+				<WeddingProvider>
 					<SetWrapper addToCart={this.addToCart} openModal={this.props.openModal} />
-				</SetProvider>
+				</WeddingProvider>
 
-				<h2 className="text-4xl font-semibold mb-20 text-center">We also recommend</h2>
-				
-				<SweetSets/>
+				<SweetSets />
 
 				<Link to="/ReadySets">
 						<div className="choice__more flex justify-center mb-20 mt-10">
@@ -256,10 +255,8 @@ class Set extends Component {
 						</div>
 					</Link>
 			</div>
-
 		);
 	}
 }
 
-export default Set;
-
+export default WeddingSet;
