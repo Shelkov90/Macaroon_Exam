@@ -55,7 +55,7 @@ class FormWedding extends PureComponent {
 
 									<button
 										className="bg-red-500 text-white py-2 px-10 mx-auto mt-10 mb-2 hover:bg-red-600"
-										type="button"
+										type="submit"
 									>
 										Send a request
 									</button>

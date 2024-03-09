@@ -1809,6 +1809,28 @@
       ],
       "date": "09.03.2024",
       "totalPrice": 130
+    },
+    {
+      "id": "ae0g5",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Even more",
+          "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 130,
+          "discount": 0,
+          "image": "/images/choice3.png"
+        },
+        {
+          "name": "Even more",
+          "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
+          "price": 130,
+          "discount": 0,
+          "image": "/images/choice3.png"
+        }
+      ],
+      "date": "09.03.2024",
+      "totalPrice": 1040
     }
   ],
   "products": [
@@ -2527,44 +2549,5 @@
       "id": "3e8f"
     }
   ],
-  "cart": [
-    {
-      "id": "990a",
-      "name": "Even more",
-      "description": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan",
-      "price": 130,
-      "discount": 0,
-      "image": "/images/choice3.png",
-      "details": [
-        {
-          "tastes": [
-            {
-              "strawberry - basil": "4 pcs",
-              "coconut": "3 pcs",
-              "blue cheese": "3 pcs",
-              "parmesan": "3 pcs"
-            }
-          ],
-          "description": [
-            {
-              "header": "Even more",
-              "text": "3 eclairs, 4 straws, 6 macarons. Flavors: Strawberry - Basil, Coconut, Blue Cheese, Parmesan"
-            }
-          ],
-          "compound": [
-            {
-              "header": "Calorie content",
-              "text": "470.90 kcal (1740 kJ) (17%)"
-            }
-          ],
-          "conditions": [
-            {
-              "header": "Conditions and shelf life",
-              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "cart": []
 }

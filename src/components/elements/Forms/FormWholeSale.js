@@ -37,7 +37,7 @@ class FormWholeSale extends PureComponent {
 
 						</div>
 
-						<button class="bg-red-500 text-white py-4 px-10 mx-auto hover:bg-red-600" type="button">Order a quote</button>
+						<button class="bg-red-500 text-white py-4 px-10 mx-auto hover:bg-red-600" type="submit">Order a quote</button>
 
 					</form>
 
