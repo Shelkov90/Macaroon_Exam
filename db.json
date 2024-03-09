@@ -1831,6 +1831,201 @@
       ],
       "date": "09.03.2024",
       "totalPrice": 1040
+    },
+    {
+      "id": "n06vpw",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "ofydb",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "csv641",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "n9f7es",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "9yfkut",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "ui9wbi",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "4req5bl",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "bl0m3m",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "v86r4s",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "cm73tn",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "4sftec",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "ninxgz",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
+    },
+    {
+      "id": "wet0ck",
+      "userId": "1",
+      "products": [
+        {
+          "name": "Heart",
+          "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+          "price": 200,
+          "discount": 0,
+          "image": "/images/Popular1.png"
+        }
+      ],
+      "date": "09/03/2024",
+      "totalPrice": 200
     }
   ],
   "products": [
@@ -2549,5 +2744,43 @@
       "id": "3e8f"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 1,
+      "name": "Heart",
+      "description": "24 pieces in a heart-shaped box. Assorted 6 flavors",
+      "price": 200,
+      "discount": 0,
+      "image": "/images/Popular1.png",
+      "details": [
+        {
+          "tastes": [
+            {
+              "strawberry": "10 pcs",
+              "coconut": "10 pcs",
+              "banana": "10 pcs"
+            }
+          ],
+          "description": [
+            {
+              "header": "Heart",
+              "text": "24 pieces in a heart-shaped box. Assorted 6 flavors"
+            }
+          ],
+          "compound": [
+            {
+              "header": "Calorie content",
+              "text": "439.70 kcal (1840 kJ) (21%)"
+            }
+          ],
+          "conditions": [
+            {
+              "header": "Conditions and shelf life",
+              "text": "We recommend storing macarons in the lower part of the refrigerator (temperature 1-7°C). The desired shelf life is seven days. We recommend taking them out of the refrigerator an hour or two before serving to get the full benefit of texture and taste"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

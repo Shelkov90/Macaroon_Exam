@@ -7,6 +7,7 @@ import {
 } from "../../services/Fetch";
 import CheckoutModal from "../../elements/Modal/CheckoutModal";
 import SweetSets from "../../elements/Sweet/SweetSets";
+import { Link } from "react-router-dom";
 
 class Cart extends PureComponent {
 	constructor(props) {
@@ -184,6 +185,7 @@ class Cart extends PureComponent {
 
 		// Проверяем, что количество каждого товара больше 0
 		const allItemsValid = cartItems.every(item => item.quantity > 0);
+
 		if (!allItemsValid) {
 			console.error("Количество товаров должно быть больше 0 для оформления заказа.");
 			return; // Возвращаемся из функции, не оформляя заказ
@@ -203,6 +205,7 @@ class Cart extends PureComponent {
 				totalPrice: this.state.totalPrice,
 				id: Math.random().toString(36).substring(7),
 			};
+			
 			const response = await addDataBaseItem("orders", order);
 			if (response) {
 				console.log("Order added to database:", order);
@@ -565,18 +568,17 @@ class Cart extends PureComponent {
 
 				{showSuccessMessage && (
 					<div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
-						<div className="bg-gray-100 rounded-lg p-8 relative">
-							<span
-								className="absolute top-0 right-0 mt-1 mr-1 text-3xl text-gray-600 cursor-pointer"
-								onClick={() => this.setState({ showSuccessMessage: false })}
-							>
-								&times;
-							</span>
+						<div className="flex flex-col justify-between gap-2 bg-gray-100 rounded-lg p-8 relative">
 							<p className="flex justify-center items-center text-lg text-green-400">
 								Your purchase was successful!
 							</p>
 							<img src="images/done.png" alt="alt" className="ml-6 mt-6" />
-
+							<Link to='/'
+								className="flex w-full bg-blue-400 text-white justify-center text-3xl rounded-md px-4 cursor-pointer hover:bg-blue-500"
+								onClick={() => this.setState({ showSuccessMessage: false })}
+							>
+								Go HomePage
+							</Link>
 						</div>
 					</div>
 				)}
