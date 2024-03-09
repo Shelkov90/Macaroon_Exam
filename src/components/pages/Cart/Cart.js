@@ -3,6 +3,7 @@ import {
 	removeProductFromCart,
 	getDataBaseInfo,
 	addDataBaseItem,
+	clearCart,
 } from "../../services/Fetch";
 import CheckoutModal from "../../elements/Modal/CheckoutModal";
 import SweetSets from "../../elements/Sweet/SweetSets";
@@ -17,6 +18,7 @@ class Cart extends PureComponent {
 			deliveryCost: 0,
 			isOpenCheckoutModal: false,
 			selectedDeliveryMethod: null,
+			showSuccessMessage: false,
 		};
 	}
 
@@ -173,6 +175,20 @@ class Cart extends PureComponent {
 
 	handleConfirmOrder = async () => {
 		const { cartItems } = this.state;
+
+		// Проверяем, что корзина не пуста
+		if (cartItems.length === 0) {
+			console.error("Корзина пуста. Добавьте товары для оформления заказа.");
+			return;
+		}
+
+		// Проверяем, что количество каждого товара больше 0
+		const allItemsValid = cartItems.every(item => item.quantity > 0);
+		if (!allItemsValid) {
+			console.error("Количество товаров должно быть больше 0 для оформления заказа.");
+			return; // Возвращаемся из функции, не оформляя заказ
+		}
+
 		try {
 			const order = {
 				userId: "1",
@@ -190,7 +206,17 @@ class Cart extends PureComponent {
 			const response = await addDataBaseItem("orders", order);
 			if (response) {
 				console.log("Order added to database:", order);
+				// Вызываем функцию для очистки корзины после успешного добавления заказа в базу данных
+				const clearCartResponse = await clearCart();
+				if (clearCartResponse === 200) {
+					console.log("Cart successfully cleared.");
+				} else {
+					console.error("Error clearing cart:", clearCartResponse);
+				}
+				// Закрываем модальное окно после успешного добавления заказа
 				this.handleCloseCheckoutModal();
+				// Устанавливаем состояние для отображения сообщения о успешной покупке
+				this.setState({ showSuccessMessage: true });
 			} else {
 				console.error("Error adding order to database:", response.statusText);
 			}
@@ -199,8 +225,13 @@ class Cart extends PureComponent {
 		}
 	};
 
+
+
+
+
+
 	render() {
-		const { cartItems, totalPrice } = this.state;
+		const { cartItems, totalPrice, showSuccessMessage } = this.state;
 		const totalItems = cartItems.reduce(
 			(total, item) => total + (item.quantity || 0),
 			0
@@ -218,7 +249,6 @@ class Cart extends PureComponent {
 				<div className="cart_title text-center">
 					<h2 className="text-4xl font-semibold mb-6 text-center">Your Cart</h2>
 					<p className="text-center text-gray-400 -mt-2 mb-10">
-						{" "}
 						{totalItems} {productText} / {totalPrice} $
 					</p>
 				</div>
@@ -245,8 +275,7 @@ class Cart extends PureComponent {
 											-
 										</button>
 										<span>
-											{item.quantity !== undefined &&
-												typeof item.quantity === "number"
+											{item.quantity !== undefined && typeof item.quantity === "number"
 												? item.quantity
 												: 0}
 										</span>
@@ -357,9 +386,7 @@ class Cart extends PureComponent {
 										? "border-red-500"
 										: "border-transparent"
 										} w-1/2 bg-white p-4`}
-									onClick={() =>
-										this.handleSelectDeliveryMethod("Delivery", 20)
-									}
+									onClick={() => this.handleSelectDeliveryMethod("Delivery", 20)}
 								>
 									<img
 										src="/images/delivery1.svg"
@@ -531,16 +558,34 @@ class Cart extends PureComponent {
 
 						<div class="form__lastText text-sm mb-20">
 							By clicking on the "Place an order" button, I accept and agree to
-							the <span class="text-blue-400 underline">Offer Agreement</span>{" "}
-							and authorize the processing of my personal data in accordance
-							with the
+							the{" "}
+							<span class="text-blue-400 underline">Offer Agreement</span> and
+							authorize the processing of my personal data in accordance with the
 							<span class="text-blue-400 underline ml-1">Privacy Policy.</span>
 						</div>
 					</form>
 				</div>
 
 				<SweetSets />
-				
+
+				{showSuccessMessage && (
+					<div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-500 bg-opacity-50 z-50">
+						<div className="bg-gray-100 rounded-lg p-8 relative">
+							<span
+								className="absolute top-0 right-0 mt-1 mr-1 text-3xl text-gray-600 cursor-pointer"
+								onClick={() => this.setState({ showSuccessMessage: false })}
+							>
+								&times;
+							</span>
+							<p className="flex justify-center items-center text-lg text-green-400">
+								Your purchase was successful!
+							</p>
+							<img src="images/done.png" alt="alt" className="ml-6 mt-6" />
+
+						</div>
+					</div>
+				)}
+
 				{this.state.isOpenCheckoutModal && (
 					<CheckoutModal
 						isOpenCheckoutModal={this.state.isOpenCheckoutModal}
@@ -549,6 +594,7 @@ class Cart extends PureComponent {
 					/>
 				)}
 			</>
+
 		);
 	}
 }
