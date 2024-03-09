@@ -31,9 +31,9 @@ class SweetSets extends PureComponent {
 
 	addToCart = async (set) => {
 		try {
-			// Добавляю товар в корзину
+			// Добавляем товар в корзину
 			await addProductToCart(set);
-			// Обновляю состояние корзины, чтобы отобразить добавленный товар
+			// Обновляем состояние корзины, чтобы отобразить добавленный товар
 			this.setState(prevState => ({
 				cart: [...prevState.cart, set],
 				isModalOpen: true,
@@ -45,11 +45,11 @@ class SweetSets extends PureComponent {
 	}
 
 	handleCloseModal = () => {
-		this.setState({ isModalOpen: false }); // Закрываю модальное окно
+		this.setState({ isModalOpen: false }); // Закрываем модальное окно
 	}
 
 	handleContinueShopping = () => {
-		this.setState({ isModalOpen: false }); // Закрываю модальное окно
+		this.setState({ isModalOpen: false }); // Закрываем модальное окно
 	}
 
 	handleCheckout = () => {
@@ -67,7 +67,7 @@ class SweetSets extends PureComponent {
 				<SweetItem
 					key={set.id}
 					set={set}
-					addToCart={this.addToCart} // передаю функцию для добавления в корзину
+					addToCart={this.addToCart} // передаем функцию для добавления в корзину
 				/>
 			</div>
 		));

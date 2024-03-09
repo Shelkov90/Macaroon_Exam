@@ -21,7 +21,7 @@ const SweetItem = ({ set, addToCart }) => {
 					<div
 						className="popular__card__cart px-2 basis-2/5 flex items-center justify-center cursor-pointer overflow-hidden transition duration-300 ease-in-out hover:bg-blue-400 hover:text-white"
 						onClick={() => {
-							addToCart(set); // вызываю функцию addToCart
+							addToCart(set); // вызываем функцию addToCart
 						}}
 					>
 						<img className="mr-2" src="/images/cart.svg" alt="alt" />

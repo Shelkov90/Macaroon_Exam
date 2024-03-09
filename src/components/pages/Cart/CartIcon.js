@@ -5,7 +5,7 @@ class CartIcon extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			cartLength: 0, // Инициализирую состояние корзины
+			cartLength: 0, // Инициализирем состояние корзины
 		};
 	}
 

@@ -225,11 +225,6 @@ class Cart extends PureComponent {
 		}
 	};
 
-
-
-
-
-
 	render() {
 		const { cartItems, totalPrice, showSuccessMessage } = this.state;
 		const totalItems = cartItems.reduce(

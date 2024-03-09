@@ -122,7 +122,7 @@ export const SetWrapper = ({ addToCart, openModal }) => {
 								<div
 									className="price__toCart flex py-4 px-10 rounded-md bg-pink-600 text-white cursor-pointer hover:bg-pink-700 hover:text-white transition duration-300 ease-in-out"
 									onClick={() => {
-										addToCart(set); // вызываю функцию addToCart
+										addToCart(set); // вызываем функцию addToCart
 										handleOpenModal();
 									}}
 								>
@@ -227,9 +227,9 @@ class SweetSet extends PureComponent {
 
 	addToCart = async (set) => {
 		try {
-			// Добавляю товар в корзину
+			// Добавляем товар в корзину
 			await addProductToCart(set);
-			// Обновляю состояние корзины, чтобы отобразить добавленный товар
+			// Обновляем состояние корзины, чтобы отобразить добавленный товар
 			this.setState((prevState) => ({
 				cart: [...prevState.cart, set],
 			}));
